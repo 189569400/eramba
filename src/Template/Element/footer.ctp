@@ -24,16 +24,13 @@
                         <span class="lead">eramba Ltd</span><br>
                         <br>
                         <strong>Company Number:</strong> 9524547 / VAT:&nbsp;GB265865853 /
-                        Bank&nbsp;Account&nbsp;Information / License / W-8BEN-E
+                        <a href="https://www.eramba.org/payments">Bank&nbsp;Account&nbsp;Information</a> / <a href="https://www.eramba.org/tc">Enterprise License</a> / <a href="https://www.eramba.org/tc_community">Community License</a> / <a href="https://s3-eu-west-1.amazonaws.com/downloadseramba/fw8bene-version2017-completed-by-eramba_on17082018.pdf">W-8BEN-E</a>
                     </p>
                     <hr>
                 </div>
                 <div class="col-md-4">
                     <p class="text-center">
-                        <i>We are available to take calls during London<br>
-                        business hours:</i><br>
                         UK: +44 2036379084<br>
-                        <br>
                         <a href="mailto:support@eramba.org">support@eramba.org</a>
                     </p>
                     <hr>
