@@ -7,7 +7,7 @@
                         Welcome to<br> Open IT GRC
                     </h1>
                     <p class="lead mb-sm">
-                        eramba is the leading, open enterprise class IT Governance, Risk & Compliance application
+                        Serving thousands of companies around the world, eramba is a popular open Governance, Risk and Compliance (GRC) solution
                     </p>
                     <div id="hero-last-release">
                         <strong>Latest Release - <?= $latestRls ?></strong>
@@ -47,12 +47,12 @@
             <div class="row">
                 <div class="offset-xl-8 col-xl-4 offset-lg-7 col-lg-5 animation toleft">
                     <p class="lead text-white mb-md">
-                        GRC professions tired of spreadsheets, expensive and complicated GRC tools decided to build a simple, free and enterprise level GRC tool<br>
+                        GRC professions tired of spreadsheets, expensive and complicated GRC tools decided to build a simple, free and enterprise level GRC tool called eramba<br>
                         <br>
-                        With many thousands of downloads and users around the world we are a popular GRC project!<br>
+                        Simplicity, scalability, openness and affordability - that is our game<br>
                         <br>
                         <span class="text-orange">
-                            We are not just another GRC company, we are a community
+                            We are not just another GRC company, we are a community 
                         </span>
                     </p>
                 </div>
@@ -144,7 +144,7 @@
                            GRC Features 
                         </h2>
                         <p>
-			We have worked in GRC for many years and understand the job well. eramba helps you with Risk Management, Compliance Management, Incident Management, Policy Reviews, Internal Control Testing, Online Assessments, Notifications, Reminders, Filters, Reports.<br><br>For every pain we built a simple feature that makes the job easier and far more professional.
+			Like you, we have worked in GRC for many years and understand the job well. eramba helps you with Risk Management, Compliance Management, Incident Management, Policy Reviews, Internal Control Testing, Online Assessments, Notifications, Reminders, Filters, Reports.<br><br>For every known pain we built a simple feature that makes the job easier and far more professional.
                         </p>
                     </div>
                     <div class="col-lg-7 offset-lg-1">
