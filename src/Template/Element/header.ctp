@@ -1,0 +1,51 @@
+<?php
+    use Cake\Routing\Router;
+?>
+<header id="header">
+    <div class="container">
+        <div id="header-inner" class="clearfix">
+            <div id="header-logo">
+                <a href="/">
+                    <img src="/img/logo.png" alt="">
+                </a>
+            </div>
+
+            <div id="header-nav-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div id="header-nav">
+                <nav class="main-nav">
+                    <div id="header-nav-close">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul>
+                        <?php foreach ($menuItems as $item): ?>
+                        <?php
+                            $hasSubMenu = !empty($item['subItems']) ? true : false;
+                            $subItems = $hasSubMenu ? $item['subItems'] : [];
+                        ?>
+                        <li>
+                            <a href="<?= Router::url($item['link']) ?>"><?= $item['name'] ?></a>
+                            <?php if ($hasSubMenu): ?>
+                            <div class="sub-nav">
+                                <ul>
+                                    <?php foreach ($subItems as $subItem): ?>
+                                    <li>
+                                        <a href="<?= Router::url($subItem['link']) ?>"><?= $subItem['name'] ?></a>
+                                    </li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+                            <?php endif; ?>
+                        </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>

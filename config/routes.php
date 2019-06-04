@@ -62,12 +62,37 @@ Router::scope('/', function (RouteBuilder $routes) {
      * its action called 'display', and we pass a param to select the view file
      * to use (in this case, src/Template/Pages/home.ctp)...
      */
-    $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
+    // $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
+
+    $routes->connect('/', ['controller' => 'Home', 'action' => 'index']);
 
     /**
      * ...and connect the rest of 'Pages' controller's URLs.
      */
     $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
+
+    /**
+     * Pages
+     */
+    $routes->connect('/online-demo', ['controller' => 'Pages', 'action' => 'display', 'online_demo']);
+
+    /**
+     * Friendly URLs
+     */
+    $routes->connect('/roadmap', ['controller' => 'Roadmaps', 'action' => 'index']);
+    $routes->connect('/contact-us', ['controller' => 'Contacts', 'action' => 'index']);
+
+    /**
+     * External redirects
+     */
+    $routes->redirect('/license', 'https://docs.google.com/document/d/1dPycAlAIoCgJg1r2Mxv4U4D2Pl6gG3D4NqWRyZ5sx4w/', ['status' => 302]);
+    $routes->redirect('/tc', 'https://docs.google.com/document/d/1DzJWu9kH5gllFlFV9LLstuI4eGbhBwhXHhZ4KqGAI70/', ['status' => 302]);
+    $routes->redirect('/payments', 'https://docs.google.com/document/d/1VkTCCD2hh3l9sgk-5VIrbuAbCEtl3BSXSG2uiJEgeP8/', ['status' => 302]);
+    $routes->redirect('/tc_saas_enterprise', 'https://docs.google.com/document/d/1OwimW4_coRaFMQFmYU2Xy23uZ4qlwHdVMCg8Dpl7zws/', ['status' => 302]);
+    $routes->redirect('/community_tc', 'https://docs.google.com/document/d/1GM4YHOio0jOnaoESyZRl3Jt6S2nSB9ztLIi9b4cWlvQ/', ['status' => 302]);
+    $routes->redirect('/privacy', 'https://docs.google.com/document/d/1VctdYiI3b5_imQYYy0z3QEA8Ab6bpMISdhWBfj1pq2U/', ['status' => 302]);
+    $routes->redirect('/blog', 'https://www.linkedin.com/company/eramba/', ['status' => 302]);
+    $routes->redirect('/forum', 'https://discussions.eramba.org', ['status' => 302]);
 
     /**
      * Connect catchall routes for all controllers.
