@@ -47,13 +47,12 @@
             <div class="row">
                 <div class="offset-xl-8 col-xl-4 offset-lg-7 col-lg-5 animation toleft">
                     <p class="lead text-white mb-md">
-                        GRC professions tired of spreadsheets, expensive and complicated GRC tools decided to build a simple, free and enterprise level GRC tool.<br>
+                        GRC professions tired of spreadsheets, expensive and complicated GRC tools decided to build a simple, free and enterprise level GRC tool<br>
                         <br>
                         With many thousands of downloads and users around the world we are a popular GRC project!<br>
                         <br>
                         <span class="text-orange">
-                            We are not just another GRC company<br>
-                            <strong>we are a community</strong>
+                            We are not just another GRC company, we are a community
                         </span>
                     </p>
                 </div>
@@ -79,7 +78,7 @@
             </div>
             <select name="" id="features-nav-select">
                 <option value="1">GRC Features</option>
-                <option value="2">Untypical GRC Features</option>
+                <option value="2">Atypical GRC Features</option>
                 <option value="3">Open</option>
                 <option value="4">Free &amp; Enterprise</option>
                 <option value="5">On-perm Or SaaS</option>
@@ -99,7 +98,7 @@
                 <a data-toggle="tab" data-tab="2" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">
                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 24 24" height="70" width="70"><title></title><g transform="matrix(1,0,0,1,0,0)"><path d="M 1.5,3.775v7.637c0.06,5.169,3.343,9.75,8.219,11.468l1.121,0.414c0.749,0.275,1.571,0.275,2.32,0l1.121-0.414 c4.876-1.718,8.159-6.299,8.219-11.468V3.775c-0.002-0.613-0.369-1.166-0.934-1.406C18.537,1.105,15.282,0.469,12,0.5 C8.718,0.469,5.463,1.105,2.434,2.369C1.869,2.609,1.502,3.162,1.5,3.775z " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 7.5,6.5h9c0.552,0,1,0.448,1,1v9c0,0.552-0.448,1-1,1 h-9c-0.552,0-1-0.448-1-1v-9C6.5,6.948,6.948,6.5,7.5,6.5z " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 12,8.5v7 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 15.5,12h-7" stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
                     <span>
-                        Untypical GRC Features
+                        Atypical GRC Features
                     </span>
                 </a>
             </li>
@@ -142,10 +141,10 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <h2 class="text-orange">
-                            Policy
+                           GRC Features 
                         </h2>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+			We have worked in GRC for many years and understand the job well. eramba helps you with Risk Management, Compliance Management, Incident Management, Policy Reviews, Internal Control Testing, Online Assessments, Notifications, Reminders, Filters, Reports.<br><br>For every pain we built a simple feature that makes the job easier and far more professional.
                         </p>
                     </div>
                     <div class="col-lg-7 offset-lg-1">
@@ -161,10 +160,10 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <h2 class="text-orange">
-                            Policy 2
+			Atypical GRC Features
                         </h2>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex eaent.
+			eramba is not strictly Compliance and Risk - we have made functionalities that help you review users accounts on your systems and awareness trainings that allow you to upload videos, disclaimer texts and multiple choice questionnaires and remind employees when they have missed a training.
                         </p>
                     </div>
                     <div class="col-lg-7 offset-lg-1">
