@@ -23,7 +23,7 @@
                     <p>
                         <span class="lead">eramba Ltd</span><br>
                         <br>
-                        <strong>Company Number:</strong> 9524547 / VAT:&nbsp;GB265865853 /
+                        Company Number: 9524547 / VAT: GB265865853 /
                         <a href="https://www.eramba.org/payments">Bank&nbsp;Account&nbsp;Information</a> / <a href="https://www.eramba.org/tc">Enterprise License</a> / <a href="https://www.eramba.org/tc_community">Community License</a> / <a href="https://s3-eu-west-1.amazonaws.com/downloadseramba/fw8bene-version2017-completed-by-eramba_on17082018.pdf">W-8BEN-E</a>
                     </p>
                     <hr>
@@ -37,11 +37,11 @@
                 </div>
                 <div class="col-md-4">
                     <p class="text-center">
-                        71-75 Shelton Street, London, WC2H 9JQ,<br>
-                        United Kingdom<br>
+                        <a href="https://www.google.com/maps/place/71-75+Shelton+St,+London+WC2H+9JQ,+UK/@51.5147437,-0.1234761,3a,75y,339.94h,90t/data=!3m6!1e1!3m4!1swMbd_F8v9dq7PqUimRqmRQ!2e0!7i16384!8i8192!4m5!3m4!1s0x487604ccaaa0b0b7:0xbe144a0754857ae1!8m2!3d51.5149056!4d-0.1235464">71-75 Shelton Street, London, WC2H9JQ<br>
+                        United Kingdom</a><br>
                         <br>
-                        Tolstého 9, Bratislava,81106,<br>
-                        Slovak Republic
+                        <a href="https://www.google.com/maps/place/Tolst%C3%A9ho+9,+Bratislava,+81106/@48.149552,17.105152,3a,75y,347.88h,90t/data=!3m4!1e1!3m2!1sV6QCMdohSzSfYLfS7Cj_XQ!2e0!4m2!3m1!1s0x476c895a315dd93b:0x41e602799717834b?sa=X&ved=2ahUKEwi8tpzAgNDiAhWTAGMBHSxsCXcQxB0wAHoECAoQAg">Tolstého 9, Bratislava, 81106<br>
+                        Slovak Republic</a>
                     </p>
                 </div>
             </div>

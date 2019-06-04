@@ -22,8 +22,6 @@
                     </a>
                 </div>
                 <p class="text-grey">
-                    Our enterprise release (or subscriptors edition) is updated every month and has the latest patches and features. Once a year we pass (most) of this to the community release.<br>
-                    <br>
                     <strong>Username:</strong> admin<br>
                     <strong>Password:</strong> alphanumeric1
                 </p>
@@ -40,8 +38,6 @@
                     </a>
                 </div>
                 <p class="text-grey">
-                    Our community edition is based on our enterprise release and updated once a year.<br>
-                    <br>
                     <strong>Username:</strong> admin<br>
                     <strong>Password:</strong> alphanumeric1
                 </p>
