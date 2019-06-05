@@ -29,13 +29,13 @@
                             $subItems = $hasSubMenu ? $item['subItems'] : [];
                         ?>
                         <li>
-                            <a href="<?= Router::url($item['link']) ?>"><?= $item['name'] ?></a>
+                            <a href="<?= Router::url($item['link']) ?>" target="<?= !empty($item['target']) ? $item['target'] : '_self' ?>"><?= $item['name'] ?></a>
                             <?php if ($hasSubMenu): ?>
                             <div class="sub-nav">
                                 <ul>
                                     <?php foreach ($subItems as $subItem): ?>
                                     <li>
-                                        <a href="<?= Router::url($subItem['link']) ?>"><?= $subItem['name'] ?></a>
+                                        <a href="<?= Router::url($subItem['link']) ?>" target="<?= !empty($subItem['target']) ? $subItem['target'] : '_self' ?>"><?= $subItem['name'] ?></a>
                                     </li>
                                     <?php endforeach; ?>
                                 </ul>

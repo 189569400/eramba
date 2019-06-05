@@ -74,6 +74,15 @@ class AppController extends Controller
 
     protected function setHeader()
     {
+        /**
+         * Set menu items which will be displayed on every page header
+         * Options of each item and subitem:
+         *  - name: Name of the menu item (mandatory)
+         *  - link: Link to which menu item points to (default is _self) (mandatory)
+         *  - target: Where should link be opened (_self, _blank) (optional)
+         *  - subItems: Sub items which will be displayed under main item (each sub item has the same options as main item) (optional)
+         * @var array
+         */
         $menuItems = [
             [
                 'name' => __('Resources'),
@@ -93,7 +102,8 @@ class AppController extends Controller
                     ],
                     [
                         'name' => __('Blog'),
-                        'link' => '/blog'
+                        'link' => '/blog',
+                        'target' => '_blank'
                     ],
                     [
                         'name' => __('Roadmap'),
@@ -101,9 +111,8 @@ class AppController extends Controller
                     ],
                     [
                         'name' => __('Forum'),
-                        'link' => [
-                            'controller' => '/forum'
-                        ]
+                        'link' => '/forum',
+                        'target' => '_blank'
                     ]
                 ]
             ],
