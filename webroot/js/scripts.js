@@ -4,8 +4,8 @@ $(function() {
         handler: function(direction) {
             $(this.element).addClass('animated');
             $(this.element).find('.count-to').each(function() {
-                if (!$(this).hasClass('.count-to-started')) {
-                    $(this).addClass('.count-to-started');
+                if (!$(this).hasClass('count-to-started')) {
+                    $(this).addClass('count-to-started');
                     countToStart($(this)); 
                 }
             });
@@ -18,13 +18,13 @@ $(function() {
     function countTo($elem, finalNumber, actualNumber, step, interval)
     {
         setTimeout(function() {
-            var number = Math.round(actualNumber + step);
+            var number = actualNumber + step;
 
             if (number > finalNumber) {
                 number = finalNumber;
             }
 
-            $elem.html(number);
+            $elem.html(Math.round(number));
 
             if (number != finalNumber) {
                 countTo($elem, finalNumber, number, step, interval);

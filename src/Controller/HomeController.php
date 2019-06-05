@@ -32,15 +32,6 @@ class HomeController extends AppController
 
     public function setCounters()
     {
-        //
-        // Load these numbers from file (one file for one number so esteban can update it easily with cron)
-        // Files:
-        // - downloads.txt
-        // - community_users.txt
-        // - enterprise_users.txt
-        // - releases.txt
-        //
-        
         $countersFiles = [
             'downloads' => 'downloads.txt',
             'community_users' => 'community_users.txt',
@@ -82,7 +73,7 @@ class HomeController extends AppController
                 continue;
             }
 
-            $counters[$key]['value'] = file_get_contents($filePath);
+            $counters[$key]['value'] = intval(file_get_contents($filePath));
         }
 
         $this->set(compact('counters'));

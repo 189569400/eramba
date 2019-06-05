@@ -186,9 +186,15 @@
         </h2>
         <ul class="list-inline stats-list clearfix">
             <?php foreach ($counters as $counter): ?>
-            <li class="list-inline-item animation totop <?= !empty($counter['delay']) ? 'delay-' . $counter['delay'] : '' ?>">
-                <span class="stats-label text-orange"><?= $counter['name'] ?></span>
-                <span class="stats-number count-to" data-count-to="<?= $counter['value'] ?>" data-count-duration="<?= $counter['duration'] ?>"><?= $counter['value'] ?></span>
+            <?php
+                $cName = $counter['name'];
+                $cValue = $counter['value'];
+                $cDelay = $counter['delay'];
+                $cDuration = $counter['duration'];
+            ?>
+            <li class="list-inline-item animation totop <?= !empty($cDelay) ? 'delay-' . $cDelay : '' ?>">
+                <span class="stats-label text-orange"><?= $cName ?></span>
+                <span class="stats-number count-to" data-count-to="<?= $cValue ?>" data-count-duration="<?= $cDuration ?>">0</span>
             </li>
             <?php endforeach; ?>
         </ul>
