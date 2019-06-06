@@ -51,11 +51,24 @@ class AppController extends Controller
         $this->loadComponent('Crud.Crud', [
             'actions' => [
                 'index' => [
-                    'className' => '\App\Crud\Action\SectionAction'
+                    'className' => '\App\Crud\Action\SectionAction',
+                    'enabled' => false
                 ],
                 'add' => [
                     'className' => 'Crud.Add',
-                    'enabled' => false
+                    'enabled' => false,
+                    'messages' => [
+                        'success' => [
+                            'params' => [
+                                'class' => 'success'
+                            ]
+                        ],
+                        'error' => [
+                            'params' => [
+                                'class' => 'danger'
+                            ]
+                        ]
+                    ]
                 ]
             ]
         ]);
