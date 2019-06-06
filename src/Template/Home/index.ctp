@@ -42,18 +42,19 @@
     <div id="community-inner">
         <div class="container">
             <h2 class="text-right text-white animation toleft">
-                We are a community
+                We are a GRC community
             </h2>
             <div class="row">
                 <div class="offset-xl-8 col-xl-4 offset-lg-7 col-lg-5 animation toleft">
                     <p class="lead text-white mb-md">
-                        GRC professions tired of spreadsheets, expensive and complicated GRC tools decided to build a simple, free and enterprise level GRC tool called eramba<br>
-                        <br>
-                        Simplicity, scalability, openness and affordability - that is our game<br>
+                        We are a group of GRC professions tired of spreadsheets, expensive and complicated GRC tools that decided to build a simple, free and enterprise level GRC solution.<br>
                         <br>
                         <span class="text-orange">
-                            We are not just another GRC company, we are a community 
+                       	<b>Simplicity, scalability, openness and affordability. We know well that complex GRC tools simply dont work for most of us!</b><br>
                         </span>
+			<br>
+			From Europe, since 2010 we have proudly run this project without magnanimous revenue or profitability expectations. We love being small and charge only what the project needs to operate and that is all.
+			</br>
                     </p>
                 </div>
             </div>
