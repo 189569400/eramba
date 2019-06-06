@@ -24,27 +24,21 @@ class ContactsTable extends Table
     protected $reCaptcha = true;
 
     //
-    // Location of email sender
-    const LOCATION_BRATISLAVA = 1;
-
-    public static function getLocationOptions()
-    {
-        $locations = [
-            self::LOCATION_BRATISLAVA => __('Bratislava')
-        ];
-
-        return $locations;
-    }
-    //
-
-    //
     // Types of email
-    const TYPE_TEST = 1;
+    const TYPE_ENTERPRISE_QUOTE = 1;
+    const TYPE_COMMUNITY_SAAS_QUOTE = 2;
+    const TYPE_DEMO_CALL = 3;
+    const TYPE_BUG_REPORT = 4;
+    const TYPE_PARTNER_SIGN_UP = 5;
 
     public static function getTypeOptions()
     {
         $types = [
-            self::TYPE_TEST => __('I need help')
+            self::TYPE_ENTERPRISE_QUOTE => __('Enterprise Quote'),
+            self::TYPE_COMMUNITY_SAAS_QUOTE => __('Community SaaS Quote'),
+            self::TYPE_DEMO_CALL => __('Demo Call'),
+            self::TYPE_BUG_REPORT => __('Bug Report'),
+            self::TYPE_PARTNER_SIGN_UP => __('Partner SignUp')
         ];
 
         return $types;
@@ -87,9 +81,9 @@ class ContactsTable extends Table
             ->allowEmptyString('name', false);
 
         $validator
-            ->integer('location')
-            ->requirePresence('location', 'create')
-            ->allowEmptyString('location', false);
+            ->integer('country_id')
+            ->requirePresence('country_id', 'create')
+            ->allowEmptyString('country_id', false);
 
         $validator
             ->scalar('type')

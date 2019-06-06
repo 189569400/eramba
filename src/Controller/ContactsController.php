@@ -47,7 +47,7 @@ class ContactsController extends AppController
             if ($subject->success) {
                 $this->sendEmail($subject->entity->name, $subject->entity->email, [
                     'name' => $subject->entity->name,
-                    'location' => $subject->entity->location,
+                    'country' => $subject->entity->country_id,
                     'type' => $subject->entity->type,
                     'email' => $subject->entity->email
                 ]);
@@ -69,8 +69,16 @@ class ContactsController extends AppController
     public function beforeRender(Event $event)
     {
         parent::beforeRender($event);
-        
-        $this->set('locationOptions', $this->Contacts->getLocationOptions());
+
+        $this->loadModel('Countries');
+        $countryOptions = $this->Countries->find('list', [
+            'keyField' => 'id',
+            'valueField' => 'name'
+        ])->order([
+            'Countries.name' => 'ASC'
+        ])->toArray();
+
+        $this->set(compact('countryOptions'));
         $this->set('typeOptions', $this->Contacts->getTypeOptions());
     }
 

@@ -29,10 +29,10 @@
 
                     <div class="form-group">
                         <label>Where are you based? <span class="text-grey">(Required)</span></label>
-                        <?= $this->Form->select('Contacts.location', $locationOptions, [
+                        <?= $this->Form->select('Contacts.country_id', $countryOptions, [
                             'class' => 'form-control'
                         ]) ?>
-                        <?= $this->Form->error('Contacts.location') ?>
+                        <?= $this->Form->error('Contacts.country_id') ?>
                     </div>
 
                     <div class="form-group">
