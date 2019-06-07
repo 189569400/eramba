@@ -9,10 +9,13 @@
 
         <?= $this->Html->meta('icon', 'img/favicon.png') ?>
 
-        <?= $this->Html->css('bootstrap.css') ?>
-        <?= $this->Html->css('animations.css') ?>
-        <?= $this->Html->css('styles.css') ?>
-        <?= $this->Html->css('bootstrap-datepicker3.min.css'); ?>
+        <?= $this->Html->css([
+            'bootstrap.css',
+            'animations.css',
+            'styles.css',
+            'bootstrap-datepicker3.min.css',
+            'select2.min.css'
+        ]) ?>
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
 
@@ -33,7 +36,8 @@
             'bootstrap.js',
             'jquery.waypoints.min.js',
             'bootstrap-datepicker.min.js',
-            'scripts.js'
+            'scripts.js',
+            'select2.min.js'
         ]) ?>
     </body>
 </html>
