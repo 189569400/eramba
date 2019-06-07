@@ -103,7 +103,7 @@ class AppController extends Controller
                 'subItems' => [
                     [
                         'name' => __('Documentation'),
-                        'link' => ''
+                        'link' => '/documentation'
                     ],
                     [
                         'name' => _('Online Demo'),

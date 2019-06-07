@@ -75,6 +75,7 @@ Router::scope('/', function (RouteBuilder $routes) {
      * Pages
      */
     $routes->connect('/online-demo', ['controller' => 'Pages', 'action' => 'display', 'online_demo']);
+    $routes->connect('/documentation', ['controller' => 'Pages', 'action' => 'display', 'documentation']);
 
     /**
      * Friendly URLs
