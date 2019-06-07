@@ -132,6 +132,11 @@ $(function() {
         $('.partners-tag-' + $(this).val()).show();
     });
 
+    // partners countries select2 initialization
+    $(document).ready(function() {
+        $('#partners-country-select').select2();
+    });
+
     // partners country select
     $('.datepicker').datepicker();
 

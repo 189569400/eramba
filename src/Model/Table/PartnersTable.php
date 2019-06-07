@@ -9,7 +9,7 @@ use Cake\Validation\Validator;
 /**
  * Partners Model
  *
- * @property \App\Model\Table\CountriesTable|\Cake\ORM\Association\BelongsTo $Countries
+ * @property \App\Model\Table\CountriesTable|\Cake\ORM\Association\BelongsToMany $Countries
  *
  * @method \App\Model\Entity\Partner get($primaryKey, $options = [])
  * @method \App\Model\Entity\Partner newEntity($data = null, array $options = [])
@@ -40,8 +40,10 @@ class PartnersTable extends Table
 
         $this->addBehavior('Timestamp');
 
-        $this->belongsTo('Countries', [
-            'foreignKey' => 'country_id'
+        $this->belongsToMany('Countries', [
+            'foreignKey' => 'partner_id',
+            'targetForeignKey' => 'country_id',
+            'joinTable' => 'partners_countries'
         ]);
     }
 
@@ -75,19 +77,5 @@ class PartnersTable extends Table
             ->allowEmptyString('logo', false);
 
         return $validator;
-    }
-
-    /**
-     * Returns a rules checker object that will be used for validating
-     * application integrity.
-     *
-     * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
-     * @return \Cake\ORM\RulesChecker
-     */
-    public function buildRules(RulesChecker $rules)
-    {
-        $rules->add($rules->existsIn(['country_id'], 'Countries'));
-
-        return $rules;
     }
 }

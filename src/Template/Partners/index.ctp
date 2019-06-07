@@ -1,5 +1,6 @@
 <?php
     use Cake\Routing\Router;
+    use Cake\Utility\Hash;
 ?>
 <section class="mb-xl first-section-margin">
     <div class="container">
@@ -81,7 +82,14 @@
             <div class="col-md-10 offset-md-1">
                 <div id="partners-list">
                     <?php foreach ($partners as $partner): ?>
-                    <div class="partners-list-item partners-tag-0 partners-tag-<?= $partner->country_id ?>">
+                    <?php
+                        $partnerCountriesId = Hash::extract($partner->countries, '{n}.id');
+                        $partnerTags = "";
+                        foreach ($partnerCountriesId as $pci) {
+                            $partnerTags .= " partners-tag-" . $pci;
+                        }
+                    ?>
+                    <div class="partners-list-item partners-tag-0 <?= $partnerTags ?>">
                         <img src="/img/partners/<?= $partner->logo ?>" alt="">
                     </div>
                     <?php endforeach; ?>

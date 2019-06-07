@@ -4,18 +4,16 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * Partner Entity
+ * PartnersCountry Entity
  *
  * @property int $id
- * @property string $name
- * @property string $link
- * @property string $logo
- * @property \Cake\I18n\FrozenTime $created
- * @property \Cake\I18n\FrozenTime $modified
+ * @property int $partner_id
+ * @property int|null $country_id
  *
- * @property \App\Model\Entity\Country[] $countries
+ * @property \App\Model\Entity\Partner $partner
+ * @property \App\Model\Entity\Country $country
  */
-class Partner extends Entity
+class PartnersCountry extends Entity
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
@@ -27,11 +25,9 @@ class Partner extends Entity
      * @var array
      */
     protected $_accessible = [
-        'name' => true,
-        'link' => true,
-        'logo' => true,
-        'created' => true,
-        'modified' => true,
-        'countries' => true
+        'partner_id' => true,
+        'country_id' => true,
+        'partner' => true,
+        'country' => true
     ];
 }

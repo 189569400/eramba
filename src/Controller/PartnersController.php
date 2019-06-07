@@ -56,8 +56,9 @@ class PartnersController extends AppController
         ->order([
             'Partners.name' => 'ASC'
         ])
+        ->contain('Countries')
         ->toArray();
-
+        
         $this->loadModel('Countries');
         $countryOptions = $this->Countries->find('list', [
             'keyField' => 'id',
@@ -65,7 +66,7 @@ class PartnersController extends AppController
         ])->order([
             'Countries.name' => 'ASC'
         ])->toArray();
-        
+
         $this->set(compact('partners', 'countryOptions'));
     }
 }
