@@ -132,11 +132,6 @@ $(function() {
         $('.partners-tag-' + $(this).val()).show();
     });
 
-    // partners countries select2 initialization
-    $(document).ready(function() {
-        $('#partners-country-select').select2();
-    });
-
     // partners country select
     $('.datepicker').datepicker();
 
@@ -157,5 +152,13 @@ $(function() {
     });
     $('#features .features-nav li a').on('click', function() {
         $('#features-nav-select').val($(this).data('tab'));
+    });
+
+    // select2 initialization
+    $(document).ready(function() {
+        var $select2 = $('.select2-form-control').select2();
+        $select2.each(function() {
+            $(this).data('select2').$container.addClass("form-control");
+        });
     });
 });

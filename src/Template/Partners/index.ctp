@@ -71,7 +71,7 @@
                         $countryOptions = array_merge([0 => __('All')], $countryOptions);
                     ?>
                     <?= $this->Form->select('country', $countryOptions, [
-                        'class' => 'form-control',
+                        'class' => 'select2-form-control form-control',
                         'id' => 'partners-country-select'
                     ]) ?>
                     <?= $this->Form->error('Contacts.location') ?>

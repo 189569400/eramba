@@ -30,7 +30,8 @@
                     <div class="form-group">
                         <label>Where are you based? <span class="text-grey">(Required)</span></label>
                         <?= $this->Form->select('Contacts.country_id', $countryOptions, [
-                            'class' => 'form-control'
+                            'class' => 'select2-form-control form-control',
+                            'id' => 'contact-form-country-select'
                         ]) ?>
                         <?= $this->Form->error('Contacts.country_id') ?>
                     </div>
@@ -38,7 +39,7 @@
                     <div class="form-group">
                         <label>How can we help? <span class="text-grey">(Required)</span></label>
                         <?= $this->Form->select('Contacts.type', $typeOptions, [
-                            'class' => 'form-control'
+                            'class' => 'select2-form-control form-control'
                         ]) ?>
                         <?= $this->Form->error('Contacts.type') ?>
                     </div>
