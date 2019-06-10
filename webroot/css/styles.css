@@ -533,6 +533,9 @@ input.datepicker {
 .form-check-label.checked:after {
 	display: block;
 }
+.form-check-label-small {
+	font-size: 12px;
+}
 .error-message {
 	color: #cf5252;
 	font-size: 20px;

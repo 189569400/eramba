@@ -101,6 +101,11 @@ class ContactsTable extends Table
             ->requirePresence('body', 'create')
             ->allowEmptyString('body', false);
 
+        $validator
+            ->boolean('gdpr_consent')
+            ->requirePresence('gdpr_consent', 'create')
+            ->equals('gdpr_consent', true, 'You need to consent with GDPR rules so we can process your information.', 'create');
+
         return $validator;
     }
 

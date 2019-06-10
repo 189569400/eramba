@@ -32,7 +32,7 @@ class ContactsController extends AppController
     }
 
     public function add()
-    {
+    {//debug($this->getRequest()->getData());exit;
         $this->Crud->view('add', 'index');
 
         $this->Crud->on('beforeSave', function(Event $event) {
@@ -57,7 +57,7 @@ class ContactsController extends AppController
         $this->getEventManager()->on('Crud.setFlash', function(Event $event) {
             $subject = $event->getSubject();
             if (!$subject->success) {
-                $subject->text = __('An error occurred while trying to send your email');
+                $subject->text = __('An error occurred while trying to send your email. Check form to see errors and try it again.');
             } else {
                 $subject->text = __('E-mail has been sent successfully');
             }

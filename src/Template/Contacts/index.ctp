@@ -62,6 +62,27 @@
                         <?= $this->Form->error('Contacts.body') ?>
                     </div>
 
+                    <div class="form-check text-left mb-md">
+                        <?= $this->Form->checkbox('Contacts.gdpr_consent', [
+                            'class' => 'form-check-input',
+                            'id' => 'form-check-gdpr'
+                        ]) ?>
+                        <!-- <input type="checkbox" class="form-check-input" id="form-check-gdpr" name="gdpr-consent"> -->
+                        <label class="form-check-label form-check-label-small" for="form-check-gdpr">I consent to having this website store the information provided above so they can respond to my question</label>
+                        <?= $this->Form->error('Contacts.gdpr_consent') ?>
+                    </div>
+
+                    <div class="form-check text-left mb-md">
+                        <?= $this->Form->checkbox('Contacts.community_days_notification', [
+                            'class' => 'form-check-input',
+                            'id' => 'form-check-cd-notify',
+                            'checked' => 'checked'
+                        ]) ?>
+                        <!-- <input type="checkbox" class="form-check-input" id="form-check-notify" checked="checked" name="community-days_notification"> -->
+                        <label class="form-check-label form-check-label-small" for="form-check-cd-notify">I want to be notified when eramba visits my country on one of their community days - events organised for free to share GRC experiences using eramba</label>
+                        <?= $this->Form->error('Contacts.community_days_notification') ?>
+                    </div>
+
                     <div class="text-center mb-md">
                         <div class="g-recaptcha" data-sitekey="6LcDyaIUAAAAALz7fnBULKDDmReuRFAUqeeQrlLW"></div>
                     </div>

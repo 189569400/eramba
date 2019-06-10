@@ -29,6 +29,8 @@ class Contact extends Entity
         'location' => true,
         'type' => true,
         'email' => true,
-        'body' => true
+        'body' => true,
+        'gdpr_consent' => true,
+        'community_days_notification' => true
     ];
 }
