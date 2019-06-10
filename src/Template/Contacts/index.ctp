@@ -85,6 +85,9 @@
 
                     <div class="text-center mb-md">
                         <div class="g-recaptcha" data-sitekey="6LcDyaIUAAAAALz7fnBULKDDmReuRFAUqeeQrlLW"></div>
+                        <?php if (!empty($recaptchaError)): ?>
+                        <div class="error-message ">Please click on the CAPTCHA above to ensure you are h-u-m-a-n!</div>
+                        <?php endif; ?>
                     </div>
 
                     <div class="text-center">

@@ -32,12 +32,12 @@ class ContactsController extends AppController
     }
 
     public function add()
-    {//debug($this->getRequest()->getData());exit;
+    {
         $this->Crud->view('add', 'index');
 
         $this->Crud->on('beforeSave', function(Event $event) {
             if (!$this->validateReCaptcha()) {
-                $this->Flash->error(__("You didn't pass through reCAPTCHA validation. You need to confirm you're not a robot."));
+                $this->set('recaptchaError', true);
                 $this->Contacts->setReCaptchaStatus(false);
             }
         });
@@ -57,7 +57,7 @@ class ContactsController extends AppController
         $this->getEventManager()->on('Crud.setFlash', function(Event $event) {
             $subject = $event->getSubject();
             if (!$subject->success) {
-                $subject->text = __('An error occurred while trying to send your email. Check form to see errors and try it again.');
+                $subject->text = __('We could not process your request - check the form below to see what went wrong!');
             } else {
                 $subject->text = __('E-mail has been sent successfully');
             }
