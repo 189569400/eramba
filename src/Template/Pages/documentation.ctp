@@ -547,6 +547,9 @@
                     </p>
                     <div class="links">
                         <a href="#">Doc</a>
+                        <a href="#">Ubuntu (Vid)</a>
+                        <a href="#">CentOS (Vid)</a>
+                        <a href="#">RedHat (Vid)</a>
                     </div>
                 </div>
             </div>
