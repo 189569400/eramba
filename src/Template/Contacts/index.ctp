@@ -89,7 +89,9 @@
                     </div>
 
                     <div class="text-center">
-                        <button type="submit" class="btn btn-primary">SUBMIT</button>
+                        <?= $this->Form->button(__('SUBMIT'), [
+                            'class' => 'btn btn-primary'
+                        ]) ?>
                     </div>
                 <?= $this->Form->end() ?>
             </div>
