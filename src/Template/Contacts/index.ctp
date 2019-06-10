@@ -68,7 +68,7 @@
                             'id' => 'form-check-gdpr'
                         ]) ?>
                         <!-- <input type="checkbox" class="form-check-input" id="form-check-gdpr" name="gdpr-consent"> -->
-                        <label class="form-check-label form-check-label-small" for="form-check-gdpr">I consent to having this website store the information provided above so they can respond to my question</label>
+                        <label class="form-check-label form-check-label-small" for="form-check-gdpr">I consent to having this website store the information provided above so they can respond to my question. At any time you can request getting your personal data removed from our systems by emailing support@eramba.org. <br><br>Review our privacy policy.</label>
                         <?= $this->Form->error('Contacts.gdpr_consent') ?>
                     </div>
 
