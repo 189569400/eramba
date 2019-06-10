@@ -67,7 +67,6 @@
                             'class' => 'form-check-input',
                             'id' => 'form-check-gdpr'
                         ]) ?>
-                        <!-- <input type="checkbox" class="form-check-input" id="form-check-gdpr" name="gdpr-consent"> -->
                         <label class="form-check-label form-check-label-small" for="form-check-gdpr">I consent to having this website store the information provided above so they can respond to my question. At any time you can request getting your personal data removed from our systems by emailing support@eramba.org. <br><br>Review our privacy policy.</label>
                         <?= $this->Form->error('Contacts.gdpr_consent') ?>
                     </div>
@@ -78,7 +77,6 @@
                             'id' => 'form-check-cd-notify',
                             'checked' => 'checked'
                         ]) ?>
-                        <!-- <input type="checkbox" class="form-check-input" id="form-check-notify" checked="checked" name="community-days_notification"> -->
                         <label class="form-check-label form-check-label-small" for="form-check-cd-notify">I want to be notified when eramba visits my country on one of their community days - events organised for free to share GRC experiences using eramba</label>
                         <?= $this->Form->error('Contacts.community_days_notification') ?>
                     </div>
