@@ -60,6 +60,7 @@ class ContactsTable extends Table
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
+        $this->addBehavior('ReCaptcha.ReCaptcha');
 
         $this->belongsTo('Countries', [
             'foreignKey' => 'country_id'

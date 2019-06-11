@@ -81,12 +81,7 @@
                         <?= $this->Form->error('Contacts.community_days_notification') ?>
                     </div>
 
-                    <div class="text-center mb-md">
-                        <div class="g-recaptcha" data-sitekey="6LcDyaIUAAAAALz7fnBULKDDmReuRFAUqeeQrlLW"></div>
-                        <?php if (!empty($recaptchaError)): ?>
-                        <div class="error-message ">Please click on the CAPTCHA above to ensure you are h-u-m-a-n!</div>
-                        <?php endif; ?>
-                    </div>
+                    <?= $this->ReCaptcha->getHtml() ?>
 
                     <div class="text-center">
                         <?= $this->Form->button(__('SUBMIT'), [
@@ -99,10 +94,8 @@
     </div>
 </section>
 
+<?= $this->ReCaptcha->getScript() ?>
+
 <div id="contact-img">
     <img src="/img/contact-bg.png" id="contact-bg" alt="">
 </div>
-
-<?= $this->Html->script("https://www.google.com/recaptcha/api.js", [
-    'async', 'defer'
-]) ?>
