@@ -111,7 +111,10 @@ class AppController extends Controller
                     ],
                     [
                         'name' => __('Community Download'),
-                        'link' => ''
+                        'link' => [
+                            'controller' => 'CommunityDownloads',
+                            'action' => 'index'
+                        ]
                     ],
                     [
                         'name' => __('Blog'),
