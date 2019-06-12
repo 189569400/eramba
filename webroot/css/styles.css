@@ -694,6 +694,7 @@ input.datepicker {
 	float: left;
 	position: relative;
 	z-index: 2;
+	margin-top: -5px;
 }
 #header-logo img {
 	width: 185px;
@@ -824,6 +825,7 @@ input.datepicker {
 @media (max-width: 1500px) {
 	#header-logo img {
 		width: 165px;
+		margin-top: 0px;
 	}
 	.main-nav li {
 		margin-right: 40px;
@@ -1612,9 +1614,20 @@ input.datepicker {
 	width: 90px;
 	background: url(../img/arrow-right-bottom.png) 0px 0px no-repeat;
 }
-#online-demo img {
+.online-demo-item a,
+.online-demo-item a:hover {
+	color: #212529;
+	text-decoration: none;
+}
+.online-demo-item img {
 	max-width: 100%;
 	margin-bottom: 80px;
+	transition: all 150ms;
+}
+.online-demo-item:hover img {
+	-ms-transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	transform: scale(1.05);
 }
 @media (max-width: 991px) {
 	#online-demo-choice:before {
