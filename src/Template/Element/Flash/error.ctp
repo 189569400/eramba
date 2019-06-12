@@ -1,9 +1,9 @@
 <script type="text/javascript">
 new PNotify({
-	title: "<?= __('ERROR') ?>",
+	title: false,
 	text: "<?= h($message) ?>",
 	type: 'error',
 	icon: false,
-	delay: 5000
+	delay: 6000
 });
 </script>

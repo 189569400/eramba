@@ -2239,17 +2239,28 @@ input.datepicker {
 	font-size: 19px;
 	font-size: 600;
 }
-.ui-pnotify > .brighttheme-error {
-	background: #dc3545;
-	color: #fff !important;
-}
-.ui-pnotify > .brighttheme-success {
-	background: #28a745;
-	color: #fff !important;
-}
 .ui-pnotify > .brighttheme-info {
 	background: #354e8e;
 	color: #fff !important;
+}
+.ui-pnotify > .brighttheme-error,
+.ui-pnotify.error > .brighttheme-info,
+.ui-pnotify.danger > .brighttheme-info {
+	background: #dc3545;
+	color: #fff !important;
+}
+.ui-pnotify > .brighttheme-success,
+.ui-pnotify.success > .brighttheme-info {
+	background: #28a745;
+	color: #fff !important;
+}
+@media (max-width: 600px) {
+	.ui-pnotify {
+		width: auto !important;
+		left: 30px !important;
+		right: 30px !important;
+		top: 15px !important;
+	}
 }
 /**
  * End PNotify

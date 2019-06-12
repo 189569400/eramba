@@ -1,9 +1,9 @@
 <script type="text/javascript">
 new PNotify({
-	title: "<?= __('SUCCESS') ?>",
+	title: false,
 	text: "<?= h($message) ?>",
 	type: 'success',
 	icon: false,
-	delay: 5000
+	delay: 6000
 });
 </script>
