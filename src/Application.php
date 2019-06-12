@@ -34,6 +34,9 @@ class Application extends BaseApplication
      */
     public function bootstrap()
     {
+        // Load GitHub plugin
+        $this->addPlugin('GitHub');
+
         // Load CRUD plugin
         $this->addPlugin('Crud');
         
