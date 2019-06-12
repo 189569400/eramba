@@ -126,6 +126,13 @@ class AppController extends Controller
                         'link' => '/roadmap'
                     ],
                     [
+                        'name' => __('Releases'),
+                        'link' => [
+                            'controller' => 'Releases',
+                            'action' => 'index'
+                        ]
+                    ],
+                    [
                         'name' => __('Forum'),
                         'link' => '/forum',
                         'target' => '_blank'
