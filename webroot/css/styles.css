@@ -2225,3 +2225,32 @@ input.datepicker {
 	background-color: transparent !important;
 	border: 0 !important;
 }
+/**
+ * End Select2 plugin
+ */
+
+/**
+ * PNotify
+ */
+.ui-pnotify > .ui-pnotify-container.brighttheme {
+	border-radius: 4px;
+}
+.ui-pnotify > .brighttheme .ui-pnotify-title {
+	font-size: 19px;
+	font-size: 600;
+}
+.ui-pnotify > .brighttheme-error {
+	background: #dc3545;
+	color: #fff !important;
+}
+.ui-pnotify > .brighttheme-success {
+	background: #28a745;
+	color: #fff !important;
+}
+.ui-pnotify > .brighttheme-info {
+	background: #354e8e;
+	color: #fff !important;
+}
+/**
+ * End PNotify
+ */

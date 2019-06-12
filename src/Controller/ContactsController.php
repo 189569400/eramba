@@ -49,8 +49,10 @@ class ContactsController extends AppController
         $this->getEventManager()->on('Crud.setFlash', function(Event $event) {
             $subject = $event->getSubject();
             if (!$subject->success) {
+                $subject->element = 'error';
                 $subject->text = __('We could not process your request - check the form below to see what went wrong!');
             } else {
+                $subject->element = 'success';
                 $subject->text = __('E-mail has been sent successfully');
             }
         });

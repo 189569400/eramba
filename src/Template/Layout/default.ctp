@@ -12,9 +12,11 @@
         <?= $this->Html->css([
             'bootstrap.css',
             'animations.css',
-            'styles.css',
             'bootstrap-datepicker3.min.css',
-            'select2.min.css'
+            'select2.min.css',
+            'pnotify.css',
+            'pnotify.brighttheme.css',
+            'styles.css',
         ]) ?>
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
@@ -38,7 +40,6 @@
     <body>
         <?= $this->element('header') ?>
 
-        <?= $this->Flash->render() ?>
         <?= $this->fetch('content') ?>
 
         <?= $this->element('footer') ?>
@@ -48,8 +49,11 @@
             'bootstrap.js',
             'jquery.waypoints.min.js',
             'bootstrap-datepicker.min.js',
+            'select2.min.js',
+            'pnotify.js',
             'scripts.js',
-            'select2.min.js'
         ]) ?>
+
+        <?= $this->Flash->render() ?>
     </body>
 </html>
