@@ -12,10 +12,12 @@
         <div class="row">
             <div class="online-demo-item col-md-4 offset-md-1">
                 <h4 class="text-center">
-                    Enterprise edition
+                    <a href="<?= Router::url('https://demo-e.eramba.org') ?>" target="_blank">
+                        Enterprise edition
+                    </a>
                 </h4>
                 <div class="text-center">
-                    <a href="<?= Router::url('https://demo-e.eramba.org') ?>">
+                    <a href="<?= Router::url('https://demo-e.eramba.org') ?>" target="_blank">
                         <div class="img-shadow">
                             <img class="img-fluid" src="/img/enterprise-rocket.png" alt="">
                         </div>
@@ -28,10 +30,12 @@
             </div>
             <div class="online-demo-item col-md-4 offset-md-2">
                 <h4 class="text-center">
-                    Community edition
+                    <a href="<?= Router::url('https://demo.eramba.org') ?>" target="_blank">
+                        Community edition
+                    </a>
                 </h4>
                 <div class="text-center">
-                    <a href="<?= Router::url('https://demo.eramba.org') ?>">
+                    <a href="<?= Router::url('https://demo.eramba.org') ?>" target="_blank">
                         <div class="img-shadow">
                             <img class="img-fluid" src="/img/community-plane.png" alt="">
                         </div>
