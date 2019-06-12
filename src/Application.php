@@ -34,6 +34,10 @@ class Application extends BaseApplication
      */
     public function bootstrap()
     {
+        // Load CRUD plugin
+        $this->addPlugin('Crud');
+        
+        // Load ReCaptcha plugin
         $this->addPlugin('ReCaptcha');
 
         // Call parent to load bootstrap from files.
