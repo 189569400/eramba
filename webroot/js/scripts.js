@@ -228,8 +228,7 @@ $(function() {
                 videoId: video,
                 playerVars: {
                     color: 'white',
-                    autoplay: 1,
-                    rel: 0
+                    autoplay: 1
                 },
             });
         }
