@@ -1,8 +1,32 @@
- <section id="documentation-intro" class="mb-xxxl first-section-margin">
+<?php
+$documentationItems = [
+    1 => [
+        'title' => 'Lalala',
+        'video' => 'Xa0Q0J5tOP0',
+        'relatedItems' => [2,3]
+    ],
+    2 => [
+        'title' => 'Salala',
+        'video' => 'taJ60kskkns',
+        'relatedItems' => [1,3]
+    ],
+    3 => [
+        'title' => 'Tralala',
+        'video' => 'FG0fTKAqZ5g',
+        'relatedItems' => []
+    ],
+];
+?>
+
+<script type="text/javascript">
+var documentationItems = <?= json_encode($documentationItems) ?>;
+</script>
+
+<section id="documentation-intro" class="mb-xxxl first-section-margin">
     <div class="container">
         <div class="row">
             <div class="col-lg-7 col-md-12" id="documentation-intro-left">
-                <div id="documentation-intro-video">
+                <div class="doc-video">
                     <iframe src="https://www.youtube.com/embed/1aQac28Sb3o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
@@ -45,8 +69,8 @@
                         Understand the basic relationships in between controls, risks, compliance, Etc.
                     </p>
                     <div class="links">
-                        <a href="#">Doc</a>
-                        <a href="#">Video</a>
+                        <a href="#" target="_blank">Doc</a>
+                        <a href="#" class="video-modal-trigger" data-documentation-id="1" data-toggle="modal" data-target="#documentation-modal">Video</a>
                     </div>
                 </div>
             </div>
@@ -61,8 +85,8 @@
                         Basic features arrengements.
                     </p>
                     <div class="links">
-                        <a href="#">Doc</a>
-                        <a href="#">Video</a>
+                        <a href="#" target="_blank">Doc</a>
+                        <a href="#" class="video-modal-trigger" data-documentation-id="2" data-toggle="modal" data-target="#documentation-modal">Video</a>
                     </div>
                 </div>
             </div>
@@ -77,8 +101,8 @@
                         Core feature to query GRC data and export it as exports.
                     </p>
                     <div class="links">
-                        <a href="#">Doc</a>
-                        <a href="#">Video</a>
+                        <a href="#" target="_blank">Doc</a>
+                        <a href="#" class="video-modal-trigger" data-documentation-id="3" data-toggle="modal" data-target="#documentation-modal">Video</a>
                     </div>
                 </div>
             </div>
@@ -96,7 +120,7 @@
                         Automate email notifications, reports, reminders and more.
                     </p>
                     <div class="links">
-                        <a href="#">Doc</a>
+                        <a href="#" target="_blank">Doc</a>
                         <a href="#">Video</a>
                     </div>
                 </div>
@@ -112,7 +136,7 @@
                         Store and visualise GRC KPI metrics.
                     </p>
                     <div class="links">
-                        <a href="#">Doc</a>
+                        <a href="#" target="_blank">Doc</a>
                         <a href="#">Video</a>
                     </div>
                 </div>
@@ -128,7 +152,7 @@
                         Define your own graphical report templates.
                     </p>
                     <div class="links">
-                        <a href="#">Doc</a>
+                        <a href="#" target="_blank">Doc</a>
                         <a href="#">Video</a>
                     </div>
                 </div>
@@ -144,7 +168,7 @@
                         Control who can access eramba and what they can see.
                     </p>
                     <div class="links">
-                        <a href="#">Doc</a>
+                        <a href="#" target="_blank">Doc</a>
                         <a href="#">Video</a>
                     </div>
                 </div>
@@ -163,7 +187,7 @@
                         Customize forms to your needs by adding additional fields.
                     </p>
                     <div class="links">
-                        <a href="#">Doc</a>
+                        <a href="#" target="_blank">Doc</a>
                         <a href="#">Video</a>
                     </div>
                 </div>
@@ -179,7 +203,7 @@
                         Import controls, policies and more using preformated CSV files.
                     </p>
                     <div class="links">
-                        <a href="#">Doc</a>
+                        <a href="#" target="_blank">Doc</a>
                         <a href="#">Video</a>
                     </div>
                 </div>
@@ -198,7 +222,7 @@
                         Add,Update,Delete and List items (Risks, Controls, Etc) using Rest APIs.
                     </p>
                     <div class="links">
-                        <a href="#">Doc</a>
+                        <a href="#" target="_blank">Doc</a>
                         <a href="#">Video</a>
                     </div>
                 </div>
@@ -241,7 +265,7 @@
                         Document your policies, ensure they get review, publish them on a single portal, Etc.
                     </p>
                     <div class="links">
-                        <a href="#">Doc</a>
+                        <a href="#" target="_blank">Doc</a>
                         <a href="#">Video</a>
                     </div>
                 </div>
@@ -257,7 +281,7 @@
                         Register your internal controls, their audits / testing, collect evidence, understand where they are used, Etc.
                     </p>
                     <div class="links">
-                        <a href="#">Doc</a>
+                        <a href="#" target="_blank">Doc</a>
                         <a href="#">Video</a>
                     </div>
                 </div>
@@ -273,7 +297,7 @@
                         Keep record of every approval you give away and trigger notifications when they expire.
                     </p>
                     <div class="links">
-                        <a href="#">Doc</a>
+                        <a href="#" target="_blank">Doc</a>
                         <a href="#">Video</a>
                     </div>
                 </div>
@@ -289,7 +313,7 @@
                         Upload any standard or regulation in CSV format and demonstrate how compliant your organisation is.
                     </p>
                     <div class="links">
-                        <a href="#">Doc</a>
+                        <a href="#" target="_blank">Doc</a>
                         <a href="#">Video</a>
                     </div>
                 </div>
@@ -305,7 +329,7 @@
                         Simplify Risk Management and its reviews to ensure it brings real value to your organisation.
                     </p>
                     <div class="links">
-                        <a href="#">Doc</a>
+                        <a href="#" target="_blank">Doc</a>
                         <a href="#">Video</a>
                     </div>
                 </div>
@@ -324,7 +348,7 @@
                         Document each data flow, their controls, policies and people involved. Understand where your data is nad how is protected.
                     </p>
                     <div class="links">
-                        <a href="#">Doc</a>
+                        <a href="#" target="_blank">Doc</a>
                         <a href="#">Video</a>
                     </div>
                 </div>
@@ -340,7 +364,7 @@
                         Record and manage incidents systematically and link them to affected risks, assets, controls, Etc.
                     </p>
                     <div class="links">
-                        <a href="#">Doc</a>
+                        <a href="#" target="_blank">Doc</a>
                         <a href="#">Video</a>
                     </div>
                 </div>
@@ -356,7 +380,7 @@
                         Define and follow up on all projects that build and improve your GRC program.
                     </p>
                     <div class="links">
-                        <a href="#">Doc</a>
+                        <a href="#" target="_blank">Doc</a>
                         <a href="#">Video</a>
                     </div>
                 </div>
@@ -401,7 +425,7 @@
                         Create multiple, Active Directory related awareness trainings with videos, multiple choices and more.
                     </p>
                     <div class="links">
-                        <a href="#">Doc</a>
+                        <a href="#" target="_blank">Doc</a>
                         <a href="#">Video</a>
                     </div>
                 </div>
@@ -419,7 +443,7 @@
                         Upload your questions and send them out so your suppliers can log in remotely and provide feedback.
                     </p>
                     <div class="links">
-                        <a href="#">Doc</a>
+                        <a href="#" target="_blank">Doc</a>
                         <a href="#">Video</a>
                     </div>
                 </div>
@@ -437,7 +461,7 @@
                         Automate the process of reviewing user and roles accounts.
                     </p>
                     <div class="links">
-                        <a href="#">Doc</a>
+                        <a href="#" target="_blank">Doc</a>
                         <a href="#">Video</a>
                     </div>
                 </div>
@@ -473,7 +497,7 @@
                         Describes how we implement and monitor a Risk program.
                     </p>
                     <div class="links">
-                        <a href="#">Doc</a>
+                        <a href="#" target="_blank">Doc</a>
                         <a href="#">Video</a>
                     </div>
                 </div>
@@ -488,7 +512,7 @@
                         Describes how we implement and monitor a compliance program.
                     </p>
                     <div class="links">
-                        <a href="#">Doc</a>
+                        <a href="#" target="_blank">Doc</a>
                         <a href="#">Video</a>
                     </div>
                 </div>
@@ -503,7 +527,7 @@
                         Describes how we answer the question: how you protect your data?
                     </p>
                     <div class="links">
-                        <a href="#">Doc</a>
+                        <a href="#" target="_blank">Doc</a>
                         <a href="#">Video</a>
                     </div>
                 </div>
@@ -546,7 +570,7 @@
                         Download our code and install the application on your Linux system using the source code.
                     </p>
                     <div class="links">
-                        <a href="#">Doc</a>
+                        <a href="#" target="_blank">Doc</a>
                         <a href="#">Ubuntu (Vid)</a>
                         <a href="#">CentOS (Vid)</a>
                         <a href="#">RedHat (Vid)</a>
@@ -557,3 +581,37 @@
         </div>
     </div>
 </section>
+
+<div class="modal fade" id="documentation-modal" tabindex="-1" role="dialog" aria-labelledby="documentationModal" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="documentation-modal-right">
+                    <div class="doc-video">
+                        <div id="documentation-modal-video"></div>
+                    </div>
+                </div>
+                <div id="documentation-modal-left">
+                    <div id="documentation-modal-main-item" class="mb-xs">
+                    </div>
+
+                    <div id="documentation-modal-related-items">
+                        <strong>
+                            Required Trainings
+                        </strong>
+                        <ul class="related-videos-list">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://www.youtube.com/iframe_api"></script>

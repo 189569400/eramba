@@ -161,4 +161,87 @@ $(function() {
             $(this).data('select2').$container.addClass("form-control");
         });
     });
+
+    // video modal
+    var docYtPlayer = null;
+
+    $('.video-modal-trigger').on('click', function() {
+        loadDocumentationModal($(this).data('documentation-id'));
+    });
+
+    $('#documentation-modal').on('click', '.video-link', function() {
+        loadDocumentationVideo($(this).data('video-id'));
+        setActiveVideoLink($(this));
+        return false;
+    });
+
+    $('#documentation-modal').on('hidden.bs.modal', function() {
+        stopDocumentationVideo();
+    });
+
+    function loadDocumentationModal(documentationId)
+    {
+        var documentation = documentationItems[documentationId];
+
+        // set modal title
+        $('#documentation-modal .modal-title').html(documentation.title);
+
+        // insert main video link
+        $('#documentation-modal-main-item').html(getVideoLinkHtml(documentation));
+
+        // build related videos list
+        $('#documentation-modal-related-items').hide();
+        $('#documentation-modal-related-items ul').html('');
+
+        var relatedList = '';
+
+        documentation.relatedItems.forEach(function(item) {
+            var relatedDocumentation = documentationItems[item];
+            relatedList += '<li>' + getVideoLinkHtml(relatedDocumentation) + '</li>';
+        });
+
+        if (relatedList !== '') {
+            $('#documentation-modal-related-items ul').html(relatedList);
+            $('#documentation-modal-related-items').show();
+        }
+
+        loadDocumentationVideo(documentation.video);
+        setActiveVideoLink($('#documentation-modal-main-item .video-link'));
+    }
+
+    function getVideoLinkHtml(documentation)
+    {
+        return '<a href="#" class="video-link" data-video-id="' + documentation.video + '"><span class="play-icon"></span> ' + documentation.title + '</a>'
+    }
+
+    function setActiveVideoLink($link)
+    {
+        $('#documentation-modal .video-link.active').removeClass('active');
+
+        $link.addClass('active');
+    }
+    
+    function loadDocumentationVideo(video)
+    {
+        if (docYtPlayer === null) {
+            docYtPlayer = new YT.Player('documentation-modal-video', {
+                videoId: video,
+                playerVars: {
+                    color: 'white',
+                    autoplay: 1,
+                    rel: 0
+                },
+            });
+        }
+        else {
+            docYtPlayer.loadVideoById(video);
+        }
+    }
+
+    function stopDocumentationVideo()
+    {
+        if (docYtPlayer !== null) {
+            docYtPlayer.stopVideo();
+        }
+    }
 });

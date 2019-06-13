@@ -2019,11 +2019,11 @@ input.datepicker {
 #documentation-intro h1 {
 	margin-top: 25%;
 }
-#documentation-intro-video {
+.doc-video {
 	position: relative;
 	padding-bottom: 56.3%;
 }
-#documentation-intro-video iframe {
+.doc-video iframe {
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -2101,6 +2101,62 @@ input.datepicker {
 	height: 7px;
 	border-radius: 50%;
 	background: #919191;
+}
+.play-icon {
+	width: 0;
+	height: 0;
+	display: inline-block;
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	border-left: 12px solid #000;
+	margin-right: 5px;
+}
+.video-link,
+.video-link:hover {
+	color: #212529;
+	text-decoration: none;
+}
+.video-link.active {
+	font-weight: 700;
+}
+.related-videos-list {
+	list-style: none;
+	padding-left: 0px;
+	margin-top: 10px;
+	padding-left: 15px;
+	margin-bottom: 0px;
+}
+.related-videos-list li {
+	margin-bottom: 5px;
+}
+#documentation-modal .close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+#documentation-modal .modal-body {
+	padding: 0px;
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+}
+#documentation-modal-left {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 300px;
+	padding: 16px;
+	background: #f7f7f7;
+	border-bottom-left-radius: 0.3rem;
+	overflow-y: scroll;
+}
+#documentation-modal-right {
+	padding-left: 300px;
+}
+#documentation-modal-right .doc-video {
+	margin-top: -1px;
+	border-bottom-right-radius: 0.3rem;
+	overflow: hidden;
 }
 @media (max-width: 1500px) {
 	.doc-list > * {
@@ -2198,6 +2254,19 @@ input.datepicker {
 	}
 	.doc-item .links a:not(:first-child):after {
 		top: 10px;
+	}
+}
+@media (max-width: 767px) {
+	#documentation-modal-left {
+		position: static;
+		width: 100%;
+		border-bottom-right-radius: 0.3rem;
+	}
+	#documentation-modal-right {
+		padding-left: 0px;
+	}
+	#documentation-modal-right .doc-video {
+		border-bottom-right-radius: 0rem;
 	}
 }
 @media (max-width: 575px) {
