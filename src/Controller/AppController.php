@@ -128,7 +128,7 @@ class AppController extends Controller
                     [
                         'name' => __('Roadmap'),
                         'link' => '/roadmap',
-                        'key' => 'roadmap'
+                        'key' => 'roadmaps'
                     ],
                     [
                         'name' => __('Releases'),
