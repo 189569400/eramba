@@ -45,28 +45,29 @@ var documentationItems = <?= json_encode($documentationItems) ?>;
 <section class="mb-lg">
     <div class="container">
         <div class="row doc-list">
-            <div class="col-md-3 hidden-md">
-                <div class="img-shadow">
-                    <img src="/img/doc-bike.png" class="img-fluid" alt="">
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-12">
-                <h2 class="medium text-blue text-uppercase">
+
+            <div class="col-lg-12">
+                <h2 class="medium text-center text-left-md text-blue text-uppercase">
                     Learn the basics
                 </h2>
-                <p class="text-grey">
-                    These guides cover basic features and concepts used across the system, is really important you get familiarised with them before you start using eramba. Follow the arrows to make sure you cover the entire curricula.
-                </p>
+
+                <div class="row">
+                    <div class="col-lg-6 offset-lg-3">
+                        <p class="text-grey text-center text-left-md">
+                            These guides cover basic features and concepts used across the system, is really important you get familiarised with them before you start using eramba.
+                        </p>
+                    </div>
+                </div>
             </div>
 
-            <div class="col-lg-4 offset-lg-1 col-sm-6">
+            <div class="col-lg-4 col-sm-6">
                 <div class="doc-item">
                     <div class="number">1</div>
                     <h5>
                         Basic GRC Relationships
                     </h5>
                     <p>
-                        Understand the basic relationships in between controls, risks, compliance, Etc.
+                        Understand how eramba deals with GRC, this is a basic video even for the most experienced GRC professional.
                     </p>
                     <div class="links">
                         <a href="#" target="_blank">Doc</a>
@@ -79,10 +80,10 @@ var documentationItems = <?= json_encode($documentationItems) ?>;
                 <div class="doc-item">
                     <div class="number">2</div>
                     <h5>
-                        General Layout
+                        System Layout
                     </h5>
                     <p>
-                        Basic features arrengements.
+                        Learn how eramba modules are organised, what features are inside and what they do.
                     </p>
                     <div class="links">
                         <a href="#" target="_blank">Doc</a>
@@ -98,7 +99,7 @@ var documentationItems = <?= json_encode($documentationItems) ?>;
                         Filters
                     </h5>
                     <p>
-                        Core feature to query GRC data and export it as exports.
+                        Learn how queries can be made, stored and notified in eramba.
                     </p>
                     <div class="links">
                         <a href="#" target="_blank">Doc</a>
@@ -109,19 +110,16 @@ var documentationItems = <?= json_encode($documentationItems) ?>;
 
             <div class="col-lg-4 col-sm-6">
                 <div class="doc-item">
-                    <div class="enterprise">
-                        Enterprise Only
-                    </div>
                     <div class="number">4</div>
                     <h5>
-                        Notifications
+                        Graphical Reports
                     </h5>
                     <p>
-                        Automate email notifications, reports, reminders and more.
+                        Learn the two basic reporting methodologies and how you can customise your own reports.
                     </p>
                     <div class="links">
                         <a href="#" target="_blank">Doc</a>
-                        <a href="#">Video</a>
+                        <a href="#" class="video-modal-trigger" data-documentation-id="1" data-toggle="modal" data-target="#documentation-modal">Video</a>
                     </div>
                 </div>
             </div>
@@ -129,104 +127,22 @@ var documentationItems = <?= json_encode($documentationItems) ?>;
             <div class="col-lg-4 col-sm-6">
                 <div class="doc-item">
                     <div class="number">5</div>
-                    <h5>
-                        KPI Dashboards
-                    </h5>
-                    <p>
-                        Store and visualise GRC KPI metrics.
-                    </p>
-                    <div class="links">
-                        <a href="#" target="_blank">Doc</a>
-                        <a href="#">Video</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6">
-                <div class="doc-item">
-                    <div class="number">6</div>
-                    <h5>
-                        Graphical Reports
-                    </h5>
-                    <p>
-                        Define your own graphical report templates.
-                    </p>
-                    <div class="links">
-                        <a href="#" target="_blank">Doc</a>
-                        <a href="#">Video</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6">
-                <div class="doc-item">
-                    <div class="number">7</div>
-                    <h5>
-                        Access Mgt
-                    </h5>
-                    <p>
-                        Control who can access eramba and what they can see.
-                    </p>
-                    <div class="links">
-                        <a href="#" target="_blank">Doc</a>
-                        <a href="#">Video</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6">
-                <div class="doc-item">
                     <div class="enterprise">
                         Enterprise Only
                     </div>
-                    <div class="number">8</div>
                     <h5>
-                        Custom Fields
+                        Notifications
                     </h5>
                     <p>
-                        Customize forms to your needs by adding additional fields.
+                        Learn about the different notification possibilities inside eramba, how they interact with filters and reports and and how they are configured.
                     </p>
                     <div class="links">
                         <a href="#" target="_blank">Doc</a>
-                        <a href="#">Video</a>
+                        <a href="#" class="video-modal-trigger" data-documentation-id="1" data-toggle="modal" data-target="#documentation-modal">Video</a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-sm-6">
-                <div class="doc-item">
-                    <div class="number">9</div>
-                    <h5>
-                        CSV Imports
-                    </h5>
-                    <p>
-                        Import controls, policies and more using preformated CSV files.
-                    </p>
-                    <div class="links">
-                        <a href="#" target="_blank">Doc</a>
-                        <a href="#">Video</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6">
-                <div class="doc-item">
-                    <div class="enterprise">
-                        Enterprise Only
-                    </div>
-                    <div class="number">10</div>
-                    <h5>
-                        REST APIs
-                    </h5>
-                    <p>
-                        Add,Update,Delete and List items (Risks, Controls, Etc) using Rest APIs.
-                    </p>
-                    <div class="links">
-                        <a href="#" target="_blank">Doc</a>
-                        <a href="#">Video</a>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>
@@ -235,7 +151,7 @@ var documentationItems = <?= json_encode($documentationItems) ?>;
     <div class="container">
         <div class="row doc-list">
 
-            <div class="col-sm-12">
+            <div class="col-lg-12">
                 <h2 class="medium text-center text-left-md text-blue text-uppercase">
                     Core Functionalities
                 </h2>
@@ -243,19 +159,13 @@ var documentationItems = <?= json_encode($documentationItems) ?>;
                 <div class="row">
                     <div class="col-lg-6 offset-lg-3">
                         <p class="text-grey text-center text-left-md">
-                            Follow every step of the guide to ensure you learn how eramba works! These guides are critical to understand how eramba works at its very core, dont miss any guide if you want to understand how eramba is used.
+                            Key GRC functionalities covered by eramba.
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-sm-3 hidden-md">
-                <div class="img-shadow">
-                    <img src="/img/doc-motorcycle.png" class="img-fluid" alt="">
-                </div>
-            </div>
-            
-            <div class="col-lg-4 offset-lg-1 col-sm-6">
+            <div class="col-lg-4 col-sm-6">
                 <div class="doc-item">
                     <div class="number">1</div>
                     <h5>
@@ -266,7 +176,7 @@ var documentationItems = <?= json_encode($documentationItems) ?>;
                     </p>
                     <div class="links">
                         <a href="#" target="_blank">Doc</a>
-                        <a href="#">Video</a>
+                        <a href="#" class="video-modal-trigger" data-documentation-id="1" data-toggle="modal" data-target="#documentation-modal">Video</a>
                     </div>
                 </div>
             </div>
@@ -278,11 +188,11 @@ var documentationItems = <?= json_encode($documentationItems) ?>;
                         Controls & Audits
                     </h5>
                     <p>
-                        Register your internal controls, their audits / testing, collect evidence, understand where they are used, Etc.
+                        Register internal controls and their testing, set notifications on deadlines, store testing evidence, Etc.
                     </p>
                     <div class="links">
                         <a href="#" target="_blank">Doc</a>
-                        <a href="#">Video</a>
+                        <a href="#" class="video-modal-trigger" data-documentation-id="1" data-toggle="modal" data-target="#documentation-modal">Video</a>
                     </div>
                 </div>
             </div>
@@ -298,7 +208,7 @@ var documentationItems = <?= json_encode($documentationItems) ?>;
                     </p>
                     <div class="links">
                         <a href="#" target="_blank">Doc</a>
-                        <a href="#">Video</a>
+                        <a href="#" class="video-modal-trigger" data-documentation-id="1" data-toggle="modal" data-target="#documentation-modal">Video</a>
                     </div>
                 </div>
             </div>
@@ -310,11 +220,11 @@ var documentationItems = <?= json_encode($documentationItems) ?>;
                         Compliance Management
                     </h5>
                     <p>
-                        Upload any standard or regulation in CSV format and demonstrate how compliant your organisation is.
+                        Show how compliant you are to any standard or regulation to auditors and internal stakeholders.
                     </p>
                     <div class="links">
                         <a href="#" target="_blank">Doc</a>
-                        <a href="#">Video</a>
+                        <a href="#" class="video-modal-trigger" data-documentation-id="1" data-toggle="modal" data-target="#documentation-modal">Video</a>
                     </div>
                 </div>
             </div>
@@ -330,26 +240,23 @@ var documentationItems = <?= json_encode($documentationItems) ?>;
                     </p>
                     <div class="links">
                         <a href="#" target="_blank">Doc</a>
-                        <a href="#">Video</a>
+                        <a href="#" class="video-modal-trigger" data-documentation-id="1" data-toggle="modal" data-target="#documentation-modal">Video</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-4 col-sm-6">
                 <div class="doc-item">
-                    <div class="enterprise">
-                        Enterprise Only
-                    </div>
                     <div class="number">6</div>
                     <h5>
-                        Data Flow Analysis - GDPR
+                        Data Flow Analysis
                     </h5>
                     <p>
                         Document each data flow, their controls, policies and people involved. Understand where your data is nad how is protected.
                     </p>
                     <div class="links">
                         <a href="#" target="_blank">Doc</a>
-                        <a href="#">Video</a>
+                        <a href="#" class="video-modal-trigger" data-documentation-id="1" data-toggle="modal" data-target="#documentation-modal">Video</a>
                     </div>
                 </div>
             </div>
@@ -365,7 +272,7 @@ var documentationItems = <?= json_encode($documentationItems) ?>;
                     </p>
                     <div class="links">
                         <a href="#" target="_blank">Doc</a>
-                        <a href="#">Video</a>
+                        <a href="#" class="video-modal-trigger" data-documentation-id="1" data-toggle="modal" data-target="#documentation-modal">Video</a>
                     </div>
                 </div>
             </div>
@@ -374,17 +281,18 @@ var documentationItems = <?= json_encode($documentationItems) ?>;
                 <div class="doc-item">
                     <div class="number">8</div>
                     <h5>
-                        Project Mgt
+                        Project Management
                     </h5>
                     <p>
                         Define and follow up on all projects that build and improve your GRC program.
                     </p>
                     <div class="links">
                         <a href="#" target="_blank">Doc</a>
-                        <a href="#">Video</a>
+                        <a href="#" class="video-modal-trigger" data-documentation-id="1" data-toggle="modal" data-target="#documentation-modal">Video</a>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
@@ -393,31 +301,23 @@ var documentationItems = <?= json_encode($documentationItems) ?>;
     <div class="container">
         <div class="row doc-list">
 
-            <div class="col-lg-8">
-                <h2 class="medium text-blue text-uppercase">
-                    Standalone Features
+            <div class="col-lg-12">
+                <h2 class="medium text-center text-left-md text-blue text-uppercase">
+                    Stand Alone Features
                 </h2>
 
                 <div class="row">
-                    <div class="col-lg-8">
-                        <p class="text-grey">
-                            Additional tools brought in to facilitate the work of a Security professional.
+                    <div class="col-lg-6 offset-lg-3">
+                        <p class="text-grey text-center text-left-md">
+                            Additional functionalities that support the GRC organisation.
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 hidden-md">
-                <div class="img-shadow">
-                    <img src="/img/doc-car.png" class="img-fluid" alt="">
-                </div>
-            </div>
-            
             <div class="col-lg-4 col-sm-6">
                 <div class="doc-item">
-                    <div class="enterprise">
-                        Enterprise Only
-                    </div>
+                    <div class="number">1</div>
                     <h5>
                         Security Awareness
                     </h5>
@@ -426,13 +326,14 @@ var documentationItems = <?= json_encode($documentationItems) ?>;
                     </p>
                     <div class="links">
                         <a href="#" target="_blank">Doc</a>
-                        <a href="#">Video</a>
+                        <a href="#" class="video-modal-trigger" data-documentation-id="1" data-toggle="modal" data-target="#documentation-modal">Video</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-4 col-sm-6">
                 <div class="doc-item">
+                    <div class="number">2</div>
                     <div class="enterprise">
                         Enterprise Only
                     </div>
@@ -444,13 +345,14 @@ var documentationItems = <?= json_encode($documentationItems) ?>;
                     </p>
                     <div class="links">
                         <a href="#" target="_blank">Doc</a>
-                        <a href="#">Video</a>
+                        <a href="#" class="video-modal-trigger" data-documentation-id="1" data-toggle="modal" data-target="#documentation-modal">Video</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-4 col-sm-6">
                 <div class="doc-item">
+                    <div class="number">3</div>
                     <div class="enterprise">
                         Enterprise Only
                     </div>
@@ -462,10 +364,116 @@ var documentationItems = <?= json_encode($documentationItems) ?>;
                     </p>
                     <div class="links">
                         <a href="#" target="_blank">Doc</a>
-                        <a href="#">Video</a>
+                        <a href="#" class="video-modal-trigger" data-documentation-id="1" data-toggle="modal" data-target="#documentation-modal">Video</a>
                     </div>
                 </div>
             </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="mb-lg">
+    <div class="container">
+        <div class="row doc-list">
+
+            <div class="col-lg-12">
+                <h2 class="medium text-center text-left-md text-blue text-uppercase">
+                    Advanced Features
+                </h2>
+
+                <div class="row">
+                    <div class="col-lg-6 offset-lg-3">
+                        <p class="text-grey text-center text-left-md">
+                            Once you have learnt the basic features and modules in eramba you can focus on this more advanced features.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="doc-item">
+                    <div class="number">1</div>
+                    <div class="enterprise">
+                        Enterprise Only
+                    </div>
+                    <h5>
+                        Custom Fields
+                    </h5>
+                    <p>
+                        Learn how to expand eramba forms to include your own fields and how this interacts with filters and notifications.
+                    </p>
+                    <div class="links">
+                        <a href="#" target="_blank">Doc</a>
+                        <a href="#" class="video-modal-trigger" data-documentation-id="1" data-toggle="modal" data-target="#documentation-modal">Video</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="doc-item">
+                    <div class="number">2</div>
+                    <h5>
+                        CSV Imports
+                    </h5>
+                    <p>
+                        Learn how to CSV import data into eramba.
+                    </p>
+                    <div class="links">
+                        <a href="#" target="_blank">Doc</a>
+                        <a href="#" class="video-modal-trigger" data-documentation-id="1" data-toggle="modal" data-target="#documentation-modal">Video</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="doc-item">
+                    <div class="number">3</div>
+                    <h5>
+                        KPI Dashboards
+                    </h5>
+                    <p>
+                        Shows relevant filters counters for most of the modules in the system.
+                    </p>
+                    <div class="links">
+                        <a href="#" target="_blank">Doc</a>
+                        <a href="#" class="video-modal-trigger" data-documentation-id="1" data-toggle="modal" data-target="#documentation-modal">Video</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="doc-item">
+                    <div class="number">4</div>
+                    <h5>
+                        REST APIs
+                    </h5>
+                    <p>
+                        Learn how REST APIs can be used to consume data to and from eramba.
+                    </p>
+                    <div class="links">
+                        <a href="#" target="_blank">Doc</a>
+                        <a href="#" class="video-modal-trigger" data-documentation-id="1" data-toggle="modal" data-target="#documentation-modal">Video</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="doc-item">
+                    <div class="number">5</div>
+                    <h5>
+                        Access Management
+                    </h5>
+                    <p>
+                        Learn how to create user accounts, connect eramba to an LDAP Directory, limit access to groups, enforce limits to who can see what, Etc.
+                    </p>
+                    <div class="links">
+                        <a href="#" target="_blank">Doc</a>
+                        <a href="#" class="video-modal-trigger" data-documentation-id="1" data-toggle="modal" data-target="#documentation-modal">Video</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
@@ -482,23 +490,8 @@ var documentationItems = <?= json_encode($documentationItems) ?>;
                 <div class="row">
                     <div class="col-lg-6 offset-lg-3">
                         <p class="text-grey text-center text-left-md">
-                            Additional tools brought in to facilitate the These guides will help you understand how we typically implement eramba at customers
+                            The real key success factor in eramba is a well planned implementation. Read this guides to have at least one opinion on the matter.
                         </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6">
-                <div class="doc-item">
-                    <h5>
-                        Risk Management
-                    </h5>
-                    <p>
-                        Describes how we implement and monitor a Risk program.
-                    </p>
-                    <div class="links">
-                        <a href="#" target="_blank">Doc</a>
-                        <a href="#">Video</a>
                     </div>
                 </div>
             </div>
@@ -509,11 +502,11 @@ var documentationItems = <?= json_encode($documentationItems) ?>;
                         Compliance Management
                     </h5>
                     <p>
-                        Describes how we implement and monitor a compliance program.
+                        Describes the process we use to identify internal controls and policies that meets compliance requirements.
                     </p>
                     <div class="links">
                         <a href="#" target="_blank">Doc</a>
-                        <a href="#">Video</a>
+                        <a href="#" class="video-modal-trigger" data-documentation-id="1" data-toggle="modal" data-target="#documentation-modal">Video</a>
                     </div>
                 </div>
             </div>
@@ -521,14 +514,29 @@ var documentationItems = <?= json_encode($documentationItems) ?>;
             <div class="col-lg-4 col-sm-6">
                 <div class="doc-item">
                     <h5>
-                        Data Flows & GDPR
+                        Risk Management
                     </h5>
                     <p>
-                        Describes how we answer the question: how you protect your data?
+                        Describes a simple process to collect and analyse the information required by eramba to record organisational risks.
                     </p>
                     <div class="links">
                         <a href="#" target="_blank">Doc</a>
-                        <a href="#">Video</a>
+                        <a href="#" class="video-modal-trigger" data-documentation-id="1" data-toggle="modal" data-target="#documentation-modal">Video</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="doc-item">
+                    <h5>
+                        Data Flow Analysis
+                    </h5>
+                    <p>
+                        Describes a simple process to collect and analyse data flows and their associated internal controls and policies.
+                    </p>
+                    <div class="links">
+                        <a href="#" target="_blank">Doc</a>
+                        <a href="#" class="video-modal-trigger" data-documentation-id="1" data-toggle="modal" data-target="#documentation-modal">Video</a>
                     </div>
                 </div>
             </div>
@@ -555,25 +563,47 @@ var documentationItems = <?= json_encode($documentationItems) ?>;
                 </div>
             </div>
 
-            <div class="col-lg-3 hidden-md">
-                <div class="img-shadow">
-                    <img src="/img/doc-plane.png" class="img-fluid" alt="">
-                </div>
-            </div>
-
-            <div class="col-lg-4 offset-lg-1 col-sm-6">
+            <div class="col-lg-4 col-sm-6">
                 <div class="doc-item">
                     <h5>
-                        Install from Source Code
+                        Source Code Install
                     </h5>
                     <p>
                         Download our code and install the application on your Linux system using the source code.
                     </p>
                     <div class="links">
                         <a href="#" target="_blank">Doc</a>
-                        <a href="#">Ubuntu (Vid)</a>
-                        <a href="#">CentOS (Vid)</a>
-                        <a href="#">RedHat (Vid)</a>
+                        <a href="#" target="_blank">Ubuntu (Vid)</a>
+                        <a href="#" target="_blank">CentOS (Vid)</a>
+                        <a href="#" target="_blank">RedHat (Vid)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="doc-item">
+                    <h5>
+                        VMware
+                    </h5>
+                    <p>
+                        Use our pre-built VM image to minimise configuration settings.
+                    </p>
+                    <div class="links">
+                        <a href="#" target="_blank">Doc</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="doc-item">
+                    <h5>
+                        Amazon AWS
+                    </h5>
+                    <p>
+                        Use our Amazon AMI to quickly deploy eramba on the Cloud.
+                    </p>
+                    <div class="links">
+                        <a href="#" target="_blank">Doc</a>
                     </div>
                 </div>
             </div>
