@@ -100,21 +100,25 @@ class AppController extends Controller
             [
                 'name' => __('Resources'),
                 'link' => '#',
+                'key' => 'home',
                 'subItems' => [
                     [
                         'name' => __('Documentation'),
-                        'link' => '/documentation'
+                        'link' => '/documentation',
+                        'key' => 'documentation'
                     ],
                     [
                         'name' => _('Online Demo'),
-                        'link' => '/online-demo'
+                        'link' => '/online-demo',
+                        'key' => 'online_demo'
                     ],
                     [
                         'name' => __('Community Download'),
                         'link' => [
                             'controller' => 'CommunityDownloads',
                             'action' => 'index'
-                        ]
+                        ],
+                        'key' => 'communitydownloads'
                     ],
                     [
                         'name' => __('Blog'),
@@ -123,14 +127,16 @@ class AppController extends Controller
                     ],
                     [
                         'name' => __('Roadmap'),
-                        'link' => '/roadmap'
+                        'link' => '/roadmap',
+                        'key' => 'roadmap'
                     ],
                     [
                         'name' => __('Releases'),
                         'link' => [
                             'controller' => 'Releases',
                             'action' => 'index'
-                        ]
+                        ],
+                        'key' => 'releases'
                     ],
                     [
                         'name' => __('Forum'),
@@ -144,21 +150,71 @@ class AppController extends Controller
                 'link' => [
                     'controller' => 'services',
                     'action' => 'index'
-                ]
+                ],
+                'key' => 'services'
             ],
             [
                 'name' => __('Partners'),
                 'link' => [
                     'controller' => 'partners',
                     'action' => 'index'
-                ]
+                ],
+                'key' => 'partners'
             ],
             [
                 'name' => __('Contact Us'),
-                'link' => '/contact-us'
+                'link' => '/contact-us',
+                'key' => 'contacts'
             ]
         ];
 
-        $this->set(compact('menuItems'));
+        //
+        // Set active menu item
+        $pass = $this->getRequest()->getParam('pass');
+        $controller = strtolower($this->getRequest()->getParam('controller'));
+        $showSubMenu = false;
+        foreach ($menuItems as $menuItemKey => $menuItem) {
+            if (!empty($menuItem['subItems'])) {
+                $hasActiveSubItem = false;
+                foreach ($menuItem['subItems'] as $subItemKey => $subItem) {
+                    $isSubItemActive = false;
+                    if ($controller === 'pages') {
+                        if (isset($subItem['key']) &&
+                            $subItem['key'] === $pass[0]) {
+                            $isSubItemActive = true;
+                            $hasActiveSubItem = true;
+                            $showSubMenu = true;
+                        }
+                    } elseif (isset($subItem['key']) &&
+                            $controller === $subItem['key']) {
+                        $isSubItemActive = true;
+                        $hasActiveSubItem = true;
+                        $showSubMenu = true;
+                    }
+
+                    if ($isSubItemActive) {
+                        $menuItems[$menuItemKey]['subItems'][$subItemKey]['active'] = true;
+                    } else {
+                        $menuItems[$menuItemKey]['subItems'][$subItemKey]['active'] = false;
+                    }
+                }
+
+                if ($hasActiveSubItem) {
+                    $menuItems[$menuItemKey]['active'] = true;
+                } else {
+                    $menuItems[$menuItemKey]['active'] = false;
+                }
+            } else {
+                if (isset($menuItem['key']) &&
+                    $controller === $menuItem['key']) {
+                    $menuItems[$menuItemKey]['active'] = true;
+                } else {
+                    $menuItems[$menuItemKey]['active'] = false;
+                }
+            }
+        }
+        //
+        
+        $this->set(compact('menuItems', 'showSubMenu'));
     }
 }

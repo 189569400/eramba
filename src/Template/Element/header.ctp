@@ -17,7 +17,7 @@
             </div>
 
             <div id="header-nav">
-                <nav class="main-nav">
+                <nav class="main-nav <?= !empty($showSubMenu) ? 'sub-nav-active' : '' ?>">
                     <div id="header-nav-close">
                         <span></span>
                         <span></span>
@@ -28,13 +28,13 @@
                             $hasSubMenu = !empty($item['subItems']) ? true : false;
                             $subItems = $hasSubMenu ? $item['subItems'] : [];
                         ?>
-                        <li>
+                        <li class="<?= !empty($item['active']) ? 'active' : '' ?>">
                             <a href="<?= Router::url($item['link']) ?>" target="<?= !empty($item['target']) ? $item['target'] : '_self' ?>"><?= $item['name'] ?></a>
                             <?php if ($hasSubMenu): ?>
                             <div class="sub-nav">
                                 <ul>
                                     <?php foreach ($subItems as $subItem): ?>
-                                    <li>
+                                    <li class="<?= !empty($subItem['active']) ? 'active' : '' ?>">
                                         <a href="<?= Router::url($subItem['link']) ?>" target="<?= !empty($subItem['target']) ? $subItem['target'] : '_self' ?>"><?= $subItem['name'] ?></a>
                                     </li>
                                     <?php endforeach; ?>

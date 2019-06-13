@@ -39,6 +39,9 @@ nbproject/*
 # Sass preprocessor
 .sass-cache/
 
+# Composer
+composer.lock
+
 # Automatically updated files #
 ###############################
 /webroot/resources/home/counters/*
