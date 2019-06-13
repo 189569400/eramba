@@ -27,9 +27,6 @@ class DocumentationsController extends AppController
                 ]
             ]
         ])->toArray();
-        // debug($docCategories);exit;
-        // $documentations = Hash::extract($docCategories, '{n}.documentations');
-        // debug($documentations);exit;
 
         $documentationItems = [];
         foreach ($docCategories as $category) {
@@ -43,7 +40,7 @@ class DocumentationsController extends AppController
         }
 
         $documentationItemsJson = json_encode($documentationItems);
-        // debug($documentationItems);
+        
         $this->set(compact('docCategories', 'documentationItemsJson'));
 
         return $this->Crud->execute();
