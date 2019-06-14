@@ -1,8 +1,9 @@
 <?php
 use Cake\Core\Configure;
 use Cake\Error\Debugger;
+use Cake\Routing\Router;
 
-$this->layout = 'error';
+$this->layout = 'default';
 
 if (Configure::read('debug')) :
     $this->layout = 'dev_error';
@@ -31,8 +32,25 @@ endif;
 $this->end();
 endif;
 ?>
-<h2><?= h($message) ?></h2>
-<p class="error">
-    <strong><?= __d('cake', 'Error') ?>: </strong>
-    <?= __d('cake', 'The requested address {0} was not found on this server.', "<strong>'{$url}'</strong>") ?>
-</p>
+
+<section class="footer-margin first-section-margin">
+    <div class="container">
+        <div class="row mb-md">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center">
+                    <?= h($message) ?>
+                </h1>
+                <p class="error text-center mb-lg">
+                    <strong><?= __d('cake', 'Error') ?>: </strong>
+                    <?= __d('cake', 'The requested address {0} was not found on this server.', "<strong>'{$url}'</strong>") ?>
+                </p>
+                
+                <div class="text-center">
+                    <a href="<?= Router::url('/') ?>" class="btn btn-primary"><?= __('Back to home') ?></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="done-img"><img src="/img/done.png" alt=""></section>
