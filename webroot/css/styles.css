@@ -2140,6 +2140,9 @@ input.datepicker {
 /**
  * PNotify
  */
+.brighttheme.ui-pnotify-container {
+	padding: 16px 19px;
+}
 .ui-pnotify > .ui-pnotify-container.brighttheme {
 	border-radius: 4px;
 }
@@ -2161,6 +2164,10 @@ input.datepicker {
 .ui-pnotify.success > .brighttheme-info {
 	background: #28a745;
 	color: #fff !important;
+}
+.ui-pnotify .ui-pnotify-closer:active,
+.ui-pnotify .ui-pnotify-closer:focus {
+	outline: none;
 }
 @media (max-width: 600px) {
 	.ui-pnotify {

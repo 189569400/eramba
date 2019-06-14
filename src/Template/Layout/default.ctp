@@ -15,6 +15,7 @@
             'bootstrap-datepicker3.min.css',
             'select2.min.css',
             'pnotify.css',
+            'pnotify.buttons.css',
             'pnotify.brighttheme.css',
             'styles.css',
         ]) ?>
@@ -52,6 +53,7 @@
             'bootstrap-datepicker.min.js',
             'select2.min.js',
             'pnotify.js',
+            'pnotify.buttons.js',
             'scripts.js',
         ]) ?>
 
