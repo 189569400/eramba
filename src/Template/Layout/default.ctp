@@ -46,6 +46,7 @@
 
         <?= $this->Html->script([
             'jquery-3.2.1.min.js',
+            'popper.min.js',
             'bootstrap.js',
             'jquery.waypoints.min.js',
             'bootstrap-datepicker.min.js',
