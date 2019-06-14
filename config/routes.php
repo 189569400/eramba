@@ -75,13 +75,13 @@ Router::scope('/', function (RouteBuilder $routes) {
      * Pages
      */
     $routes->connect('/online-demo', ['controller' => 'Pages', 'action' => 'display', 'online_demo']);
-    $routes->connect('/documentation', ['controller' => 'Pages', 'action' => 'display', 'documentation']);
 
     /**
      * Friendly URLs
      */
     $routes->connect('/roadmap', ['controller' => 'Roadmaps', 'action' => 'index']);
     $routes->connect('/contact-us', ['controller' => 'Contacts', 'action' => 'index']);
+    $routes->connect('/documentation', ['controller' => 'Documentations', 'action' => 'index']);
 
     /**
      * External redirects
