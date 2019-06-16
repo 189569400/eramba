@@ -244,3 +244,87 @@ $(function() {
         }
     }
 });
+
+(function(window)
+{
+    var loader = {};
+
+    loader.show = function(elemId)
+    {
+        var conf = {
+            message: '<i class=\"fa fa-spinner fa-spin\" style=\"font-size: 36px\"></i>',
+            //timeout: 2000,
+            overlayCSS: {
+                backgroundColor: '#fff',
+                opacity: 0.8,
+                cursor: 'wait'
+            },
+            css: {
+                border: 0,
+                color: '#fff',
+                padding: 0,
+                backgroundColor: 'transparent'
+            }
+        };
+
+        if (elemId !== undefined) {
+            $('#' + elemId).block(conf);
+        } else {
+            $.blockUI(conf);
+        }
+    };
+
+    loader.hide = function(elemId)
+    {
+        if (elemId !== undefined) {
+            $('#' + elemId).unblock();
+        } else {
+            $.unblockUI();
+        }
+    };
+
+    window.loader = loader;
+})(window);
+
+/**
+ * Services section
+ */
+(function(window)
+{
+    var ServicesSection = {};
+
+    // Set from template
+    ServicesSection.updateBillUrl = "";
+
+    // Set from template
+    ServicesSection.previewQuoteUrl = "";
+
+    ServicesSection.updateBill = function()
+    {
+        $.ajax({
+            url: ServicesSection.updateBillUrl,
+            method: 'POST',
+            data: $('#services_form').serialize()
+        }).done(function(data) {
+            $('#bill_sum').text(data);
+        });
+    };
+
+    ServicesSection.previewQuote = function()
+    {
+        $('#preview-quote-modal-content').html('');
+        loader.show('preview-quote-modal-content');
+
+        $.ajax({
+            url: ServicesSection.previewQuoteUrl,
+            method: 'POST',
+            data: $('#services_form').serialize()
+        }).done(function(data) {
+            $('#preview-quote-modal-content').html(data);
+
+            loader.hide('preview-quote-modal-content');
+        });
+    };
+
+    window.ServicesSection = ServicesSection;
+})(window);

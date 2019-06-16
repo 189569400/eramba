@@ -9,6 +9,10 @@
 
         <?= $this->Html->meta('icon', 'img/favicon.png') ?>
 
+        <?= $this->Html->script([
+            'jquery-3.2.1.min.js'
+        ]) ?>
+
         <?= $this->Html->css([
             'bootstrap.css',
             'animations.css',
@@ -45,13 +49,13 @@
         <?= $this->element('footer') ?>
 
         <?= $this->Html->script([
-            'jquery-3.2.1.min.js',
             'bootstrap.js',
             'jquery.waypoints.min.js',
             'bootstrap-datepicker.min.js',
             'select2.min.js',
             'pnotify.js',
             'scripts.js',
+            'blockui/blockui.min.js'
         ]) ?>
 
         <?= $this->Flash->render() ?>

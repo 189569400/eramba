@@ -1935,6 +1935,9 @@ input.datepicker {
 #preview-bill-details p {
 	line-height: 21px;
 }
+#preview-quote-modal-content {
+	min-height: 150px;
+}
 
 #done-img {
 	height: 0px;
