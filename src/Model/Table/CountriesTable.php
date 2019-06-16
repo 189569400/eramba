@@ -59,4 +59,20 @@ class CountriesTable extends Table
 
         return $validator;
     }
+
+    public function getCountryName($id)
+    {
+        $country = $this->get($id, [
+            'fields' => [
+                'name'
+            ]
+        ]);
+
+        $name = "";
+        if (!empty($country)) {
+            $name = $country->name;
+        }
+
+        return $name;
+    }
 }

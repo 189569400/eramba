@@ -33,17 +33,17 @@
             </div>
             <div id="preview-bill-details" class="col-xl-3 col-lg-3 col-md-5 mb-xs">
                 <p>
-                    <strong>Date</strong><br>
-                    4 Feb 2019<br>
+                    <strong>Start Date</strong><br>
+                    <?= $startDate ?><br>
                     <br>
                     <strong>Expiry</strong><br>
-                    6 Mar 2019<br>
+                    <?= $expiryDate ?><br>
                     <br>
-                    <strong>Quote Number</strong><br>
+                    <!-- <strong>Quote Number</strong><br>
                     QU-12345<br>
-                    <br>
-                    <strong>VAT Number</strong><br>
-                    12345678
+                    <br> -->
+                    <!-- <strong>VAT Number</strong><br>
+                    12345678 -->
                 </p>
             </div>
             <div id="preview-bill-eramba" class="col-xl-3 offset-xl-0 col-lg-4 offset-lg-0 col-md-5 offset-md-7">

@@ -18,7 +18,7 @@ class EmailComponent extends Component
      */
     protected $_defaultConfig = [
     	'sendTo' => 'support@eramba.org',
-    	'subject' => "E-mail from eramba website's contact form",
+    	'subject' => "",
     	'template' => ''
     ];
 

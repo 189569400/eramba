@@ -25,22 +25,34 @@ class ServiceBillingInformationsTable extends Table
 {
     const CURRENCY_EUR = 1;
 
-    public static function getCurrencies()
+    public static function getCurrencies($currency = null)
     {
-        return [
+        $currencies = [
             self::CURRENCY_EUR => __('EUR')
         ];
+
+        if ($currency !== null && array_key_exists($currency, $currencies)) {
+            return $currencies[$currency];
+        } else {
+            return $currencies;
+        }
     }
 
     const PAYMENT_TYPE_BANK_TRANSFER = 1;
     const PAYMENT_TYPE_CREDIT_CARD = 2;
 
-    public static function getPaymentTypes()
+    public static function getPaymentTypes($type = null)
     {
-        return [
+        $paymentTypes = [
             self::PAYMENT_TYPE_BANK_TRANSFER => __('Bank Transfer'),
             self::PAYMENT_TYPE_CREDIT_CARD => __('Credit Card (100€ fee)')
         ];
+
+        if ($type !== null && array_key_exists($type, $paymentTypes)) {
+            return $paymentTypes[$type];
+        } else {
+            return $paymentTypes;
+        }
     }
 
     const PAYMENT_PRICE_BANK_TRANSFER = 0;
@@ -151,7 +163,7 @@ class ServiceBillingInformationsTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->isUnique(['email']));
+        // $rules->add($rules->isUnique(['email']));
         $rules->add($rules->existsIn(['service_id'], 'Services'));
         $rules->add($rules->existsIn(['country_id'], 'Countries'));
 

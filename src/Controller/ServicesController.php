@@ -60,10 +60,13 @@ class ServicesController extends AppController
 
     public function add()
     {
+        $session = $this->getRequest()->getSession();
+        $sessionData = $session->read('Services');
+        $this->checkMandatoryFields(!empty($sessionData) ? $sessionData : []);
+
         $this->Crud->on('beforeSave', function(Event $event) {
             $session = $this->getRequest()->getSession();
             $sessionData = $session->read('Services');
-            $this->checkMandatoryFields($sessionData);
 
             $entity = $event->getSubject()->entity;
             $entity->type = ServicesTable::TYPE_ENTERPRISE;
@@ -81,16 +84,32 @@ class ServicesController extends AppController
         });
 
         $this->Crud->on('afterSave', function(Event $event) {
-            if ($event->getSubject()->success) {
+            $subject = $event->getSubject();
+            if ($subject->success) {
                 // Delete user data from session
                 $this->clearSessionData();
 
                 // Send email
-                $this->Email->sendEmail($subject->entity->name, $subject->entity->email, [
-                    'name' => $subject->entity->name,
-                    'country' => $subject->entity->country_id,
-                    'type' => $subject->entity->type,
-                    'email' => $subject->entity->email
+                $this->loadModel('Countries');
+                $this->loadModel('ServiceBillingInformations');
+                $this->Email->setConfig('subject', "E-mail from eramba website's order form");
+                $this->Email->sendEmail($subject->entity->name, $subject->entity->service_billing_information->email, [
+                    'company_name' => $subject->entity->service_billing_information->company_name,
+                    'company_address' => $subject->entity->service_billing_information->company_address,
+                    'country_name' => $this->Countries->getCountryName($subject->entity->service_billing_information->country_id),
+                    'city' => $subject->entity->service_billing_information->city,
+                    'zip_code' => $subject->entity->service_billing_information->zip_code,
+                    'vat_number' => $subject->entity->service_billing_information->vat_number,
+                    'name' => $subject->entity->service_billing_information->name,
+                    'surname' => $subject->entity->service_billing_information->surname,
+                    'email' => $subject->entity->service_billing_information->email,
+                    'currency' => $this->ServiceBillingInformations->getCurrencies($subject->entity->service_billing_information->currency),
+                    'payment_type' => $this->ServiceBillingInformations->getPaymentTypes($subject->entity->service_billing_information->payment_type),
+                    'type' => $this->Services->getTypes($subject->entity->type),
+                    'version' => $this->Services->getVersions($subject->entity->version),
+                    'start_date' => $subject->entity->start_date,
+                    'online_trainings_hours' => $subject->entity->online_trainings_hours,
+                    'onsite_workshops_days' => $subject->entity->onsite_workshops_days
                 ]);
             }
         });
@@ -166,16 +185,16 @@ class ServicesController extends AppController
 
         if (!empty($billingInfoData['country_id'])) {
             $this->loadModel('Countries');
-            $country = $this->Countries->get($billingInfoData['country_id'], [
-                'fields' => [
-                    'name'
-                ]
-            ]);
-            if (!empty($country)) {
-                $billingInfoData['country_name'] = $country->name;
-            }
+            $billingInfoData['country_name'] = $this->Countries->getCountryName($billingInfoData['country_id']);
         } else {
             $billingInfoData['country_name'] = '';
+        }
+
+        $startDate = '-';
+        $expiryDate = '-';
+        if (!empty($servicesData['start_date'])) {
+            $startDate = date('m/d/Y', strtotime($servicesData['start_date']));
+            $expiryDate = date('m/d/Y', strtotime($servicesData['start_date']) + (60 * 60 * 24 * 365));
         }
 
         $items = [];
@@ -258,7 +277,7 @@ class ServicesController extends AppController
             $priceTotal += $item['price'] + $item['vat'];
         }
 
-        $this->set(compact('billingInfoData', 'items', 'priceSubtotal', 'priceTotal'));
+        $this->set(compact('startDate', 'expiryDate', 'billingInfoData', 'items', 'priceSubtotal', 'priceTotal'));
     }
 
     protected function getFriendlyPrice($price)
