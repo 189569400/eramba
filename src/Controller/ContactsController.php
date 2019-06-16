@@ -15,6 +15,7 @@ class ContactsController extends AppController
 
         $this->loadComponent('ReCaptcha.ReCaptcha');
         $this->loadComponent('Email', [
+            'subject' => "E-mail from eramba website's contact form",
             'template' => 'contact_form'
         ]);
 
