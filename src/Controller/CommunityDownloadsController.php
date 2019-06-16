@@ -37,7 +37,9 @@ class CommunityDownloadsController extends AppController
         $this->Crud->on('afterSave', function(Event $event) {
             $subject = $event->getSubject();
             if ($subject->success) {
-                $this->Email->sendEmail($subject->entity->name, $subject->entity->email);
+                $this->Email->setConfig('sendTo', $subject->entity->email);
+                $this->Email->setConfig('subject', "eramba support - Community Download");
+                $this->Email->sendEmail($subject->entity->name, 'support@eramba.org');
             }
         });
 
