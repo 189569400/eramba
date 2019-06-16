@@ -62,7 +62,7 @@
                                 }
                                 $versionOptionsModified[] = [
                                     'text' => __('On SaaS (Comming Soon)'),
-                                    'value' => 0,
+                                    'value' => -1,
                                     'disabled' => true
                                 ];
                             ?>
