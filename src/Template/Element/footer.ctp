@@ -30,7 +30,10 @@
                 </div>
                 <div class="col-md-4">
                     <p class="text-center">
-                        UK: +44 2036379084<br>
+                        We are available for calls during<br>
+                        UK business hours<br>
+                        <br>
+                        UK: <a href="tel:+442036379084">+44 2036379084</a><br>
                         <a href="mailto:support@eramba.org">support@eramba.org</a>
                     </p>
                     <hr>

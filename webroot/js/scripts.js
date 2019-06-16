@@ -162,6 +162,9 @@ $(function() {
         });
     });
 
+    // popopver
+    $('[data-toggle="popover"]').popover();
+
     // video modal
     var docYtPlayer = null;
 

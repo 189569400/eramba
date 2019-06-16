@@ -22,8 +22,8 @@ var documentationItems = <?= $documentationItemsJson ?>;
     </div>
 </section>
 
-<?php foreach ($docCategories as $category): ?>
-<section class="mb-lg">
+<?php foreach ($docCategories as $key => $category): ?>
+<section class=" <?= (count($docCategories) == ($key + 1)) ? 'footer-margin' : 'mb-lg' ?>">
     <div class="container">
         <div class="row doc-list">
 

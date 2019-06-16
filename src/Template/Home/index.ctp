@@ -37,34 +37,45 @@
 
 <section id="community">
     
-    <svg id="svg-bg-1" data-name="svg-bg-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 918.94 143.01"><defs><style>.cls-1{fill:url(#linear-gradient);}</style><linearGradient id="linear-gradient" x1="697.16" y1="53.76" x2="697.16" y2="196.77" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1a438f"/><stop offset="1" stop-color="#0f2a5b"/></linearGradient></defs><title></title><path class="cls-1" d="M1156.64,196.77H237.69V152.38s33.55-1.79,62.44,6.62c54.86,16,153.49,47.52,183.94,12.38,21.11-24.38,10.56-36,53.15-74.84C586.73,51.36,694.41,44,789.08,65c87.45,19.39,162.37,62.61,267.84,40.67l99.72-14.82Z" transform="translate(-237.69 -53.76)"/></svg>
+    <svg id="svg-bg-1" data-name="svg-bg-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 918.94 143.01">
+        <defs><style>.cls-1{fill:url(#linear-gradient);}</style><linearGradient id="linear-gradient" x1="697.16" y1="53.76" x2="697.16" y2="196.77" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1a438f"/><stop offset="1" stop-color="#0f2a5b"/></linearGradient></defs><title></title><path class="cls-1" id="community-bg-1" d="M1156.64,196.77H237.69V152.38s33.55-1.79,62.44,6.62c54.86,16,153.49,47.52,183.94,12.38,21.11-24.38,10.56-36,53.15-74.84C586.73,51.36,694.41,44,789.08,65c87.45,19.39,162.37,62.61,267.84,40.67l99.72-14.82Z" transform="translate(-237.69 -53.76)"/>
+    </svg>
 
     <div id="community-inner">
         <div class="container">
-            <h2 class="text-right text-white animation toleft">
-                We are a GRC community
-            </h2>
             <div class="row">
-                <div class="offset-xl-8 col-xl-4 offset-lg-7 col-lg-5 animation toleft">
-                    <p class="lead text-white mb-md">
-                        We are a group of GRC professions tired of spreadsheets, expensive and complicated GRC tools that decided to build a simple, free and enterprise level GRC solution.<br>
-                        <br>
-                        <span class="text-orange">
-                       	<b>Simplicity, scalability, openness and affordability. We know well that complex GRC tools simply dont work for most of us!</b><br>
-                        </span>
-			<br>
-			From Europe, since 2010 we have proudly run this project without magnanimous revenue or profitability expectations. We love being small and charge only what the project needs to operate and that is all.
-			</br>
-                    </p>
+                <div class="col-xl-7 col-lg-7">
+                    &nbsp;
+                    <div id="community-monuments">
+                        <img src="/img/monuments.png" alt="" class="animation totop">
+                        <div id="community-monuments-earth"></div>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-lg-5 animation toleft">
+                    <div id="community-text">
+                        <h2 class="text-left text-white animation toleft">
+                            We are a GRC community
+                        </h2>
+                        <p class="lead text-white mb-md">
+                            We are a group of GRC professions tired of spreadsheets, expensive and complicated GRC tools that decided to build a simple, free and enterprise level GRC solution.<br>
+                            <br>
+                            <span class="text-orange">
+                           	<b>Simplicity, scalability, openness and affordability. We know well that complex GRC tools simply dont work for most of us!</b><br>
+                            </span>
+                			<br>
+                			From Europe, since 2010 we have proudly run this project without magnanimous revenue or profitability expectations. We love being small and charge only what the project needs to operate and that is all.
+                			</br>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="community-monuments">
+    <!-- <div id="community-monuments">
         <img src="/img/monuments.png" alt="" class="animation totop">
         <div id="community-monuments-earth"></div>
-    </div>
+    </div> -->
 
     <svg id="svg-bg-2" data-name="svg-bg-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 837.35 73.66"><defs><style>.cls-2{fill:#fff;}</style></defs><title></title><path class="cls-2" d="M1086.75,418.22H249.4v-48.3C298.12,356,332.33,341.14,371,345.26c36.67,3.92,194.06,39.51,242.16,36.13,69.68-4.89,202.42-27.08,271.69-14.19C951.79,379.67,966.64,404.33,1086.75,418.22Z" transform="translate(-249.4 -344.56)"/></svg>
 </section>

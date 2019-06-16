@@ -12,6 +12,11 @@ new PNotify({
 	type: 'info',
 	addclass: '<?= $class ?>',
 	icon: false,
-	delay: 60000
+	delay: 6000,
+	buttons: {
+		closer: true,
+		closer_hover: false,
+		sticker: false
+	}
 });
 </script>

@@ -19,6 +19,7 @@
             'bootstrap-datepicker3.min.css',
             'select2.min.css',
             'pnotify.css',
+            'pnotify.buttons.css',
             'pnotify.brighttheme.css',
             'styles.css',
         ]) ?>
@@ -49,11 +50,14 @@
         <?= $this->element('footer') ?>
 
         <?= $this->Html->script([
+            'jquery-3.2.1.min.js',
+            'popper.min.js',
             'bootstrap.js',
             'jquery.waypoints.min.js',
             'bootstrap-datepicker.min.js',
             'select2.min.js',
             'pnotify.js',
+            'pnotify.buttons.js',
             'scripts.js',
             'blockui/blockui.min.js'
         ]) ?>
