@@ -4,20 +4,19 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * Country Entity
+ * State Entity
  *
  * @property int $id
  * @property string $name
- * @property string|null $iso3
- * @property string|null $iso2
- * @property string|null $phonecode
- * @property string|null $capital
- * @property string|null $currency
+ * @property int $country_id
  * @property \Cake\I18n\FrozenTime|null $created
  * @property \Cake\I18n\FrozenTime $modified
  * @property bool $flag
+ *
+ * @property \App\Model\Entity\Country $country
+ * @property \App\Model\Entity\City[] $cities
  */
-class Country extends Entity
+class State extends Entity
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
@@ -30,13 +29,11 @@ class Country extends Entity
      */
     protected $_accessible = [
         'name' => true,
-        'iso3' => true,
-        'iso2' => true,
-        'phonecode' => true,
-        'capital' => true,
-        'currency' => true,
+        'country_id' => true,
         'created' => true,
         'modified' => true,
-        'flag' => true
+        'flag' => true,
+        'country' => true,
+        'cities' => true
     ];
 }

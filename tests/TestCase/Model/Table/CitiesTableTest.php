@@ -1,21 +1,21 @@
 <?php
 namespace App\Test\TestCase\Model\Table;
 
-use App\Model\Table\CountriesTable;
+use App\Model\Table\CitiesTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
- * App\Model\Table\CountriesTable Test Case
+ * App\Model\Table\CitiesTable Test Case
  */
-class CountriesTableTest extends TestCase
+class CitiesTableTest extends TestCase
 {
     /**
      * Test subject
      *
-     * @var \App\Model\Table\CountriesTable
+     * @var \App\Model\Table\CitiesTable
      */
-    public $Countries;
+    public $Cities;
 
     /**
      * Fixtures
@@ -23,6 +23,8 @@ class CountriesTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
+        'app.Cities',
+        'app.States',
         'app.Countries'
     ];
 
@@ -34,8 +36,8 @@ class CountriesTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::getTableLocator()->exists('Countries') ? [] : ['className' => CountriesTable::class];
-        $this->Countries = TableRegistry::getTableLocator()->get('Countries', $config);
+        $config = TableRegistry::getTableLocator()->exists('Cities') ? [] : ['className' => CitiesTable::class];
+        $this->Cities = TableRegistry::getTableLocator()->get('Cities', $config);
     }
 
     /**
@@ -45,7 +47,7 @@ class CountriesTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Countries);
+        unset($this->Cities);
 
         parent::tearDown();
     }
@@ -71,11 +73,11 @@ class CountriesTableTest extends TestCase
     }
 
     /**
-     * Test getCountryName method
+     * Test buildRules method
      *
      * @return void
      */
-    public function testGetCountryName()
+    public function testBuildRules()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }
