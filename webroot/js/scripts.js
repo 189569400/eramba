@@ -253,6 +253,21 @@ $(function() {
             docYtPlayer.stopVideo();
         }
     }
+
+    // cookie bar
+    if (!$.cookie('cookiebar') == 1) {
+        $('#cookie-bar').removeClass('hidden');
+    }
+
+    $('#cookie-bar button').click(function() {
+        $('#cookie-bar').addClass('slide-down');
+        
+        $.cookie('cookiebar', 1, {expires: 30, path: '/'});
+
+        return false;
+    });
+
+    
 });
 
 (function(window)

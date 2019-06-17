@@ -2138,6 +2138,64 @@ input.datepicker {
  */
 
 /**
+ * Cookie Bar
+ */
+#cookie-bar {
+	background: #10295C;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	z-index: 3;
+	color: #fff;
+	box-shadow: 0px 0px 5px #04173e;
+	transition: bottom 300ms;
+}
+#cookie-bar.hidden {
+	display: none;
+}
+#cookie-bar.slide-down {
+	bottom: -200px;
+}
+#cookie-bar .container {
+	position: relative;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-weight: 300;
+}
+#cookie-bar-text {
+	color: #fff;
+	text-align: center;
+}
+#cookie-bar-text a {
+	color: #f08e56;
+}
+#cookie-bar-text button,
+#cookie-bar-text button:focus,
+#cookie-bar-text button:active {
+	background: #f08e56;
+	padding: 1px 15px 2px 15px;
+	border: 0px;
+	color: #fff;
+	border-radius: 3px;
+	margin-left: 10px;
+	font-size: 15px;
+	transition: background-color 150ms;
+	outline: none;
+}
+#cookie-bar-text button:hover {
+	background: #fdb083;
+}
+@media (max-width: 991px) {
+	#cookie-bar-text {
+		font-size: 15px;
+	}
+}
+/**
+ * End Cookie Bar
+ */
+
+/**
  * Select2 plugin
  */
 .select2-selection {

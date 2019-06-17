@@ -49,6 +49,8 @@
 
         <?= $this->element('footer') ?>
 
+        <?= $this->element('cookiebar') ?>
+
         <?= $this->Html->script([
             'jquery-3.2.1.min.js',
             'popper.min.js',
@@ -58,6 +60,7 @@
             'select2.min.js',
             'pnotify.js',
             'pnotify.buttons.js',
+            'jquery.cookie.js',
             'scripts.js',
             'blockui/blockui.min.js'
         ]) ?>
