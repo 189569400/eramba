@@ -515,7 +515,8 @@ input.datepicker {
 	display: block;
 }
 .form-check-label-small {
-	font-size: 12px;
+	font-size: 18px;
+	padding-top: 3px;
 }
 .error-message {
 	color: #cf5252;
@@ -579,6 +580,9 @@ input.datepicker {
 		width: 15px;
 		height: 15px;
 	}
+	.form-check-label-small {
+		font-size: 16px;
+	}
 	.error-message {
 		font-size: 17px;
 	}
@@ -609,6 +613,10 @@ input.datepicker {
 	}
 	.form-check-label:after {
 		top: 6px;
+	}
+	.form-check-label-small {
+		padding-top: 4px;
+		font-size: 13px;
 	}
 }
 /**
