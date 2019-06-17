@@ -2,17 +2,36 @@
 $documentationItems = [
     1 => [
         'title' => 'Lalala',
-        'video' => 'Xa0Q0J5tOP0',
+        'video' => [
+            [
+                'title' => 'Mankine video 1',
+                'videoId' => 'Xa0Q0J5tOP0'
+            ],
+            [
+                'title' => 'Tatkove video 2',
+                'videoId' => 'taJ60kskkns'
+            ]
+        ],
         'relatedItems' => [2,3]
     ],
     2 => [
         'title' => 'Salala',
-        'video' => 'taJ60kskkns',
+        'video' => [
+            [
+                'title' => 'Jou',
+                'videoId' => 'taJ60kskkns'
+            ],
+        ],
         'relatedItems' => [1,3]
     ],
     3 => [
         'title' => 'Tralala',
-        'video' => 'FG0fTKAqZ5g',
+        'video' => [
+            [
+                'title' => 'Ejou Jou Men',
+                'videoId' => 'FG0fTKAqZ5g'
+            ],
+        ],
         'relatedItems' => []
     ],
 ];
@@ -628,7 +647,11 @@ var documentationItems = <?= json_encode($documentationItems) ?>;
                     </div>
                 </div>
                 <div id="documentation-modal-left">
-                    <div id="documentation-modal-main-item" class="mb-xs">
+                    <div id="documentation-modal-main-items" class="mb-xs">
+                        <strong id="documentation-modal-main-item-title">
+                        </strong>
+                        <ul class="related-videos-list">
+                        </ul>
                     </div>
 
                     <div id="documentation-modal-related-items">

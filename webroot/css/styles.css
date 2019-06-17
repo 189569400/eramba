@@ -515,7 +515,8 @@ input.datepicker {
 	display: block;
 }
 .form-check-label-small {
-	font-size: 12px;
+	font-size: 18px;
+	padding-top: 3px;
 }
 .error-message {
 	color: #cf5252;
@@ -579,6 +580,9 @@ input.datepicker {
 		width: 15px;
 		height: 15px;
 	}
+	.form-check-label-small {
+		font-size: 16px;
+	}
 	.error-message {
 		font-size: 17px;
 	}
@@ -609,6 +613,10 @@ input.datepicker {
 	}
 	.form-check-label:after {
 		top: 6px;
+	}
+	.form-check-label-small {
+		padding-top: 4px;
+		font-size: 13px;
 	}
 }
 /**
@@ -1964,6 +1972,9 @@ input.datepicker {
 	top: 20px;
 	right: 20px;
 }
+#documentation-modal .modal-header {
+	background: #f7f7f7;
+}
 #documentation-modal .modal-body {
 	padding: 0px;
     border-bottom-left-radius: 0.3rem;
@@ -1976,12 +1987,12 @@ input.datepicker {
 	height: 100%;
 	width: 300px;
 	padding: 16px;
-	background: #f7f7f7;
 	border-bottom-left-radius: 0.3rem;
 	overflow-y: scroll;
 }
 #documentation-modal-right {
 	padding-left: 300px;
+	margin: 15px;
 }
 #documentation-modal-right .doc-video {
 	margin-top: -1px;

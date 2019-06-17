@@ -188,9 +188,10 @@ $(function() {
 
         // set modal title
         $('#documentation-modal .modal-title').html(documentation.title);
+        $('#documentation-modal-main-item-title').html(documentation.title);
 
         // insert main video link
-        $('#documentation-modal-main-item').html(getVideoLinkHtml(documentation));
+        $('#documentation-modal-main-items ul').html(getVideoLinkHtml(documentation));
 
         // build related videos list
         $('#documentation-modal-related-items').hide();
@@ -200,7 +201,7 @@ $(function() {
 
         documentation.relatedItems.forEach(function(item) {
             var relatedDocumentation = documentationItems[item];
-            relatedList += '<li>' + getVideoLinkHtml(relatedDocumentation) + '</li>';
+            relatedList += getVideoLinkHtml(relatedDocumentation);
         });
 
         if (relatedList !== '') {
@@ -209,12 +210,18 @@ $(function() {
         }
 
         loadDocumentationVideo(documentation.video);
-        setActiveVideoLink($('#documentation-modal-main-item .video-link'));
+        setActiveVideoLink($('#documentation-modal-main-items ul li:first-child a'));
     }
 
     function getVideoLinkHtml(documentation)
     {
-        return '<a href="#" class="video-link" data-video-id="' + documentation.video + '"><span class="play-icon"></span> ' + documentation.title + '</a>'
+        var videoLinks = '';
+
+        documentation.video.forEach(function(item) {
+            videoLinks += '<li><a href="#" class="video-link" data-video-id="' + item.videoId + '"><span class="play-icon"></span> ' + item.title + '</a></li>';
+        });
+
+        return videoLinks;
     }
 
     function setActiveVideoLink($link)

@@ -138,14 +138,6 @@
                     </span>
                 </a>
             </li>
-            <li>
-                <a data-toggle="tab" data-tab="6" href="#tab6" role="tab" aria-controls="tab6" aria-selected="false">
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 24 24" height="70" width="70"><title></title><g transform="matrix(1,0,0,1,0,0)"><path d="M 17.518,11.506c3.314,0,6,2.686,6,6s-2.686,6-6,6s-6-2.686-6-6S14.204,11.506,17.518,11.506z " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 17.518,14.506v6 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 20.518,17.506h-6 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 0.515,4.504h20 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 3.515,2.254L3.515,2.254 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 3.515,2.254c-0.138,0-0.25,0.112-0.25,0.25s0.112,0.25,0.25,0.25 s0.25-0.112,0.25-0.25S3.653,2.254,3.515,2.254 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 5.515,2.254L5.515,2.254 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 5.515,2.254c-0.138,0-0.25,0.112-0.25,0.25 s0.112,0.25,0.25,0.25s0.25-0.112,0.25-0.25S5.653,2.254,5.515,2.254 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 7.515,2.254L7.515,2.254 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 7.515,2.254 c-0.138,0-0.25,0.112-0.25,0.25s0.112,0.25,0.25,0.25s0.25-0.112,0.25-0.25S7.653,2.254,7.515,2.254 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 8.515,16.5h-6 c-1.105,0-2-0.895-2-2v-12c0-1.105,0.895-2,2-2h16c1.105,0,2,0.895,2,2v6" stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
-                    <span>
-                        Much More!
-                    </span>
-                </a>
-            </li>
         </ul>
 
         <div class="tab-content features-content" id="">
@@ -153,10 +145,10 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <h2 class="text-orange">
-                           GRC Features 
+                            GRC Features 
                         </h2>
                         <p>
-			Like you, we have worked in GRC for many years and understand the job well. eramba helps you with Risk Management, Compliance Management, Incident Management, Policy Reviews, Internal Control Testing, Online Assessments, Notifications, Reminders, Filters, Reports.<br><br>For every known pain we built a simple feature that makes the job easier and far more professional.
+                            Like you, we have worked in GRC for many years and understand the job well. eramba helps you with Risk Management, Compliance Management, Incident Management, Policy Reviews, Internal Control Testing, Online Assessments, Notifications, Reminders, Filters, Reports.<br><br>For every known pain we built a simple feature that makes the job easier and far more professional.
                         </p>
                     </div>
                     <div class="col-lg-7 offset-lg-1">
@@ -172,10 +164,67 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <h2 class="text-orange">
-			Atypical GRC Features
+                            Atypical GRC Features
                         </h2>
                         <p>
-			eramba is not strictly Compliance and Risk - we have made functionalities that help you review users accounts on your systems and awareness trainings that allow you to upload videos, disclaimer texts and multiple choice questionnaires and remind employees when they have missed a training.
+                            eramba is not strictly Compliance and Risk - we have made functionalities that help you review users accounts on your systems and awareness trainings that allow you to upload videos, disclaimer texts and multiple choice questionnaires and remind employees when they have missed a training.
+                        </p>
+                    </div>
+                    <div class="col-lg-7 offset-lg-1">
+                        <div class="features-mac">
+                            <div class="features-mac-screen">
+                                <img src="/img/screen1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h2 class="text-orange">
+                            Open
+                        </h2>
+                        <p>
+                            Lorem ipsum.
+                        </p>
+                    </div>
+                    <div class="col-lg-7 offset-lg-1">
+                        <div class="features-mac">
+                            <div class="features-mac-screen">
+                                <img src="/img/screen1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h2 class="text-orange">
+                            Free &amp; Enterprise
+                        </h2>
+                        <p>
+                            Lorem ipsum.
+                        </p>
+                    </div>
+                    <div class="col-lg-7 offset-lg-1">
+                        <div class="features-mac">
+                            <div class="features-mac-screen">
+                                <img src="/img/screen1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="tab5" role="tabpanel" aria-labelledby="tab5-tab">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h2 class="text-orange">
+                            On-perm Or SaaS
+                        </h2>
+                        <p>
+                            Lorem ipsum.
                         </p>
                     </div>
                     <div class="col-lg-7 offset-lg-1">
