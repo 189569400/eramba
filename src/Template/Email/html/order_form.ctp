@@ -1,3 +1,5 @@
+<h3><?= __('Order number') ?>:</h3>
+<p><?= $order_number ?></p>
 <h3><?= __('Company name') ?>:</h3>
 <p><?= $company_name ?></p>
 <h3><?= __('Company address') ?>:</h3>
