@@ -10,8 +10,6 @@ use Cake\Utility\Hash;
  */
 class RoadmapsController extends AppController
 {
-    private $updateSecurityKey = 'test';
-
     public function initialize()
     {
         parent::initialize();
@@ -59,7 +57,8 @@ class RoadmapsController extends AppController
     {
         $this->autoRender = false;
 
-        if ($secKey === $this->updateSecurityKey) {
+        $updateSecurityKey = file_get_contents(CONFIG . 'roadmap_sec_key.txt');
+        if ($secKey === $updateSecurityKey) {
             //
             // Clean up tables
             $this->GithubMilestones->deleteAll([]);
@@ -75,65 +74,70 @@ class RoadmapsController extends AppController
                 'Short Term Roadmap',
                 'Release'
             ];
-            foreach ($milestones as $milestoneData) {
-                $allowed = false;
-                foreach ($allowedMilestones as $am) {
-                    if (strpos($milestoneData['title'], $am) !== false) {
-                        $allowed = true;
-                        break;
+
+            if (array_key_exists('message', $milestones)) {
+                echo $milestones['message'];
+            } else {
+                foreach ($milestones as $milestoneData) {
+                    $allowed = false;
+                    foreach ($allowedMilestones as $am) {
+                        if (strpos($milestoneData['title'], $am) !== false) {
+                            $allowed = true;
+                            break;
+                        }
                     }
-                }
 
-                if (!$allowed) {
-                    continue;
-                }
+                    if (!$allowed) {
+                        continue;
+                    }
 
-                $milestone = $this->GithubMilestones->newEntity();
-                $milestone->number = $milestoneData['number'];
-                $milestone->title = $milestoneData['title'];
-                $milestone->description = $milestoneData['description'];
-                $milestone->open_issues = $milestoneData['open_issues'];
-                $milestone->closed_issues = $milestoneData['closed_issues'];
-                $milestone->state = $milestoneData['state'];
-                $milestone->created_at = $milestoneData['created_at'];
-                $milestone->updated_at = $milestoneData['updated_at'];
-                $milestone->due_on = $milestoneData['due_on'];
-                $milestone->closed_at = $milestoneData['closed_at'];
+                    $milestone = $this->GithubMilestones->newEntity();
+                    $milestone->number = $milestoneData['number'];
+                    $milestone->title = $milestoneData['title'];
+                    $milestone->description = $milestoneData['description'];
+                    $milestone->open_issues = $milestoneData['open_issues'];
+                    $milestone->closed_issues = $milestoneData['closed_issues'];
+                    $milestone->state = $milestoneData['state'];
+                    $milestone->created_at = date('Y-m-d H:i:s', strtotime($milestoneData['created_at']));
+                    $milestone->updated_at = date('Y-m-d H:i:s', strtotime($milestoneData['updated_at']));
+                    $milestone->due_on = date('Y-m-d H:i:s', strtotime($milestoneData['due_on']));
+                    $milestone->closed_at = date('Y-m-d H:i:s', strtotime($milestoneData['closed_at']));
 
-                if ($this->GithubMilestones->save($milestone)) {
-                    $issues = $this->GitHub->getIssues(null, null, [
-                        'per_page' => 100,
-                        'milestone' => $milestone->number
-                    ]);
-                    foreach ($issues as $issueData) {
-                        $issue = $this->GithubIssues->newEntity();
-                        $issue->number = $issueData['number'];
-                        $issue->title = $issueData['title'];
-                        $issue->owner = Hash::get($issueData, 'user.login', '');
-                        $issue->state = $issueData['state'];
-                        $issue->milestone_id = $milestone->id;
-                        $issue->created_at = $issueData['created_at'];
-                        $issue->updated_at = $issueData['updated_at'];
-                        $issue->closed_at = $issueData['closed_at'];
+                    if ($this->GithubMilestones->save($milestone)) {
+                        $issues = $this->GitHub->getIssues(null, null, [
+                            'per_page' => 100,
+                            'milestone' => $milestone->number
+                        ]);
+                        foreach ($issues as $issueData) {
+                            $issue = $this->GithubIssues->newEntity();
+                            $issue->number = $issueData['number'];
+                            $issue->title = $issueData['title'];
+                            $issue->owner = Hash::get($issueData, 'user.login', '');
+                            $issue->state = $issueData['state'];
+                            $issue->milestone_id = $milestone->id;
+                            $issue->created_at = date('Y-m-d H:i:s', strtotime($issueData['created_at']));
+                            $issue->updated_at = date('Y-m-d H:i:s', strtotime($issueData['updated_at']));
+                            $issue->closed_at = date('Y-m-d H:i:s', strtotime($issueData['closed_at']));
 
-                        if ($this->GithubIssues->save($issue)) {
-                            $issueLabels = Hash::get($issueData, 'labels', []);
-                            foreach ($issueLabels as $labelData) {
-                                $label = $this->GithubIssueLabels->newEntity();
-                                $label->name = $labelData['name'];
-                                $label->color = $labelData['color'];
-                                $label->is_default = $labelData['default'] == true ? 1 : 0;
-                                $label->issue_id = $issue->id;
+                            if ($this->GithubIssues->save($issue)) {
+                                $issueLabels = Hash::get($issueData, 'labels', []);
+                                foreach ($issueLabels as $labelData) {
+                                    $label = $this->GithubIssueLabels->newEntity();
+                                    $label->name = $labelData['name'];
+                                    $label->color = $labelData['color'];
+                                    $label->is_default = $labelData['default'] == true ? 1 : 0;
+                                    $label->issue_id = $issue->id;
 
-                                $this->GithubIssueLabels->save($label);
+                                    $this->GithubIssueLabels->save($label);
+                                }
                             }
                         }
                     }
                 }
+
+                echo __('Successfully updated');
             }
             //
-            
-            echo __('Successfully updated');
         } else {
             throw new Exception('You don\'t have permission to do this action');
         }

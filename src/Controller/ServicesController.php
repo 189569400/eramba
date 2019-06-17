@@ -22,11 +22,6 @@ class ServicesController extends AppController
         ]);
 
         $this->Crud->enable(['index', 'add']);
-
-        $this->Security->setConfig('unlockedActions', [
-            'updateBill',
-            'previewQuote'
-        ]);
     }
 
     public function index()
@@ -92,8 +87,9 @@ class ServicesController extends AppController
                 // Send email
                 $this->loadModel('Countries');
                 $this->loadModel('ServiceBillingInformations');
-                $this->Email->setConfig('subject', "E-mail from eramba website's order form");
+                $this->Email->setConfig('subject', __("Purchase Request from www.eramba.org"));
                 $this->Email->sendEmail($subject->entity->name, $subject->entity->service_billing_information->email, [
+                    'order_number' => $subject->entity->number,
                     'company_name' => $subject->entity->service_billing_information->company_name,
                     'company_address' => $subject->entity->service_billing_information->company_address,
                     'country_name' => $this->Countries->getCountryName($subject->entity->service_billing_information->country_id),
@@ -276,8 +272,10 @@ class ServicesController extends AppController
             $priceSubtotal += $item['price'];
             $priceTotal += $item['price'] + $item['vat'];
         }
+        $priceSubtotalFriendly = $this->getFriendlyPrice($priceSubtotal);
+        $priceTotalFriendly = $this->getFriendlyPrice($priceTotal);
 
-        $this->set(compact('startDate', 'expiryDate', 'billingInfoData', 'items', 'priceSubtotal', 'priceTotal'));
+        $this->set(compact('startDate', 'expiryDate', 'billingInfoData', 'items', 'priceSubtotal', 'priceSubtotalFriendly', 'priceTotal', 'priceTotalFriendly'));
     }
 
     protected function getFriendlyPrice($price)

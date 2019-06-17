@@ -111,6 +111,10 @@
             </div>
 
             <div id="paid-services-actions">
+                <a href="<?= Router::url([
+                    'controller' => 'Services',
+                    'action' => 'index'
+                ]) ?>" class="btn btn-primary mb-sm">Go Back</a>
                 <button type="button" class="btn btn-primary mb-sm" data-toggle="modal" data-target="#preview-bill-modal" onClick="ServicesSection.previewQuote();">Preview my Quote</button>
                 <button class="btn btn-primary mb-sm">Submit</button>
                 <br>

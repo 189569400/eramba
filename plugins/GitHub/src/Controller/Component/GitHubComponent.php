@@ -17,7 +17,7 @@ class GitHubComponent extends Component
      * @var array
      */
     protected $_defaultConfig = [
-    	'token' => 'd149f26880d070e9edf3126d940107248bfe14e4',
+    	'token_file' => 'plugins/GitHub/config/github_token.txt',
     	'baseUrl' => 'https://api.github.com/repos/eramba/eramba_v2/'
     ];
 
@@ -78,6 +78,9 @@ class GitHubComponent extends Component
 
     protected function sendRequest($action)
     {
+        // Get token from token file
+        $token = file_get_contents(ROOT . DS . $this->getConfig('token_file'));
+
     	$curl = curl_init($this->getConfig('baseUrl') . $action);
     	curl_setopt_array($curl, [
     		CURLOPT_CUSTOMREQUEST => 'GET',
@@ -86,10 +89,10 @@ class GitHubComponent extends Component
     		CURLOPT_RETURNTRANSFER => true,
     		// CURLOPT_HEADER => true,
     		CURLOPT_HTTPHEADER => [
-    			"Authorization: token {$this->getConfig('token')}"
+    			"Authorization: token {$token}"
     		]
     	]);
-
+        
     	return json_decode(curl_exec($curl), true);
     }
 }
