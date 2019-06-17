@@ -45,3 +45,7 @@ composer.lock
 # Automatically updated files #
 ###############################
 /webroot/resources/home/counters/*
+
+#Github token file#
+###################
+/plugins/GitHub/config/github_token.txt
