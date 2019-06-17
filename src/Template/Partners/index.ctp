@@ -68,13 +68,13 @@
                 <div class="form-group">
                     <label>Select a country</label>
                     <?php
-                        $countryOptions = array_merge([0 => __('All')], $countryOptions);
+                        $countryOptions = [0 => __('All')] + $countryOptions;
                     ?>
                     <?= $this->Form->select('country', $countryOptions, [
                         'class' => 'select2-form-control form-control',
                         'id' => 'partners-country-select'
                     ]) ?>
-                    <?= $this->Form->error('Contacts.location') ?>
+                    <?= $this->Form->error('country') ?>
                 </div>
             </div>
         </div>

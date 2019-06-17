@@ -58,7 +58,9 @@ class PartnersController extends AppController
         ])
         ->contain('Countries')
         ->toArray();
-        
+
+        $partnersCountries = Hash::extract($partners, "{n}.countries.{n}.id");
+
         $this->loadModel('Countries');
         $countryOptions = $this->Countries->find('list', [
             'keyField' => 'id',
@@ -67,6 +69,12 @@ class PartnersController extends AppController
             'Countries.name' => 'ASC'
         ])->toArray();
 
+        foreach ($countryOptions as $key => $val) {
+            if (!in_array($key, $partnersCountries)) {
+                unset($countryOptions[$key]);
+            }
+        }
+        
         $this->set(compact('partners', 'countryOptions'));
     }
 }
