@@ -98,10 +98,10 @@ class RoadmapsController extends AppController
                     $milestone->open_issues = $milestoneData['open_issues'];
                     $milestone->closed_issues = $milestoneData['closed_issues'];
                     $milestone->state = $milestoneData['state'];
-                    $milestone->created_at = $milestoneData['created_at'];
-                    $milestone->updated_at = $milestoneData['updated_at'];
-                    $milestone->due_on = $milestoneData['due_on'];
-                    $milestone->closed_at = $milestoneData['closed_at'];
+                    $milestone->created_at = date('Y-m-d H:i:s', strtotime($milestoneData['created_at']));
+                    $milestone->updated_at = date('Y-m-d H:i:s', strtotime($milestoneData['updated_at']));
+                    $milestone->due_on = date('Y-m-d H:i:s', strtotime($milestoneData['due_on']));
+                    $milestone->closed_at = date('Y-m-d H:i:s', strtotime($milestoneData['closed_at']));
 
                     if ($this->GithubMilestones->save($milestone)) {
                         $issues = $this->GitHub->getIssues(null, null, [
@@ -115,9 +115,9 @@ class RoadmapsController extends AppController
                             $issue->owner = Hash::get($issueData, 'user.login', '');
                             $issue->state = $issueData['state'];
                             $issue->milestone_id = $milestone->id;
-                            $issue->created_at = $issueData['created_at'];
-                            $issue->updated_at = $issueData['updated_at'];
-                            $issue->closed_at = $issueData['closed_at'];
+                            $issue->created_at = date('Y-m-d H:i:s', strtotime($issueData['created_at']));
+                            $issue->updated_at = date('Y-m-d H:i:s', strtotime($issueData['updated_at']));
+                            $issue->closed_at = date('Y-m-d H:i:s', strtotime($issueData['closed_at']));
 
                             if ($this->GithubIssues->save($issue)) {
                                 $issueLabels = Hash::get($issueData, 'labels', []);
