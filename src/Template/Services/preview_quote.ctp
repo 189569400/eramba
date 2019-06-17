@@ -73,28 +73,28 @@
                 <tr class="border-grey">
                     <td><?= $item['name'] ?></td>
                     <td><?= $item['quantity'] ?></td>
-                    <td class="hidden-sm"><?= $item['unit_price'] ?></td>
+                    <td class="hidden-sm"><?= $item['unit_price_friendly'] ?></td>
                     <td class="hidden-sm"><?= $item['vat'] ?></td>
-                    <td><?= $item['price'] ?></td>
+                    <td><?= $item['price_friendly'] ?></td>
                 </tr>
                 <?php endforeach; ?>
                 <tr>
                     <td class="hidden-sm"></td>
                     <td class="hidden-sm"></td>
                     <td colspan="2">Subtotal</td>
-                    <td><?= $priceSubtotal ?></td>
+                    <td><?= $priceSubtotalFriendly ?></td>
                 </tr>
                 <tr>
                     <td class="hidden-sm"></td>
                     <td class="hidden-sm"></td>
                     <td colspan="2" class="border-black">TOTAL NO VAT</td>
-                    <td class="border-black"><?= $priceSubtotal ?></td>
+                    <td class="border-black"><?= $priceSubtotalFriendly ?></td>
                 </tr>
                 <tr>
                     <td class="hidden-sm"></td>
                     <td class="hidden-sm"></td>
                     <td colspan="2" class="border-black"><strong>TOTAL EUR</strong></td>
-                    <td class="border-black"><strong><?= $priceTotal ?></strong></td>
+                    <td class="border-black"><strong><?= $priceTotalFriendly ?></strong></td>
                 </tr>
             </tbody>
         </table>

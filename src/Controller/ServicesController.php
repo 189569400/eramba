@@ -22,11 +22,6 @@ class ServicesController extends AppController
         ]);
 
         $this->Crud->enable(['index', 'add']);
-
-        $this->Security->setConfig('unlockedActions', [
-            'updateBill',
-            'previewQuote'
-        ]);
     }
 
     public function index()
@@ -276,8 +271,10 @@ class ServicesController extends AppController
             $priceSubtotal += $item['price'];
             $priceTotal += $item['price'] + $item['vat'];
         }
+        $priceSubtotalFriendly = $this->getFriendlyPrice($priceSubtotal);
+        $priceTotalFriendly = $this->getFriendlyPrice($priceTotal);
 
-        $this->set(compact('startDate', 'expiryDate', 'billingInfoData', 'items', 'priceSubtotal', 'priceTotal'));
+        $this->set(compact('startDate', 'expiryDate', 'billingInfoData', 'items', 'priceSubtotal', 'priceSubtotalFriendly', 'priceTotal', 'priceTotalFriendly'));
     }
 
     protected function getFriendlyPrice($price)

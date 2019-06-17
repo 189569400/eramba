@@ -19,10 +19,6 @@ class CommunityDownloadsController extends AppController
         ]);
 
         $this->Crud->enable(['index', 'add']);
-
-        $this->Security->setConfig('unlockedActions', [
-            'add'
-        ]);
     }
 
     public function index()
