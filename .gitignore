@@ -46,6 +46,10 @@ composer.lock
 ###############################
 /webroot/resources/home/counters/*
 
-#Github token file#
-###################
+# Github token file #
+#####################
 /plugins/GitHub/config/github_token.txt
+
+# Roadmap security key file #
+#############################
+/config/roadmap_sec_key.txt

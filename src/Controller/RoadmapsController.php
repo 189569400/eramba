@@ -10,8 +10,6 @@ use Cake\Utility\Hash;
  */
 class RoadmapsController extends AppController
 {
-    private $updateSecurityKey = 'test';
-
     public function initialize()
     {
         parent::initialize();
@@ -59,7 +57,8 @@ class RoadmapsController extends AppController
     {
         $this->autoRender = false;
 
-        if ($secKey === $this->updateSecurityKey) {
+        $updateSecurityKey = file_get_contents(CONFIG . 'roadmap_sec_key.txt');
+        if ($secKey === $updateSecurityKey) {
             //
             // Clean up tables
             $this->GithubMilestones->deleteAll([]);
