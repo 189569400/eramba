@@ -31,7 +31,7 @@ class ContactsTable extends Table
     const TYPE_BUG_REPORT = 4;
     const TYPE_PARTNER_SIGN_UP = 5;
 
-    public static function getTypeOptions()
+    public static function getTypes($type = null)
     {
         $types = [
             self::TYPE_ENTERPRISE_QUOTE => __('Enterprise Quote'),
@@ -41,7 +41,11 @@ class ContactsTable extends Table
             self::TYPE_PARTNER_SIGN_UP => __('Partner SignUp')
         ];
 
-        return $types;
+        if ($type !== null && array_key_exists($type, $types)) {
+            return $types[$type];
+        } else {
+            return $types;
+        }
     }
     //
 

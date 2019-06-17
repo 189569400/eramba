@@ -22,10 +22,6 @@ class ReCaptchaComponent extends Component
 
     public function beforeFilter(Event $event)
     {
-    	$this->getController()->Security->setConfig('unlockedFields', [
-            'g-recaptcha-response'
-        ]);
-
         if ($this->getController()->getRequest()->getParam('action') === 'add') {
             $this->getController()->Crud->on('beforeSave', function(Event $event) {
                 if (!$this->validateReCaptcha()) {

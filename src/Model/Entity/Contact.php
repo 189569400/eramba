@@ -26,7 +26,7 @@ class Contact extends Entity
      */
     protected $_accessible = [
         'name' => true,
-        'location' => true,
+        'country_id' => true,
         'type' => true,
         'email' => true,
         'body' => true,

@@ -1,7 +1,7 @@
 <h3><?= __('Name') ?>:</h3>
 <p><?= $name ?></p>
-<h3><?= __('Location') ?>:</h3>
-<p><?= $location ?></p>
+<h3><?= __('Country') ?>:</h3>
+<p><?= $country ?></p>
 <h3><?= __('Type') ?>:</h3>
 <p><?= $type ?></p>
 <h3><?= __('E-mail') ?>:</h3>

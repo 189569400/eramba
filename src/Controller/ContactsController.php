@@ -34,11 +34,13 @@ class ContactsController extends AppController
         $this->Crud->on('afterSave', function(Event $event) {
             $subject = $event->getSubject();
             if ($subject->success) {
+                $this->loadModel('Countries');
                 $this->Email->sendEmail($subject->entity->name, $subject->entity->email, [
                     'name' => $subject->entity->name,
-                    'country' => $subject->entity->country_id,
-                    'type' => $subject->entity->type,
-                    'email' => $subject->entity->email
+                    'country' => $this->Countries->getCountryName($subject->entity->country_id),
+                    'type' => $this->Contacts->getTypes($subject->entity->type),
+                    'email' => $subject->entity->email,
+                    'body' => $subject->entity->body
                 ]);
             }
         });
@@ -68,6 +70,6 @@ class ContactsController extends AppController
         ])->toArray();
 
         $this->set(compact('countryOptions'));
-        $this->set('typeOptions', $this->Contacts->getTypeOptions());
+        $this->set('typeOptions', $this->Contacts->getTypes());
     }
 }
