@@ -62,7 +62,7 @@ class ServicesTable extends Table
     const VERSION_PERM_PRICE = 2500;
     const VERSION_SAAS_PRICE = 0;
     const ONLINE_TRAININGS_HOUR_PRICE = 80;
-    const ONSITE_WORKSHOPS_DAY_PRICE = 3000;
+    const ONSITE_WORKSHOPS_DAY_PRICE = 750;
 
     private $setNewQuoteNumber = false;
 
