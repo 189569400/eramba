@@ -1972,6 +1972,9 @@ input.datepicker {
 	top: 20px;
 	right: 20px;
 }
+#documentation-modal .modal-header {
+	background: #f7f7f7;
+}
 #documentation-modal .modal-body {
 	padding: 0px;
     border-bottom-left-radius: 0.3rem;
@@ -1984,12 +1987,12 @@ input.datepicker {
 	height: 100%;
 	width: 300px;
 	padding: 16px;
-	background: #f7f7f7;
 	border-bottom-left-radius: 0.3rem;
 	overflow-y: scroll;
 }
 #documentation-modal-right {
 	padding-left: 300px;
+	margin: 15px;
 }
 #documentation-modal-right .doc-video {
 	margin-top: -1px;
