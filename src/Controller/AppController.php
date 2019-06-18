@@ -105,7 +105,7 @@ class AppController extends Controller
                     [
                         'name' => __('Documentation'),
                         'link' => '/documentation',
-                        'key' => 'documentation'
+                        'key' => 'documentations'
                     ],
                     [
                         'name' => _('Online Demo'),
