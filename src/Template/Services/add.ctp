@@ -23,16 +23,14 @@
                         ]) ?>
                         <?= $this->Form->error('service_billing_information.company_name') ?>
                     </div>
+                    <div class="form-group">
+                        <label>Company’s Adress</label>
+                        <?= $this->Form->text('service_billing_information.company_address', [
+                            'class' => 'form-control'
+                        ]) ?>
+                        <?= $this->Form->error('service_billing_information.company_address') ?>
+                    </div>
                     <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Company’s Adress</label>
-                                <?= $this->Form->text('service_billing_information.company_address', [
-                                    'class' => 'form-control'
-                                ]) ?>
-                                <?= $this->Form->error('service_billing_information.company_address') ?>
-                            </div>
-                        </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Country</label>
@@ -40,6 +38,15 @@
                                     'class' => 'select2-form-control form-control'
                                 ]) ?>
                                 <?= $this->Form->error('service_billing_information.country_id') ?>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>State</label>
+                                <?= $this->Form->text('service_billing_information.state', [
+                                    'class' => 'form-control'
+                                ]) ?>
+                                <?= $this->Form->error('service_billing_information.state') ?>
                             </div>
                         </div>
                     </div>

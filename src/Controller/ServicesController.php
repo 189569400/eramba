@@ -93,6 +93,7 @@ class ServicesController extends AppController
                     'company_name' => $subject->entity->service_billing_information->company_name,
                     'company_address' => $subject->entity->service_billing_information->company_address,
                     'country_name' => $this->Countries->getCountryName($subject->entity->service_billing_information->country_id),
+                    'state' => $subject->entity->service_billing_information->state,
                     'city' => $subject->entity->service_billing_information->city,
                     'zip_code' => $subject->entity->service_billing_information->zip_code,
                     'vat_number' => $subject->entity->service_billing_information->vat_number,

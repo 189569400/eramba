@@ -6,8 +6,10 @@
 <p><?= $company_address ?></p>
 <h3><?= __('Country') ?>:</h3>
 <p><?= $country_name ?></p>
+<h3><?= __('State') ?>:</h3>
+<p><?= $state ?></p>
 <h3><?= __('City') ?>:</h3>
-<p><?= $email ?></p>
+<p><?= $city ?></p>
 <h3><?= __('Zip Code') ?>:</h3>
 <p><?= $zip_code ?></p>
 <h3><?= __('VAT Number') ?>:</h3>

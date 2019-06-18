@@ -107,6 +107,12 @@ class ServiceBillingInformationsTable extends Table
             ->allowEmptyString('company_address', false);
 
         $validator
+            ->scalar('state')
+            ->maxLength('state', 255)
+            ->requirePresence('state', 'create')
+            ->allowEmptyString('state', false);
+
+        $validator
             ->scalar('city')
             ->maxLength('city', 255)
             ->requirePresence('city', 'create')

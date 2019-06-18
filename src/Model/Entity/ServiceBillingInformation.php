@@ -39,6 +39,7 @@ class ServiceBillingInformation extends Entity
         'company_name' => true,
         'company_address' => true,
         'country_id' => true,
+        'state' => true,
         'city' => true,
         'zip_code' => true,
         'vat_number' => true,
