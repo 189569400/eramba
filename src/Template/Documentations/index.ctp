@@ -60,16 +60,7 @@ var documentationItems = <?= $documentationItemsJson ?>;
                         <?php if (!empty($documentation->link)): ?>
                         <a href="<?= $documentation->link ?>" target="_blank">Doc</a>
                         <?php endif; ?>
-                        <?php if (!empty($documentation->video)): ?>
-                        <a href="#" class="video-modal-trigger" data-documentation-id="<?= $documentation->id ?>" data-toggle="modal" data-target="#documentation-modal">Video</a>
-                        <?php endif; ?>
-                        <?php if (!empty($documentation->video_ubuntu)): ?>
-                        <a href="#" class="video-modal-trigger" data-documentation-id="<?= $documentation->id ?>" data-toggle="modal" data-target="#documentation-modal">Video</a>
-                        <?php endif; ?>
-                        <?php if (!empty($documentation->video_centos)): ?>
-                        <a href="#" class="video-modal-trigger" data-documentation-id="<?= $documentation->id ?>" data-toggle="modal" data-target="#documentation-modal">Video</a>
-                        <?php endif; ?>
-                        <?php if (!empty($documentation->video_redhat)): ?>
+                        <?php if (!empty($documentation->documentation_videos)): ?>
                         <a href="#" class="video-modal-trigger" data-documentation-id="<?= $documentation->id ?>" data-toggle="modal" data-target="#documentation-modal">Video</a>
                         <?php endif; ?>
                     </div>

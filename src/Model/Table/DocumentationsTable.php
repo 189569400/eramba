@@ -45,6 +45,10 @@ class DocumentationsTable extends Table
         $this->hasMany('DocumentationRelations', [
             'foreignKey' => 'documentation_id'
         ]);
+
+        $this->hasMany('DocumentationVideos', [
+            'foreignKey' => 'documentation_id'
+        ]);
     }
 
     /**

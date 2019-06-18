@@ -23,7 +23,8 @@ class DocumentationsController extends AppController
         $docCategories = $this->DocumentationCategories->find('all', [
             'contain' => [
                 'Documentations' => [
-                    'DocumentationRelations'
+                    'DocumentationRelations',
+                    'DocumentationVideos'
                 ]
             ]
         ])->toArray();
@@ -33,12 +34,23 @@ class DocumentationsController extends AppController
             foreach ($category->documentations as $documentation) {
                 $documentationItems[$documentation->id] = [
                     'title' => $documentation->title,
-                    'video' => $documentation->video,
                     'relatedItems' => Hash::extract($documentation->documentation_relations, '{n}.related_documentation_id')
                 ];
+
+                //
+                // Add videos
+                $videos = [];
+                foreach ($documentation->documentation_videos as $video) {
+                    $videos[] = [
+                        'title' => $video->title,
+                        'videoId' => $video->video
+                    ];
+                }
+                $documentationItems[$documentation->id]['video'] = $videos;
+                //
             }
         }
-
+        
         $documentationItemsJson = json_encode($documentationItems);
         
         $this->set(compact('docCategories', 'documentationItemsJson'));
