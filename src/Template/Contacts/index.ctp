@@ -42,6 +42,7 @@ use Cake\Routing\Router;
                     </div>
 
                     <div class="form-group">
+                        <p class="text-grey">Optional</p>
                         <?= $this->Form->select('Contacts.state_id', [], [
                             'class' => 'select2-form-control form-control',
                             'id' => 'location-state-select',
@@ -52,6 +53,7 @@ use Cake\Routing\Router;
                     </div>
 
                     <div class="form-group">
+                        <p class="text-grey">Optional</p>
                         <?= $this->Form->select('Contacts.city_id', [], [
                             'class' => 'select2-form-control form-control',
                             'id' => 'location-city-select',
