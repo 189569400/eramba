@@ -1,3 +1,6 @@
+<?php
+use Cake\Routing\Router;
+?>
 <section class="mb-xl first-section-margin">
     <div class="container">
         <div class="row">
@@ -31,9 +34,30 @@
                         <label>Where are you based? <span class="text-grey">(Required)</span></label>
                         <?= $this->Form->select('Contacts.country_id', $countryOptions, [
                             'class' => 'select2-form-control form-control',
-                            'id' => 'contact-form-country-select'
+                            'id' => 'location-country-select',
+                            'empty' => __('Select Country'),
+                            'onchange' => "Location.loadStates($(this).val(), 'location-state-select', '" . Router::url(['controller' => 'Contacts', 'action' => 'getStatesList']) . "')"
                         ]) ?>
                         <?= $this->Form->error('Contacts.country_id') ?>
+                    </div>
+
+                    <div class="form-group">
+                        <?= $this->Form->select('Contacts.state_id', [], [
+                            'class' => 'select2-form-control form-control',
+                            'id' => 'location-state-select',
+                            'empty' => __('Select State'),
+                            'onchange' => "Location.loadCities($(this).val(), 'location-city-select', '" . Router::url(['controller' => 'Contacts', 'action' => 'getCitiesList']) . "')"
+                        ]) ?>
+                        <?= $this->Form->error('Contacts.state_id') ?>
+                    </div>
+
+                    <div class="form-group">
+                        <?= $this->Form->select('Contacts.city_id', [], [
+                            'class' => 'select2-form-control form-control',
+                            'id' => 'location-city-select',
+                            'empty' => __('Select City')
+                        ]) ?>
+                        <?= $this->Form->error('Contacts.city_id') ?>
                     </div>
 
                     <div class="form-group">

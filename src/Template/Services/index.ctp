@@ -1,5 +1,6 @@
 <?php
     use Cake\Routing\Router;
+    use App\Model\Table\ContactsTable;
 ?>
 <section id="paid-services" class="footer-margin first-section-margin">
     <?= $this->Form->create(isset($service) ? $service : null, [
@@ -31,7 +32,7 @@
                     <div class="comming-soon">
                         Comming soon
                     </div>
-                    <div class="faded">
+                    <div class="mb-sm">
                         <h4 class="text-center">
                             Eramba Community - SaaS
                         </h4>
@@ -43,6 +44,10 @@
                         <p class="text-grey text-center">
                             We can host eramba for you speeding up your eramba journey!<br> Read the <a href="#">FAQ</a> to know more.
                         </p>
+                    </div>
+                    <div class="text-center">
+                        <h4 class="text-grey mb-sm">Want to test SaaS as a beta user?</h4>
+                        <a class="btn btn-primary" href="<?= Router::url(['controller' => 'Contacts', 'action' => 'index', '?' => ['type' => ContactsTable::TYPE_COMMUNITY_SAAS_TESTER]]) ?>">Contact Us</a>
                     </div>
                 </div>
             </div>

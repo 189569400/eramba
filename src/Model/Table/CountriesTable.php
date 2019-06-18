@@ -119,11 +119,12 @@ class CountriesTable extends Table
 
     public function getCountryName($id)
     {
-        $country = $this->get($id, [
-            'fields' => [
-                'name'
-            ]
-        ]);
+        $country = $this->find('all')
+            ->select(['name'])
+            ->where([
+                'id' => $id
+            ])
+            ->first();
 
         $name = "";
         if (!empty($country)) {

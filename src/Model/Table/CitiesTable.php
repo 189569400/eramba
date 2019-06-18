@@ -90,4 +90,21 @@ class CitiesTable extends Table
 
         return $rules;
     }
+
+    public function getCityName($id)
+    {
+        $city = $this->find('all')
+            ->select(['name'])
+            ->where([
+                'id' => $id
+            ])
+            ->first();
+
+        $name = "";
+        if (!empty($city)) {
+            $name = $city->name;
+        }
+
+        return $name;
+    }
 }

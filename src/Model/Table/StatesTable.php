@@ -88,4 +88,21 @@ class StatesTable extends Table
 
         return $rules;
     }
+
+    public function getStateName($id)
+    {
+        $state = $this->find('all')
+            ->select(['name'])
+            ->where([
+                'id' => $id
+            ])
+            ->first();
+
+        $name = "";
+        if (!empty($state)) {
+            $name = $state->name;
+        }
+
+        return $name;
+    }
 }

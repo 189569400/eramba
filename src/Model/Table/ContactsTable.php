@@ -30,6 +30,7 @@ class ContactsTable extends Table
     const TYPE_DEMO_CALL = 3;
     const TYPE_BUG_REPORT = 4;
     const TYPE_PARTNER_SIGN_UP = 5;
+    const TYPE_COMMUNITY_SAAS_TESTER = 6;
 
     public static function getTypes($type = null)
     {
@@ -38,7 +39,8 @@ class ContactsTable extends Table
             self::TYPE_COMMUNITY_SAAS_QUOTE => __('Community SaaS Quote'),
             self::TYPE_DEMO_CALL => __('Demo Call'),
             self::TYPE_BUG_REPORT => __('Bug Report'),
-            self::TYPE_PARTNER_SIGN_UP => __('Partner SignUp')
+            self::TYPE_PARTNER_SIGN_UP => __('Partner SignUp'),
+            self::TYPE_COMMUNITY_SAAS_TESTER => __('Community SaaS tester')
         ];
 
         if ($type !== null && array_key_exists($type, $types)) {
@@ -69,6 +71,14 @@ class ContactsTable extends Table
         $this->belongsTo('Countries', [
             'foreignKey' => 'country_id'
         ]);
+
+        $this->belongsTo('States', [
+            'foreignKey' => 'state_id'
+        ]);
+
+        $this->belongsTo('Cities', [
+            'foreignKey' => 'city_id'
+        ]);
     }
 
     /**
@@ -93,6 +103,16 @@ class ContactsTable extends Table
             ->integer('country_id')
             ->requirePresence('country_id', 'create')
             ->allowEmptyString('country_id', false);
+
+        $validator
+            ->integer('state_id')
+            ->requirePresence('state_id', 'create')
+            ->allowEmptyString('state_id', true);
+
+        $validator
+            ->integer('city_id')
+            ->requirePresence('city_id', 'create')
+            ->allowEmptyString('city_id', true);
 
         $validator
             ->scalar('type')
@@ -128,7 +148,7 @@ class ContactsTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         // $rules->add($rules->isUnique(['email']));
-        $rules->add($rules->existsIn(['country_id'], 'Countries'));
+        // $rules->add($rules->existsIn(['country_id'], 'Countries'));
 
         return $rules;
     }
@@ -137,6 +157,16 @@ class ContactsTable extends Table
     {
         if (!$this->reCaptcha) {
             return false;
+        }
+
+        if ($entity->country_id == -1 || !$this->exists(['id' => $entity->country_id])) {
+            $entity->country_id = null;
+        }
+        if ($entity->state_id == -1 || !$this->exists(['id' => $entity->state_id])) {
+            $entity->state_id = null;
+        }
+        if ($entity->city_id == -1 || !$this->exists(['id' => $entity->city_id])) {
+            $entity->city_id = null;
         }
     }
 

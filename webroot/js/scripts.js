@@ -353,3 +353,43 @@ $(function() {
 
     window.ServicesSection = ServicesSection;
 })(window);
+
+/**
+ * Location
+ */
+(function(window)
+{
+    var Location = {};
+
+    Location.loadStates = function(countryId, elemId, url)
+    {
+        url += "/" + countryId;
+        $.ajax({
+            url: url,
+            method: 'GET'
+        }).done(function(data) {
+            $('#' + elemId).empty().select2({
+                data: JSON.parse(data)
+            }).each(function() {
+                $(this).data('select2').$container.addClass("form-control");
+            });
+        });
+    };
+
+    Location.loadCities = function(stateId, elemId, url)
+    {
+        url += "/" + stateId;
+        $.ajax({
+            url: url,
+            method: 'GET'
+        }).done(function(data) {
+            $('#' + elemId).empty().select2({
+                data: JSON.parse(data)
+            }).each(function() {
+                $(this).data('select2').$container.addClass("form-control");
+            });
+        });
+    };
+
+    window.Location = Location;
+})(window);
