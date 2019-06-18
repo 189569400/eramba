@@ -43,6 +43,14 @@ class CommunityDownloadsTable extends Table
         $this->belongsTo('Countries', [
             'foreignKey' => 'country_id'
         ]);
+
+        $this->belongsTo('States', [
+            'foreignKey' => 'state_id'
+        ]);
+
+        $this->belongsTo('Cities', [
+            'foreignKey' => 'city_id'
+        ]);
     }
 
     /**
@@ -61,6 +69,16 @@ class CommunityDownloadsTable extends Table
             ->integer('country_id')
             ->requirePresence('country_id', 'create')
             ->allowEmptyString('country_id', false);
+
+        $validator
+            ->integer('state_id')
+            ->requirePresence('state_id', 'create')
+            ->allowEmptyString('state_id', true);
+
+        $validator
+            ->integer('city_id')
+            ->requirePresence('city_id', 'create')
+            ->allowEmptyString('city_id', true);
 
         $validator
             ->scalar('name')
@@ -91,8 +109,21 @@ class CommunityDownloadsTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         // $rules->add($rules->isUnique(['email']));
-        $rules->add($rules->existsIn(['country_id'], 'Countries'));
+        // $rules->add($rules->existsIn(['country_id'], 'Countries'));
 
         return $rules;
+    }
+
+    public function beforeSave(Event $event, $entity, $options = [])
+    {
+        if ($entity->country_id == -1 || !$this->exists(['id' => $entity->country_id])) {
+            $entity->country_id = null;
+        }
+        if ($entity->state_id == -1 || !$this->exists(['id' => $entity->state_id])) {
+            $entity->state_id = null;
+        }
+        if ($entity->city_id == -1 || !$this->exists(['id' => $entity->city_id])) {
+            $entity->city_id = null;
+        }
     }
 }

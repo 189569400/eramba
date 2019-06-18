@@ -26,6 +26,8 @@ class CommunityDownload extends Entity
      */
     protected $_accessible = [
         'country_id' => true,
+        'state_id' => true,
+        'city_id' => true,
         'name' => true,
         'email' => true,
         'country' => true

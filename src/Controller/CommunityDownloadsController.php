@@ -62,7 +62,62 @@ class CommunityDownloadsController extends AppController
         ])->order([
             'Countries.name' => 'ASC'
         ])->toArray();
+        $countryOptions = [-1 => __('My country is not listed')] + $countryOptions;
 
         $this->set(compact('countryOptions'));
+    }
+
+    public function getStatesList($country_id = null)
+    {
+        $this->autoRender = false;
+
+        $this->loadModel('States');
+        $stateOptions = $this->States->find('list', [
+            'keyField' => 'id',
+            'valueField' => 'name'
+        ])->order([
+            'States.name' => 'ASC'
+        ])->where([
+            'country_id' => $country_id
+        ])->toArray();
+        $stateOptions = [-1 => __('My state is not listed')] + $stateOptions;
+        $stateOptions = [0 => __('Select State')] + $stateOptions;
+        $results = [];
+        foreach ($stateOptions as $key => $val) {
+            $results[] = [
+                'text' => $val,
+                'id' => $key
+            ];
+        }
+
+        echo json_encode($results);
+        exit;
+    }
+
+    public function getCitiesList($state_id = null)
+    {
+        $this->autoRender = false;
+
+        $this->loadModel('Cities');
+        $cityOptions = $this->Cities->find('list', [
+            'keyField' => 'id',
+            'valueField' => 'name'
+        ])->order([
+            'Cities.name' => 'ASC'
+        ])->where([
+            'state_id' => $state_id
+        ])->toArray();
+        $cityOptions = [-1 => __('My city is not listed')] + $cityOptions;
+        $cityOptions = [0 => __('Select City')] + $cityOptions;
+        $results = [];
+        foreach ($cityOptions as $key => $val) {
+            $results[] = [
+                'text' => $val,
+                'id' => $key
+            ];
+        }
+
+        echo json_encode($results);
+        exit;
     }
 }
