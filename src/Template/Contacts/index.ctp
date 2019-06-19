@@ -9,7 +9,7 @@ use Cake\Routing\Router;
                     Contact us!
                 </h1>
                 <p class="text-grey">
-                    Please use this form to reach out to us! We get tons of ideas, questions, proposals and bug reports that greatly help the project.Dont by shy and drop us a line! We always reply!
+                    Use this form to reach out to us!<br><br>We get tons of ideas, questions, proposals and bug reports that greatly help the project.Dont by shy and drop us a line!
                 </p>
             </div>
         </div>
@@ -22,10 +22,10 @@ use Cake\Routing\Router;
             <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
                 <?= $this->Form->create(isset($contact) ? $contact : null, ['url' => ['controller' => 'Contacts', 'action' => 'add']]) ?>
                     <div class="form-group">
-                        <label>What's your name? <span class="text-grey">(Required)</span></label>
+                        <label>Your name? <span class="text-grey">(Required)</span></label>
                         <?= $this->Form->text('Contacts.name', [
                             'class' => 'form-control',
-                            'placeholder' => 'John Doe'
+                            'placeholder' => 'Batman'
                         ]) ?>
                         <?= $this->Form->error('Contacts.name') ?>
                     </div>
@@ -42,7 +42,7 @@ use Cake\Routing\Router;
                     </div>
 
                     <div class="form-group">
-                        <p class="text-grey">Optional</p>
+                        <label>Select a State / Region <span class="text-grey">(Optional)</span></label>
                         <?= $this->Form->select('Contacts.state_id', [], [
                             'class' => 'select2-form-control form-control',
                             'id' => 'location-state-select',
@@ -53,7 +53,7 @@ use Cake\Routing\Router;
                     </div>
 
                     <div class="form-group">
-                        <p class="text-grey">Optional</p>
+                        <label>Select a City if available <span class="text-grey">(Optional)</span></label>
                         <?= $this->Form->select('Contacts.city_id', [], [
                             'class' => 'select2-form-control form-control',
                             'id' => 'location-city-select',
@@ -93,7 +93,7 @@ use Cake\Routing\Router;
                             'class' => 'form-check-input',
                             'id' => 'form-check-gdpr'
                         ]) ?>
-                        <label class="form-check-label form-check-label-small" for="form-check-gdpr">I consent to having this website store the information provided above so they can respond to my question. At any time you can request getting your personal data removed from our systems by emailing support@eramba.org. <br><br>Review our privacy policy.</label>
+                        <label class="form-check-label form-check-label-small" for="form-check-gdpr">I consent to having this website store the information provided above so they can respond to my question. At any time you can request getting your personal data removed from our systems by emailing support@eramba.org. <br><br>Review our <a href="https://www.eramba.org/privacy">privacy policy</a>.</label>
                         <?= $this->Form->error('Contacts.gdpr_consent') ?>
                     </div>
 
