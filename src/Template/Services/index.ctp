@@ -24,15 +24,45 @@
                             <img class="img-fluid" src="/img/enterprise-rocket.png" alt="">
                         </div>
                     </div>
-                    <p class="text-grey text-center">
+                    <p class="text-grey text-center mb-sm">
                         Includes our Enterprise version, support and frequent updates. You can choose to install on-premise or SaaS with us.<br> Read the <a href="#">FAQ</a> to know more.
                     </p>
+                    <div class="form-group narrow">
+                        <label>Version</label>
+                        <?php
+                            $versionOptionsModified = [];
+                            foreach ($versionOptions as $key => $val) {
+                                $versionOptionsModified[] = [
+                                    'text' => $val,
+                                    'value' => $key
+                                ];
+                            }
+                            $versionOptionsModified[] = [
+                                'text' => __('On SaaS (Comming Soon)'),
+                                'value' => -1,
+                                'disabled' => true
+                            ];
+                        ?>
+                        <?= $this->Form->select('Services.version', $versionOptionsModified, [
+                            'class' => 'form-control',
+                            'onChange' => 'ServicesSection.updateBill();'
+                        ]) ?>
+                        <?= $this->Form->error('Services.version') ?>
+                    </div>
+                    <div class="form-group narrow">
+                        <label>Start Date</label><br>
+                        <?= $this->Form->text('Services.start_date', [
+                            'class' => 'form-control datepicker',
+                            'onChange' => 'ServicesSection.updateBill();'
+                        ]) ?>
+                        <?= $this->Form->error('Services.start_date') ?>
+                    </div>
                 </div>
                 <div class="licence-item col-lg-4 offset-lg-2 col-md-6 mb-md">
                     <div class="comming-soon">
                         Comming soon
                     </div>
-                    <div class="mb-sm">
+                    <div class="mb-lg faded">
                         <h4 class="text-center">
                             Eramba Community - SaaS
                         </h4>
@@ -48,43 +78,6 @@
                     <div class="text-center">
                         <h4 class="text-grey mb-sm">Want to test SaaS as a beta user?</h4>
                         <a class="btn btn-primary" href="<?= Router::url(['controller' => 'Contacts', 'action' => 'index', '?' => ['type' => ContactsTable::TYPE_COMMUNITY_SAAS_TESTER]]) ?>">Contact Us</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="paid-services-step">
-                <div class="row mb-md paid-services-step">
-                    <div class="col-lg-4 offset-lg-1 col-md-6">
-                        <div class="form-group narrow">
-                            <label>Version</label>
-                            <?php
-                                $versionOptionsModified = [];
-                                foreach ($versionOptions as $key => $val) {
-                                    $versionOptionsModified[] = [
-                                        'text' => $val,
-                                        'value' => $key
-                                    ];
-                                }
-                                $versionOptionsModified[] = [
-                                    'text' => __('On SaaS (Comming Soon)'),
-                                    'value' => -1,
-                                    'disabled' => true
-                                ];
-                            ?>
-                            <?= $this->Form->select('Services.version', $versionOptionsModified, [
-                                'class' => 'form-control',
-                                'onChange' => 'ServicesSection.updateBill();'
-                            ]) ?>
-                            <?= $this->Form->error('Services.version') ?>
-                        </div>
-                        <div class="form-group narrow">
-                            <label>Start Date</label><br>
-                            <?= $this->Form->text('Services.start_date', [
-                                'class' => 'form-control datepicker',
-                                'onChange' => 'ServicesSection.updateBill();'
-                            ]) ?>
-                            <?= $this->Form->error('Services.start_date') ?>
-                        </div>
                     </div>
                 </div>
             </div>
