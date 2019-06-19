@@ -36,57 +36,21 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <?php foreach ($eReleases as $rls): ?>
                         <tr>
                             <td>
-                                e2.2.1
+                                <?= $rls->version ?>
                             </td>
                             <td>
-                                28. May 2019
+                                <?= date('F d, Y', strtotime($rls->release_date)) ?>
                             </td>
                             <td>
-                                <span data-container="body" data-toggle="popover" data-placement="top" data-html="true" data-trigger="hover" data-content="<?= nl2br('Important, backup your DB before you push the update (System / Settings / Backup & Restore).
-
-                                    This release fixes multiple bugs, migrates the way compliance packages link to organisation (important change), CSV imports no longer support IDs but full names and we are starting to support php7.(2|3) in beta mode. Please watch the 9 minutes video explaining all mayor changes.
-
-                                    Ref: https://www.eramba.org/enterprise-release-2-1-0/') ?>" data-template='<div class="popover popover-release" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'>
+                                <span data-container="body" data-toggle="popover" data-placement="top" data-html="true" data-trigger="hover" data-content="<?= nl2br($rls->changelog) ?>" data-template='<div class="popover popover-release" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'>
                                     Show
                                 </span>
                             </td>
                         </tr>
-                        <tr>
-                            <td>
-                                e2.1.9
-                            </td>
-                            <td>
-                                01. May 2019
-                            </td>
-                            <td>
-                                <span data-container="body" data-toggle="popover" data-placement="top" data-html="true" data-trigger="hover" data-content="<?= nl2br('Important, backup your DB before you push the update (System / Settings / Backup & Restore).
-
-                                    This release fixes multiple bugs, migrates the way compliance packages link to organisation (important change), CSV imports no longer support IDs but full names and we are starting to support php7.(2|3) in beta mode. Please watch the 9 minutes video explaining all mayor changes.
-
-                                    Ref: https://www.eramba.org/enterprise-release-2-1-0/') ?>" data-template='<div class="popover popover-release" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'>
-                                    Show
-                                </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                e2.1.8
-                            </td>
-                            <td>
-                                21. April 2019
-                            </td>
-                            <td>
-                                <span data-container="body" data-toggle="popover" data-placement="top" data-html="true" data-trigger="hover" data-content="<?= nl2br('Important, backup your DB before you push the update (System / Settings / Backup & Restore).
-
-                                    This release fixes multiple bugs, migrates the way compliance packages link to organisation (important change), CSV imports no longer support IDs but full names and we are starting to support php7.(2|3) in beta mode. Please watch the 9 minutes video explaining all mayor changes.
-
-                                    Ref: https://www.eramba.org/enterprise-release-2-1-0/') ?>" data-template='<div class="popover popover-release" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'>
-                                    Show
-                                </span>
-                            </td>
-                        </tr>
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>
@@ -112,51 +76,39 @@
                     <tbody>
                         <tr>
                             <td>
-                                e2.2.1
+                                c1.0.6.052
                             </td>
                             <td>
-                                28. May 2019
+                                March 19, 2018
                             </td>
                             <td>
-                                <span data-container="body" data-toggle="popover" data-placement="top" data-html="true" data-trigger="hover" data-content="<?= nl2br('Important, backup your DB before you push the update (System / Settings / Backup & Restore).
-
-                                    This release fixes multiple bugs, migrates the way compliance packages link to organisation (important change), CSV imports no longer support IDs but full names and we are starting to support php7.(2|3) in beta mode. Please watch the 9 minutes video explaining all mayor changes.
-
-                                    Ref: https://www.eramba.org/enterprise-release-2-1-0/') ?>" data-template='<div class="popover popover-release" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'>
+                                <span data-container="body" data-toggle="popover" data-placement="top" data-html="true" data-trigger="hover" data-content="<?= nl2br('TBD') ?>" data-template='<div class="popover popover-release" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'>
                                     Show
                                 </span>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                e2.1.9
+                                c1.0.6.001
                             </td>
                             <td>
-                                01. May 2019
+                                March 24, 2016
                             </td>
                             <td>
-                                <span data-container="body" data-toggle="popover" data-placement="top" data-html="true" data-trigger="hover" data-content="<?= nl2br('Important, backup your DB before you push the update (System / Settings / Backup & Restore).
-
-                                    This release fixes multiple bugs, migrates the way compliance packages link to organisation (important change), CSV imports no longer support IDs but full names and we are starting to support php7.(2|3) in beta mode. Please watch the 9 minutes video explaining all mayor changes.
-
-                                    Ref: https://www.eramba.org/enterprise-release-2-1-0/') ?>" data-template='<div class="popover popover-release" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'>
+                                <span data-container="body" data-toggle="popover" data-placement="top" data-html="true" data-trigger="hover" data-content="<?= nl2br('This update is provided only to test out self-updates right after deployment to customers') ?>" data-template='<div class="popover popover-release" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'>
                                     Show
                                 </span>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                e2.1.8
+                                c1.0.6.000
                             </td>
                             <td>
-                                21. April 2019
+                                March 23, 2016
                             </td>
                             <td>
-                                <span data-container="body" data-toggle="popover" data-placement="top" data-html="true" data-trigger="hover" data-content="<?= nl2br('Important, backup your DB before you push the update (System / Settings / Backup & Restore).
-
-                                    This release fixes multiple bugs, migrates the way compliance packages link to organisation (important change), CSV imports no longer support IDs but full names and we are starting to support php7.(2|3) in beta mode. Please watch the 9 minutes video explaining all mayor changes.
-
-                                    Ref: https://www.eramba.org/enterprise-release-2-1-0/') ?>" data-template='<div class="popover popover-release" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'>
+                                <span data-container="body" data-toggle="popover" data-placement="top" data-html="true" data-trigger="hover" data-content="<?= nl2br('First Community Package') ?>" data-template='<div class="popover popover-release" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'>
                                     Show
                                 </span>
                             </td>

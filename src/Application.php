@@ -34,6 +34,9 @@ class Application extends BaseApplication
      */
     public function bootstrap()
     {
+        // Load SupportConnector plugin
+        $this->addPlugin('SupportConnector');
+
         // Load GitHub plugin
         $this->addPlugin('GitHub');
 
