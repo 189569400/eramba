@@ -89,7 +89,11 @@ var documentationItems = <?= $documentationItemsJson ?>;
                     </div>
                 </div>
                 <div id="documentation-modal-left">
-                    <div id="documentation-modal-main-item" class="mb-xs">
+                    <div id="documentation-modal-main-items" class="mb-xs">
+                        <strong id="documentation-modal-main-item-title">
+                        </strong>
+                        <ul class="related-videos-list">
+                        </ul>
                     </div>
 
                     <div id="documentation-modal-related-items">
