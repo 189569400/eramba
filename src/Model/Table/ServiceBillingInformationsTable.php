@@ -45,7 +45,7 @@ class ServiceBillingInformationsTable extends Table
     {
         $paymentTypes = [
             self::PAYMENT_TYPE_BANK_TRANSFER => __('Bank Transfer'),
-            self::PAYMENT_TYPE_CREDIT_CARD => __('Credit Card (100€ fee)')
+            self::PAYMENT_TYPE_CREDIT_CARD => __('Credit Card (€100 fee)')
         ];
 
         if ($type !== null && array_key_exists($type, $paymentTypes)) {
