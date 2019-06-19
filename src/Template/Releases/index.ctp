@@ -1,7 +1,10 @@
 <section class="first-section-margin mb-xl">
     <div class="container">
         <div class="row">
-            <div class="col-md-10">
+            <div class="col-md-4 text-center hidden-md">
+                <img id="releases-img" src="/img/megaphone.png" alt="" class="img-fluid" width="250" style="transform: rotate(-12deg); margin-top: 20px; margin-left: -70px;">
+            </div>
+            <div class="col-lg-7">
                 <h1>
                     Releases
                 </h1>
@@ -17,9 +20,9 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-5 mb-md">
-                <h2 class="text-blue">
+                <h3 class="text-blue text-center">
                     Enterprise
-                </h2>
+                </h3>
                 <table>
                     <thead>
                         <tr>
@@ -91,9 +94,9 @@
                 </table>
             </div>
             <div class="col-xl-5 offset-xl-1 mb-md">
-                <h2 class="text-blue">
+                <h3 class="text-blue text-center">
                     Community
-                </h2>
+                </h3>
                 <table>
                     <thead>
                         <tr>

@@ -2106,6 +2106,9 @@ input.datepicker {
 #releases {
 	margin-bottom: -30px;
 }
+#releases h3 {
+	font-weight: 800;
+}
 #releases table {
 	width: 100%;
 }
@@ -2115,6 +2118,11 @@ input.datepicker {
 }
 #releases table tr:nth-child(odd) td {
 	background: #f9f9f9;
+}
+#releases-img {
+	transform: rotate(-12deg);
+	margin-top: 20px;
+	margin-left: -70px;
 }
 .popover-release {
     max-width: 550px;
