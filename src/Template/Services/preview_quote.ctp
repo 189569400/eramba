@@ -26,7 +26,7 @@
                 <?php else: ?>
                 <p class="text-blue">
                     <strong>
-                        <i>* We will ask for your company's and personal information on the next step</i>
+                        <i>* We will ask for your organisation details in the next step</i>
                     </strong>
                 </p>
                 <?php endif; ?>

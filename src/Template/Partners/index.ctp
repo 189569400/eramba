@@ -20,7 +20,7 @@
                 <div class="row">
                     <div class="col-xl-8 col-lg-12">
                         <p class="text-grey">
-                            No matter how good a GRC tool is - organisations need time and knowledge to mature and run a GRC department. eramba works with a network of consulting business that can help you succeed in the monumental task of running GRC.
+                            No matter how good a GRC tool is - organisations need time and knowledge to mature and run efficiently. eramba works with a network of consulting business that can help you succeed in the monumental task of running GRC.
                         </p>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 24 24" width="100" height="100" class="mb-xs icon-md"><title></title><g transform="matrix(1,0,0,1,0,0)"><path d="M 23.5,15c-1.657,0-3-1.343-3-3s1.343-3,3-3V5.5c0-0.552-0.448-1-1-1h-21c-0.552,0-1,0.448-1,1V9 c1.657,0,3,1.343,3,3s-1.343,3-3,3v3.5c0,0.552,0.448,1,1,1h21c0.552,0,1-0.448,1-1V15z " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 8,16l8-8 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 9,7.5 c0.828,0,1.5,0.672,1.5,1.5S9.828,10.5,9,10.5S7.5,9.828,7.5,9S8.172,7.5,9,7.5z " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 15,13.5c0.828,0,1.5,0.672,1.5,1.5 s-0.672,1.5-1.5,1.5s-1.5-0.672-1.5-1.5S14.172,13.5,15,13.5z" stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
                         <h5>Discounts</h5>
                         <p class="text-grey">
-                            As partner you’ll have access to discounts for new (%40) and renewed licenses (%5)
+                            As partner you’ll have access to discounts for new and renewed licenses used by you or your customers. Read <a href="https://docs.google.com/document/d/1FTAG1vMDhNXJXySLBgvore60zhcObKhAievBk3rCOdA/edit#heading=h.tlds5h3krixr">more!</a> 
                         </p>
                     </div>
                     <div class="col-md-4">

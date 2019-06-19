@@ -48,7 +48,7 @@ class ServicesTable extends Table
     public static function getVersions($version = null)
     {
         $versions = [
-            self::VERSION_PERM => __('On Perm'),
+            self::VERSION_PERM => __('On Premise'),
             // self::VERSION_SAAS => __('On SaaS')
         ];
 

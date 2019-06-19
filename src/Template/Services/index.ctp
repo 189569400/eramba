@@ -25,7 +25,7 @@
                         </div>
                     </div>
                     <p class="text-grey text-center mb-sm">
-                        Includes our Enterprise version, support and frequent updates. You can choose to install on-premise or SaaS with us.<br> Read the <a href="#">FAQ</a> to know more.
+                        Includes our Enterprise version, support and regular updates. Read the <a href="https://docs.google.com/document/d/1FTAG1vMDhNXJXySLBgvore60zhcObKhAievBk3rCOdA/edit#heading=h.23mitxs37sgm">FAQ</a> to know more.
                     </p>
                     <div class="form-group narrow">
                         <label>Version</label>
@@ -50,7 +50,7 @@
                         <?= $this->Form->error('Services.version') ?>
                     </div>
                     <div class="form-group narrow">
-                        <label>Start Date</label><br>
+                        <label>License Start Date</label><br>
                         <?= $this->Form->text('Services.start_date', [
                             'class' => 'form-control datepicker',
                             'onChange' => 'ServicesSection.updateBill();'
@@ -72,7 +72,7 @@
                             </div>
                         </div>
                         <p class="text-grey text-center">
-                            We can host eramba for you speeding up your eramba journey!<br> Read the <a href="#">FAQ</a> to know more.
+                            We can host eramba for you speeding up your eramba journey!. Read the <a href="https://docs.google.com/document/d/1FTAG1vMDhNXJXySLBgvore60zhcObKhAievBk3rCOdA/edit#heading=h.esvzhzalijlg">FAQ</a> to know more.
                         </p>
                     </div>
                     <div class="text-center">
@@ -95,7 +95,7 @@
                                 Online Trainings and Assistance
                             </h4>
                             <p class="lead text-grey">
-                                No matter if you are community or enterprise we can help you remotely with your first steps: creating risks, assets, controls, compliance reports, Etc. See our <a href="#">FAQ</a> for more information.
+                                We can help you remotely with your first steps: creating risks, assets, controls, compliance reports, Etc. See our <a href="https://docs.google.com/document/d/1FTAG1vMDhNXJXySLBgvore60zhcObKhAievBk3rCOdA/edit#heading=h.qfjnzpxbfenq">FAQ</a> for more information.
                             </p>
                         </div>
                         <div class="form-group narrow">
@@ -119,12 +119,11 @@
                                 Onsite Workshops
                             </h4>
                             <p class="lead text-grey">
-                                Our four day onsite training is the crown jewel of our services - delivered by core members of eramba with decades of experience running GRC will help you start with the right step.
-                                See you <a href="#">FAQ</a> for more information. 
+                                Our four day onsite training/workshop helps you understanding and implementing eramba in your organisation - this is highly recommended to ensure you start with the right foot!. See our <a href="https://docs.google.com/document/d/1FTAG1vMDhNXJXySLBgvore60zhcObKhAievBk3rCOdA/edit#heading=h.ovs2krb4amke">FAQ</a> for more information. 
                             </p>
                         </div>
                         <div class="form-group narrow">
-                            <label>How many days do you need?</label><br>
+                            <label>Onsite Trainning Required?</label><br>
                             <?= $this->Form->select('Services.onsite_workshops_days', [
                                 0 => __('None'),
                                 4 => __('4 day workshop')

@@ -17,14 +17,14 @@
                     </p>
 
                     <div class="form-group">
-                        <label>What's your Company’s name?</label>
+                        <label>Organisation name</label>
                         <?= $this->Form->text('service_billing_information.company_name', [
                             'class' => 'form-control'
                         ]) ?>
                         <?= $this->Form->error('service_billing_information.company_name') ?>
                     </div>
                     <div class="form-group">
-                        <label>Company’s Adress</label>
+                        <label>Street and Number</label>
                         <?= $this->Form->text('service_billing_information.company_address', [
                             'class' => 'form-control'
                         ]) ?>
@@ -71,7 +71,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>VAT number <span class="text-grey">(EU only)</span></label>
+                        <label>VAT number <span class="text-grey">(European Union only)</span></label>
                         <?= $this->Form->text('service_billing_information.vat_number', [
                             'class' => 'form-control'
                         ]) ?>
