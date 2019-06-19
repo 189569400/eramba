@@ -63,7 +63,7 @@
                             We are a group of GRC professions tired of spreadsheets, expensive and complicated GRC tools that decided to build a simple, free and enterprise level GRC solution.<br>
                             <br>
                             <span class="text-orange">
-                           	<b>Simplicity, scalability, openness and affordability. We know well that complex GRC tools simply dont work for most of us!</b><br>
+                           	<b>Simplicity, scalability, openness and affordability!</b><br>
                             </span>
                 			<br>
                 			From Europe, since 2010 we have proudly run this project without magnanimous revenue or profitability expectations. We love being small and charge only what the project needs to operate and that is all.
