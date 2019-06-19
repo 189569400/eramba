@@ -88,7 +88,7 @@ class ServicesController extends AppController
                 $this->loadModel('Countries');
                 $this->loadModel('ServiceBillingInformations');
                 $this->Email->setConfig('subject', __("Purchase Request from www.eramba.org"));
-                $this->Email->sendEmail($subject->entity->name, $subject->entity->service_billing_information->email, [
+                $this->Email->sendEmail('eramba', 'web@licenses.eramba.org', [
                     'order_number' => $subject->entity->number,
                     'company_name' => $subject->entity->service_billing_information->company_name,
                     'company_address' => $subject->entity->service_billing_information->company_address,

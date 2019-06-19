@@ -35,7 +35,7 @@ class CommunityDownloadsController extends AppController
             if ($subject->success) {
                 $this->Email->setConfig('sendTo', $subject->entity->email);
                 $this->Email->setConfig('subject', "eramba support - Community Download");
-                $this->Email->sendEmail($subject->entity->name, 'support@eramba.org');
+                $this->Email->sendEmail('eramba', 'support@eramba.org');
             }
         });
 
