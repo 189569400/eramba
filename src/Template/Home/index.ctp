@@ -9,8 +9,11 @@
                     <p class="lead mb-sm">
                         Serving thousands of companies around the world, eramba is a popular open Governance, Risk and Compliance (GRC) solution
                     </p>
-                    <div id="hero-last-release">
-                        <strong>Latest Release - <?= $latestRls ?></strong>
+                    <div class="hero-last-release">
+                        <strong>Latest Enterprise Release - <?= $latestEnterpriseRls ?></strong>
+                    </div>
+                    <div class="hero-last-release">
+                        <strong>Latest Community Release - <?= $latestCommunityRls ?></strong>
                     </div>
                 </div>
             </div>
