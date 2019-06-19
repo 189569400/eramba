@@ -53,3 +53,7 @@ composer.lock
 # Roadmap security key file #
 #############################
 /config/roadmap_sec_key.txt
+
+# Releases security key file #
+#############################
+/config/releases_sec_key.txt
