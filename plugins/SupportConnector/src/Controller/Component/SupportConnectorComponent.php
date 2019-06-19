@@ -32,7 +32,7 @@ class SupportConnectorComponent extends Component
     {
         $http = new Client();
 
-        $response = $http->get('https://support.eramba.org/releases/getReleases/test_key/5');
+        $response = $http->get('https://support.eramba.org/releases/getReleases/test_key/10');
 
         return $response->getJson();
     }

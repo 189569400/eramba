@@ -21,19 +21,20 @@ class ReleasesController extends AppController
 
     public function index()
     {
+        $limit = 10;
         $eReleases = $this->Releases->find('all')
             ->select([
                 'type', 'version', 'release_date', 'changelog'
             ])->where([
                 'type' => ReleasesTable::TYPE_ENTERPRISE
-            ])->limit(5)->toArray();
+            ])->limit($limit)->toArray();
 
         $cReleases = $this->Releases->find('all')
             ->select([
                 'type', 'version', 'release_date', 'changelog'
             ])->where([
                 'type' => ReleasesTable::TYPE_COMMUNITY
-            ])->limit(5)->toArray();
+            ])->limit($limit)->toArray();
 
         $this->set(compact('eReleases', 'cReleases'));
         
