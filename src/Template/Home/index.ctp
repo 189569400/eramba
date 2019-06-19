@@ -66,7 +66,7 @@
                            	<b>Simplicity, scalability, openness and affordability!</b><br>
                             </span>
                 			<br>
-                			From Europe, since 2010 we have proudly run this project without magnanimous revenue or profitability expectations. We love being small and charge only what the project needs to operate and that is all.
+                			Since 2010 and based in europe we have proudly run this project without profit expectation. We charge what is needed to operate, that is all.
                 			</br>
                         </p>
                     </div>
@@ -170,7 +170,7 @@
                             Atypical GRC Features
                         </h2>
                         <p>
-                            eramba is not strictly Compliance and Risk - we have made functionalities that help you review users accounts on your systems and awareness trainings that allow you to upload videos, disclaimer texts and multiple choice questionnaires and remind employees when they have missed a training.
+		eramba is not just limited to Compliance and Risk - we have Awareness Program solutions to reach our your employees with videos and multiple-choice questionnaires, Online Assessments to electronically and without mails send questionnaires out and automated Account Reviews that help you ensure systems in your organisation have all their accounts regularly reviewed.
                         </p>
                     </div>
                     <div class="col-lg-7 offset-lg-1">
@@ -189,7 +189,7 @@
                             Open
                         </h2>
                         <p>
-                            Lorem ipsum.
+                            We keep things as open as possible.<br><br>You get full access to our code, documentation and product roadmap. You are free to modify our code to suit your needs so as long you don't redistribute it.<br><br>Read our detailed licenses for both our <a href="https://www.eramba.org/community_tc">community</a> and <a href="https://www.eramba.org/tc">enterprise</a> releases or check our <a href="https://docs.google.com/document/d/1FTAG1vMDhNXJXySLBgvore60zhcObKhAievBk3rCOdA/edit#heading=h.jm98xhihsqn9">FAQ</a> if you want to know more about us.
                         </p>
                     </div>
                     <div class="col-lg-7 offset-lg-1">
@@ -208,7 +208,7 @@
                             Free &amp; Enterprise
                         </h2>
                         <p>
-                            Lorem ipsum.
+			We got two flavours of the same software.<br><br>Our community release is %100 free and gets at least one update a year. Our enterprise release comes at a flat yearly fee no matter how big or small your organisation is and includes regular updates and support from the core team.
                         </p>
                     </div>
                     <div class="col-lg-7 offset-lg-1">
@@ -224,10 +224,10 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <h2 class="text-orange">
-                            On-perm Or SaaS
+                            On-prem Or SaaS
                         </h2>
                         <p>
-                            Lorem ipsum.
+eramba runs on Linux and can be installed on your servers using our install guides or our customer support if you are enterprise customer. To make things simpler we are launching a SaaS service running our community and enterprise releases<br><br>Read our FAQ about SaaS <a href="https://docs.google.com/document/d/1FTAG1vMDhNXJXySLBgvore60zhcObKhAievBk3rCOdA/edit#heading=h.esvzhzalijlg">here</a>
                         </p>
                     </div>
                     <div class="col-lg-7 offset-lg-1">
