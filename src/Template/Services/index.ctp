@@ -50,7 +50,7 @@
                         <?= $this->Form->error('Services.version') ?>
                     </div>
                     <div class="form-group narrow">
-                        <label>Start Date</label><br>
+                        <label>License Start Date</label><br>
                         <?= $this->Form->text('Services.start_date', [
                             'class' => 'form-control datepicker',
                             'onChange' => 'ServicesSection.updateBill();'
@@ -123,7 +123,7 @@
                             </p>
                         </div>
                         <div class="form-group narrow">
-                            <label>How many days do you need?</label><br>
+                            <label>Onsite Trainning Required?</label><br>
                             <?= $this->Form->select('Services.onsite_workshops_days', [
                                 0 => __('None'),
                                 4 => __('4 day workshop')
