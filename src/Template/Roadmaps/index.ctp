@@ -8,7 +8,7 @@
                     Planned Roadmap
                 </h1>
                 <p class="text-grey">
-                    This is the list of items we plan to work in the future, we typically take things from this list and put them on releases. if you dont see here something you would like to have in eramba please use the forum to make your wishes clear to us, we might be able to help. this is internal stuff we are just sharing..expect rude language, cursing, etc...! this page was last updated on 2019-03-01T17:01:37Z GMT (and we update this every hour or so). clicking on the issues wont get you anywhere as they belong to a private github account.
+This is the list of bugs and functionalities we want to get done at some point - we keep three work queues: Long term (stuff we will some day do), Short Term (things we will most likely do in the next couple of months) and Next Release (things we are doing right now). The roadmap is influenced by our enterprise customers support and forum suggestions, if you are a community user please use our contact form to share any bug or idea.
                 </p>
             </div>
         </div>

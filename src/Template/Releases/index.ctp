@@ -9,7 +9,7 @@
                     Releases
                 </h1>
                 <p class="text-grey">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		This is the list of the last ten releases we have made public to both our enterprise and community releases. In most cases you update your system using the built in update tool (please review our documentation) so this page is simply informative. 
                 </p>
             </div>
         </div>
