@@ -57,7 +57,9 @@ class ServicesController extends AppController
     {
         $session = $this->getRequest()->getSession();
         $sessionData = $session->read('Services');
-        $this->checkMandatoryFields(!empty($sessionData) ? $sessionData : []);
+        if (($response = $this->checkMandatoryFields(!empty($sessionData) ? $sessionData : [])) !== true) {
+            return $response;
+        }
 
         $this->Crud->on('beforeSave', function(Event $event) {
             $session = $this->getRequest()->getSession();
@@ -288,7 +290,9 @@ class ServicesController extends AppController
     {
         $data = $this->getRequest()->getData();
 
-        $this->checkMandatoryFields($data['Services']);
+        if (!$this->checkMandatoryFields($data['Services'])) {
+            return $this->getResponse();
+        }
 
         $version = $data['Services']['version'];
         $startDate = $data['Services']['start_date'];
@@ -329,6 +333,8 @@ class ServicesController extends AppController
         if (!$allClear) {
             $this->Flash->error(__('You need to fill all mandatory fields in Paid Services section. If you already did it and you see this message, your session has probably expired. Please try again.'));
             return $this->redirect(['controller' => 'Services', 'action' => 'index']);
+        } else {
+            return true;
         }
     }
 
