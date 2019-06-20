@@ -46,7 +46,7 @@ class ContactsController extends AppController
                 $this->loadModel('Countries');
                 $this->loadModel('States');
                 $this->loadModel('Cities');
-                $this->Email->sendEmail($subject->entity->name, $subject->entity->email, [
+                $this->Email->sendEmail('eramba', 'web@licenses.eramba.org', [
                     'name' => $subject->entity->name,
                     'country' => $this->Countries->getCountryName($subject->entity->country_id),
                     'state' => $this->States->getStateName($subject->entity->state_id),
