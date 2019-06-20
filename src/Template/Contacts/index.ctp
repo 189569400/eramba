@@ -93,7 +93,7 @@ use Cake\Routing\Router;
                             'class' => 'form-check-input',
                             'id' => 'form-check-gdpr'
                         ]) ?>
-                        <label class="form-check-label form-check-label-small" for="form-check-gdpr">I consent to having this website store the information provided above so they can respond to my question. At any time you can request getting your personal data removed from our systems by emailing support@eramba.org. <br><br>Review our <a href="https://www.eramba.org/privacy">privacy policy</a>.</label>
+                        <label class="form-check-label form-check-label-small" for="form-check-gdpr">I consent to having this website store the information provided above so they can respond to my question. At any time you can request getting your personal data removed from our systems by emailing support@eramba.org. <br><br>Review our <a href="https://www.eramba.org/privacy" target="_blank">privacy policy</a>.</label>
                         <?= $this->Form->error('Contacts.gdpr_consent') ?>
                     </div>
 
