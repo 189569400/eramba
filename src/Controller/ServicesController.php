@@ -290,8 +290,8 @@ class ServicesController extends AppController
     {
         $data = $this->getRequest()->getData();
 
-        if (!$this->checkMandatoryFields($data['Services'])) {
-            return $this->getResponse();
+        if (($response = $this->checkMandatoryFields($data['Services'])) !== true) {
+            return $response;
         }
 
         $version = $data['Services']['version'];
