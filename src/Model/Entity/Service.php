@@ -12,7 +12,7 @@ use Cake\ORM\Entity;
  * @property int $version
  * @property \Cake\I18n\FrozenTime $start_date
  * @property int $online_trainings_hours
- * @property int $onsite_workshops_days
+ * @property int $onsite_workshops
  * @property float $price
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
@@ -36,7 +36,7 @@ class Service extends Entity
         'version' => true,
         'start_date' => true,
         'online_trainings_hours' => true,
-        'onsite_workshops_days' => true,
+        'onsite_workshops' => true,
         'price' => true,
         'created' => true,
         'modified' => true,

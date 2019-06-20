@@ -32,5 +32,5 @@
 <p><?= $start_date ?></p>
 <h3><?= __('Online Trainings Hours') ?>:</h3>
 <p><?= $online_trainings_hours ?></p>
-<h3><?= __('Onsite Workshops Days') ?>:</h3>
-<p><?= $onsite_workshops_days ?></p>
+<h3><?= __('Onsite Workshops') ?>:</h3>
+<p><?= $onsite_workshops ?></p>

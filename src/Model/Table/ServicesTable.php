@@ -62,7 +62,7 @@ class ServicesTable extends Table
     const VERSION_PERM_PRICE = 2500;
     const VERSION_SAAS_PRICE = 0;
     const ONLINE_TRAININGS_HOUR_PRICE = 80;
-    const ONSITE_WORKSHOPS_DAY_PRICE = 750;
+    const ONSITE_WORKSHOPS_PRICE = 2500;
 
     private $setNewQuoteNumber = false;
 
@@ -125,9 +125,9 @@ class ServicesTable extends Table
             ->allowEmptyString('online_trainings_hours', false);
 
         $validator
-            ->integer('onsite_workshops_days')
-            ->requirePresence('onsite_workshops_days', 'create')
-            ->allowEmptyString('onsite_workshops_days', false);
+            ->integer('onsite_workshops')
+            ->requirePresence('onsite_workshops', 'create')
+            ->allowEmptyString('onsite_workshops', false);
 
         $validator
             ->numeric('price')
@@ -175,7 +175,7 @@ class ServicesTable extends Table
             $entity->price = $this->calcPrice([
                 'version' => $entity->version,
                 'online_trainings_hours' => $entity->online_trainings_hours,
-                'onsite_workshops_days' => $entity->onsite_workshops_days
+                'onsite_workshops' => $entity->onsite_workshops
             ]);
             //
 
@@ -194,7 +194,7 @@ class ServicesTable extends Table
     {
         $version = $data['version'];
         $online_trainings_hours = $data['online_trainings_hours'];
-        $onsite_workshops_days = $data['onsite_workshops_days'];
+        $onsite_workshops = $data['onsite_workshops'];
 
         $price = 0;
         $priceVersion = 0;
@@ -207,7 +207,10 @@ class ServicesTable extends Table
         }
 
         $priceOnlineTranings = $online_trainings_hours * self::ONLINE_TRAININGS_HOUR_PRICE;
-        $priceOnsiteWorkshops = $onsite_workshops_days * self::ONSITE_WORKSHOPS_DAY_PRICE;
+
+        if ($onsite_workshops == 1) {
+            $priceOnsiteWorkshops = self::ONSITE_WORKSHOPS_PRICE;
+        }
 
         switch ($which) {
             case 'version': $price = $priceVersion;

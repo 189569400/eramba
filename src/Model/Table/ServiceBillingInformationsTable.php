@@ -24,11 +24,15 @@ use Cake\Validation\Validator;
 class ServiceBillingInformationsTable extends Table
 {
     const CURRENCY_EUR = 1;
+    const CURRENCY_USD = 2;
+    const CURRENCY_GBP = 3;
 
     public static function getCurrencies($currency = null)
     {
         $currencies = [
-            self::CURRENCY_EUR => __('EUR')
+            self::CURRENCY_EUR => __('EUR'),
+            self::CURRENCY_USD => __('USD'),
+            self::CURRENCY_GBP => __('GBP')
         ];
 
         if ($currency !== null && array_key_exists($currency, $currencies)) {

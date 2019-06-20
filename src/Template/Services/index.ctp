@@ -53,7 +53,8 @@
                         <label>License Start Date</label><br>
                         <?= $this->Form->text('Services.start_date', [
                             'class' => 'form-control datepicker',
-                            'onChange' => 'ServicesSection.updateBill();'
+                            'onChange' => 'ServicesSection.updateBill();',
+                            'data-date-start-date' => date('m/d/Y', time())
                         ]) ?>
                         <?= $this->Form->error('Services.start_date') ?>
                     </div>
@@ -124,14 +125,14 @@
                         </div>
                         <div class="form-group narrow">
                             <label>Onsite Trainning Required?</label><br>
-                            <?= $this->Form->select('Services.onsite_workshops_days', [
-                                0 => __('None'),
-                                4 => __('4 day workshop')
+                            <?= $this->Form->select('Services.onsite_workshops', [
+                                0 => __('No'),
+                                1 => __('Yes')
                             ], [
                                 'class' => 'form-control',
                                 'onChange' => 'ServicesSection.updateBill();'
                             ]) ?>
-                            <?= $this->Form->error('Services.onsite_workshops_days') ?>
+                            <?= $this->Form->error('Services.onsite_workshops') ?>
                         </div>
                     </div>
                 </div>

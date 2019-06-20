@@ -106,7 +106,7 @@ class ServicesController extends AppController
                     'version' => $this->Services->getVersions($subject->entity->version),
                     'start_date' => $subject->entity->start_date,
                     'online_trainings_hours' => $subject->entity->online_trainings_hours,
-                    'onsite_workshops_days' => $subject->entity->onsite_workshops_days
+                    'onsite_workshops' => $subject->entity->onsite_workshops
                 ]);
             }
         });
@@ -228,18 +228,18 @@ class ServicesController extends AppController
                 'price_friendly' => $this->getFriendlyPrice($othPrice)
             ];
         }
-        if (!empty($servicesData['onsite_workshops_days'])) {
-            $owdPrice = $this->Services->calcPrice($servicesData, 'onsite_workshops');
-            $owdUnitPrice = ServicesTable::ONSITE_WORKSHOPS_DAY_PRICE;
+        if (!empty($servicesData['onsite_workshops'])) {
+            $owPrice = $this->Services->calcPrice($servicesData, 'onsite_workshops');
+            $owUnitPrice = ServicesTable::ONSITE_WORKSHOPS_PRICE;
             $items[] = [
-                'name' => __('Onsite Workshops'),
-                'quantity' => $servicesData['onsite_workshops_days'],
-                'unit_price' => $owdUnitPrice,
-                'unit_price_friendly' => $this->getFriendlyPrice($owdUnitPrice),
+                'name' => __('Onsite Workshops (excluding travel expenses)'),
+                'quantity' => $servicesData['onsite_workshops'],
+                'unit_price' => $owUnitPrice,
+                'unit_price_friendly' => $this->getFriendlyPrice($owUnitPrice),
                 'vat' => 0,
                 'vat_friendly' => __('No VAT'),
-                'price' => $owdPrice,
-                'price_friendly' => $this->getFriendlyPrice($owdPrice)
+                'price' => $owPrice,
+                'price_friendly' => $this->getFriendlyPrice($owPrice)
             ];
         }
         if (!empty($billingInfoData['payment_type'])) {
@@ -293,14 +293,14 @@ class ServicesController extends AppController
         $version = $data['Services']['version'];
         $startDate = $data['Services']['start_date'];
         $online_trainings_hours = $data['Services']['online_trainings_hours'];
-        $onsite_workshops_days = $data['Services']['onsite_workshops_days'];
+        $onsite_workshops = $data['Services']['onsite_workshops'];
 
         $session = $this->getRequest()->getSession();
         $session->write([
             'Services.version' => $version,
             'Services.start_date' => $startDate,
             'Services.online_trainings_hours' => $online_trainings_hours,
-            'Services.onsite_workshops_days' => $onsite_workshops_days
+            'Services.onsite_workshops' => $onsite_workshops
         ]);
 
         return $this->redirect([
@@ -315,7 +315,7 @@ class ServicesController extends AppController
             'version' => 'notEmpty',
             'start_date' => 'notEmpty',
             'online_trainings_hours' => 'allowEmpty',
-            'onsite_workshops_days' => 'allowEmpty'
+            'onsite_workshops' => 'allowEmpty'
         ];
 
         $allClear = true;
