@@ -83,6 +83,7 @@ class AppController extends Controller
     public function beforeRender(Event $event)
     {
         $this->setHeader();
+        $this->viewBuilder()->setHelpers(['SocialHeaders']);
     }
 
     protected function setHeader()

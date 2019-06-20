@@ -1,3 +1,9 @@
+<?php
+$this->assign('title', __('Eramba - Open IT GRC'));
+$this->SocialHeaders->set([
+    'description' => __('Serving thousands of companies around the world, eramba is a popular open Governance, Risk and Compliance (GRC) solution.')
+]);
+?>
 <section id="hero">
     <div class="container">
         <div class="row">
