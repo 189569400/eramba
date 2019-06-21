@@ -1,5 +1,7 @@
 <?php
 use Cake\Routing\Router;
+
+$this->assign('title', __('Community Download | Eramba'));
 ?>
 <section id="community-download" class="mb-lg first-section-margin">
     <div class="container">

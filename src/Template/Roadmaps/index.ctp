@@ -1,3 +1,6 @@
+<?php
+$this->assign('title', __('Planned Roadmap | Eramba'));
+?>
 <section class="first-section-margin mb-xl" id="roadmap-text">
     <img src="/img/road-1.png" alt="" id="road-1">
     <img src="/img/road-2.png" alt="" id="road-2">

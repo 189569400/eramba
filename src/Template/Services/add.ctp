@@ -1,5 +1,10 @@
 <?php
-    use Cake\Routing\Router;
+use Cake\Routing\Router;
+
+$this->assign('title', __('Paid Services | Eramba'));
+$this->SocialHeaders->set([
+    'description' => __('Choose the eramba for your needs.')
+]);
 ?>
 <section class="footer-margin first-section-margin">
     <?= $this->Form->create(isset($service) ? $service : null, [

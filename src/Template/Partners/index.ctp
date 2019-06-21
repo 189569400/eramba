@@ -1,6 +1,11 @@
 <?php
-    use Cake\Routing\Router;
-    use Cake\Utility\Hash;
+use Cake\Routing\Router;
+use Cake\Utility\Hash;
+
+$this->assign('title', __('Partners | Eramba'));
+$this->SocialHeaders->set([
+    'description' => __('No matter how good a GRC tool is - organisations need time and knowledge to mature and run efficiently. eramba works with a network of consulting business that can help you succeed in the monumental task of running GRC.')
+]);
 ?>
 <section class="mb-xl first-section-margin">
     <div class="container">

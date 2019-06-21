@@ -1,3 +1,7 @@
+<?php
+$this->assign('title', __('Documentation | Eramba'));
+?>
+
 <script type="text/javascript">
 var documentationItems = <?= $documentationItemsJson ?>;
 </script>

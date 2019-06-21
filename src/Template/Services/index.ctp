@@ -1,6 +1,11 @@
 <?php
-    use Cake\Routing\Router;
-    use App\Model\Table\ContactsTable;
+use Cake\Routing\Router;
+use App\Model\Table\ContactsTable;
+
+$this->assign('title', __('Paid Services | Eramba'));
+$this->SocialHeaders->set([
+    'description' => __('Choose the eramba for your needs.')
+]);
 ?>
 <section id="paid-services" class="footer-margin first-section-margin">
     <?= $this->Form->create(isset($service) ? $service : null, [

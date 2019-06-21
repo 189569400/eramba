@@ -1,5 +1,7 @@
 <?php
 use Cake\Routing\Router;
+
+$this->assign('title', __('Contact us | Eramba'));
 ?>
 <section class="mb-xl first-section-margin">
     <div class="container">

@@ -1,3 +1,6 @@
+<?php
+$this->assign('title', __('Releases | Eramba'));
+?>
 <section class="first-section-margin mb-xl">
     <div class="container">
         <div class="row">

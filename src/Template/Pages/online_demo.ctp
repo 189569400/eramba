@@ -1,5 +1,10 @@
 <?php
-    use Cake\Routing\Router;
+use Cake\Routing\Router;
+
+$this->assign('title', __('Online Demo | Eramba'));
+$this->SocialHeaders->set([
+    'description' => __('This is your playground! Our enterpries and community releases can be tested.')
+]);
 ?>
 <section id="online-demo" class="footer-margin first-section-margin">
     <div class="container">
