@@ -36,7 +36,7 @@ class SocialHeadersHelper extends Helper
 		];
 
 		foreach ($headers as $name => $value) {
-			$this->Html->meta($name, $value, ['block' => true]);
+			$this->Html->meta(['property' => $name, 'content' => $value], null, ['block' => true]);
 		}
     }
 
