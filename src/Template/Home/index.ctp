@@ -73,7 +73,7 @@ $this->SocialHeaders->set([
                             </span>
                 			<br>
                 			Since 2010 and based in europe we have proudly run this project without profit expectation. We charge what is needed to operate, that is all.
-                			</br>
+                			<br>
                         </p>
                     </div>
                 </div>
@@ -92,12 +92,12 @@ $this->SocialHeaders->set([
 <section id="features" class="animation totop mb-xl">
     <div class="container">
         <div id="features-nav-select-wrapper">
-            <div name="" id="features-nav-select-btn">
+            <div id="features-nav-select-btn">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            <select name="" id="features-nav-select">
+            <select id="features-nav-select">
                 <option value="1">GRC Features</option>
                 <option value="2">Atypical GRC Features</option>
                 <option value="3">Open</option>
@@ -149,8 +149,8 @@ $this->SocialHeaders->set([
             </li>
         </ul>
 
-        <div class="tab-content features-content" id="">
-            <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+        <div class="tab-content features-content">
+            <div class="tab-pane fade show active" id="tab1" role="tabpanel">
                 <div class="row">
                     <div class="col-lg-4">
                         <h2 class="text-orange">
@@ -169,7 +169,7 @@ $this->SocialHeaders->set([
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+            <div class="tab-pane fade" id="tab2" role="tabpanel">
                 <div class="row">
                     <div class="col-lg-4">
                         <h2 class="text-orange">
@@ -188,7 +188,7 @@ $this->SocialHeaders->set([
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+            <div class="tab-pane fade" id="tab3" role="tabpanel">
                 <div class="row">
                     <div class="col-lg-4">
                         <h2 class="text-orange">
@@ -207,7 +207,7 @@ $this->SocialHeaders->set([
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
+            <div class="tab-pane fade" id="tab4" role="tabpanel">
                 <div class="row">
                     <div class="col-lg-4">
                         <h2 class="text-orange">
@@ -226,7 +226,7 @@ $this->SocialHeaders->set([
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="tab5" role="tabpanel" aria-labelledby="tab5-tab">
+            <div class="tab-pane fade" id="tab5" role="tabpanel">
                 <div class="row">
                     <div class="col-lg-4">
                         <h2 class="text-orange">
