@@ -78,7 +78,7 @@ var documentationItems = <?= $documentationItemsJson ?>;
 <?php endforeach; ?>
 
 <div class="modal fade" id="documentation-modal" tabindex="-1" role="dialog" aria-labelledby="documentationModal" aria-hidden="true">
-    <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title"></h5>

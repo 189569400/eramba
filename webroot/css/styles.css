@@ -1967,6 +1967,11 @@ input.datepicker {
 .related-videos-list li {
 	margin-bottom: 5px;
 }
+#documentation-modal .modal-dialog {
+	max-width: 1360px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
 #documentation-modal .close {
 	position: absolute;
 	top: 20px;
@@ -2083,6 +2088,10 @@ input.datepicker {
 	}
 }
 @media (max-width: 575px) {
+	#documentation-modal .modal-dialog {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
 	.doc-list > * {
 		margin-bottom: 20px;
 	}
