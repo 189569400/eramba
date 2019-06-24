@@ -11,7 +11,6 @@ $this->assign('title', __('Contact us | Eramba'));
                     Contact us!
                 </h1>
                 <p class="text-grey">
-                    Use this form to reach out to us!<br><br>We get tons of ideas, questions, proposals and bug reports that greatly help the project.Dont by shy and drop us a line!
                 </p>
             </div>
         </div>
@@ -85,7 +84,7 @@ $this->assign('title', __('Contact us | Eramba'));
                         <label>What are you interested to share with us? <span class="text-grey">(Required)</span></label>
                         <?= $this->Form->textarea('Contacts.body', [
                             'class' => 'form-control',
-                            'placeholder' => 'Ideas how to improve? Questions? Enterprise Support? Some Issue?'
+                            'placeholder' => ''
                         ]) ?>
                         <?= $this->Form->error('Contacts.body') ?>
                     </div>
@@ -95,7 +94,7 @@ $this->assign('title', __('Contact us | Eramba'));
                             'class' => 'form-check-input',
                             'id' => 'form-check-gdpr'
                         ]) ?>
-                        <label class="form-check-label form-check-label-small" for="form-check-gdpr">I consent to having this website store the information provided above so they can respond to my question. At any time you can request getting your personal data removed from our systems by emailing support@eramba.org. <br><br>Review our <a href="https://www.eramba.org/privacy" target="_blank">privacy policy</a>.</label>
+                        <label class="form-check-label form-check-label-small" for="form-check-gdpr">The only way we can respond you is for you to consent having this website store the information provided above. This wont be shared with anyone outside eramba and we will never send you sales, marketing or spam. <br><br>At any time you can request getting your personal data removed from our systems by emailing support@eramba.org - by checking the box on the left you agree to our <a href="https://www.eramba.org/privacy">privacy policy</a> and make the EU commission very happy...</label>
                         <?= $this->Form->error('Contacts.gdpr_consent') ?>
                     </div>
 

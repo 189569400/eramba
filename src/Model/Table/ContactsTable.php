@@ -35,12 +35,12 @@ class ContactsTable extends Table
     public static function getTypes($type = null)
     {
         $types = [
-            self::TYPE_ENTERPRISE_QUOTE => __('Enterprise Quote'),
-            self::TYPE_COMMUNITY_SAAS_QUOTE => __('Community SaaS Quote'),
-            self::TYPE_DEMO_CALL => __('Demo Call'),
-            self::TYPE_BUG_REPORT => __('Bug Report'),
-            self::TYPE_PARTNER_SIGN_UP => __('Partner SignUp'),
-            self::TYPE_COMMUNITY_SAAS_TESTER => __('Community SaaS tester')
+            self::TYPE_ENTERPRISE_QUOTE => __('We need an Enterprise Service Quote'),
+            #self::TYPE_COMMUNITY_SAAS_QUOTE => __('Community SaaS Quote'),
+            self::TYPE_COMMUNITY_SAAS_TESTER => __('We would like to be an early tester for the SaaS Community service'),
+            self::TYPE_DEMO_CALL => __('We would like to schedulle a Demo Zoom Call'),
+            self::TYPE_BUG_REPORT => __('We found a Bug'),
+            self::TYPE_PARTNER_SIGN_UP => __('We are interested in becomming a Partner')
         ];
 
         if ($type !== null && array_key_exists($type, $types)) {
