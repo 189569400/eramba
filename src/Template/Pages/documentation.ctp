@@ -271,7 +271,7 @@ var documentationItems = <?= json_encode($documentationItems) ?>;
                         Data Flow Analysis
                     </h5>
                     <p>
-                        Document each data flow, their controls, policies and people involved. Understand where your data is nad how is protected.
+                        Document each data flow, their controls, policies and people involved. Understand where your data is and how is protected.
                     </p>
                     <div class="links">
                         <a href="#" target="_blank">Doc</a>
