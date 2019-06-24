@@ -66,13 +66,13 @@ $this->SocialHeaders->set([
                             We are a GRC community
                         </h2>
                         <p class="lead text-white mb-md">
-                            We are a group of GRC professions tired of spreadsheets, expensive and complicated GRC tools that decided to build a simple, free and enterprise level GRC solution.<br>
+                            We are a group of GRC professions tired of spreadsheets, expensive and complicated GRC tools that decided to build a simple, free and enterprise level GRC solution<br>
                             <br>
                             <span class="text-orange">
                            	<b>Simplicity, scalability, openness and affordability!</b><br>
                             </span>
                 			<br>
-                			Since 2010 and based in europe we have proudly run this project without profit expectation. We charge what is needed to operate, that is all.
+                			Since 2010 and based out of europe we have proudly run this project without any profit expectations. We only charge what is needed to operate and mature, that is all
                 			<br>
                         </p>
                     </div>
@@ -176,7 +176,7 @@ $this->SocialHeaders->set([
                             Atypical GRC Features
                         </h2>
                         <p>
-		eramba is not just limited to Compliance and Risk - we have Awareness Program solutions to reach our your employees with videos and multiple-choice questionnaires, Online Assessments to electronically and without mails send questionnaires out and automated Account Reviews that help you ensure systems in your organisation have all their accounts regularly reviewed.
+		eramba is not just limited to Compliance and Risk - we have <i>Awareness Program</i> solutions that reach out to employees with videos and multiple-choice questionnaires - <i>Online Assessments</i> to electronically and without mails send questionnaires out and automated <i>Account Reviews</i> that help you ensure systems in your organisation have all their accounts regularly reviewed.
                         </p>
                     </div>
                     <div class="col-lg-7 offset-lg-1">
@@ -233,7 +233,7 @@ $this->SocialHeaders->set([
                             On-prem Or SaaS
                         </h2>
                         <p>
-eramba runs on Linux and can be installed on your servers using our install guides or our customer support if you are enterprise customer. To make things simpler we are launching a SaaS service running our community and enterprise releases<br><br>Read our FAQ about SaaS <a href="https://docs.google.com/document/d/1FTAG1vMDhNXJXySLBgvore60zhcObKhAievBk3rCOdA/edit#heading=h.esvzhzalijlg">here</a>
+eramba runs on Linux and can be installed on your servers - use our install guides and videos to learn how is done, if you are an enteprise customer and need install help just contact us!. To make things simpler we are soon launching a SaaS service running our community and enterprise releases<br><br>Read our FAQ about SaaS <a href="https://docs.google.com/document/d/1FTAG1vMDhNXJXySLBgvore60zhcObKhAievBk3rCOdA/edit#heading=h.esvzhzalijlg">here</a>
                         </p>
                     </div>
                     <div class="col-lg-7 offset-lg-1">
