@@ -209,7 +209,7 @@ $(function() {
             $('#documentation-modal-related-items').show();
         }
 
-        loadDocumentationVideo(documentation.video);
+        loadDocumentationVideo(documentation.video[0]['videoId']);
         setActiveVideoLink($('#documentation-modal-main-items ul li:first-child a'));
     }
 
