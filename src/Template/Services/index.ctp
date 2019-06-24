@@ -30,7 +30,7 @@ $this->SocialHeaders->set([
                         </div>
                     </div>
                     <p class="text-grey text-center mb-sm">
-                        Includes our Enterprise version, support and regular updates<a href="https://docs.google.com/document/d/1FTAG1vMDhNXJXySLBgvore60zhcObKhAievBk3rCOdA/edit#heading=h.23mitxs37sgm"> (FAQ)</a>
+                        Includes our Enterprise version, support and regular updates<a href="https://docs.google.com/document/d/1FTAG1vMDhNXJXySLBgvore60zhcObKhAievBk3rCOdA/edit#heading=h.23mitxs37sgm"> (FAQ)</a> <a href="https://www.eramba.org/tc">(T&C)</a>
                     </p>
                     <div class="form-group narrow">
                         <label>Version</label>
@@ -78,11 +78,11 @@ $this->SocialHeaders->set([
                             </div>
                         </div>
                         <p class="text-grey text-center">
-                            We can host eramba for you speeding up your eramba journey!<a href="https://docs.google.com/document/d/1FTAG1vMDhNXJXySLBgvore60zhcObKhAievBk3rCOdA/edit#heading=h.esvzhzalijlg"> (FAQ)</a>
+                            We can host eramba for you speeding up your eramba journey!<a href="https://docs.google.com/document/d/1FTAG1vMDhNXJXySLBgvore60zhcObKhAievBk3rCOdA/edit#heading=h.esvzhzalijlg"> (FAQ)</a> <a href="">(T&C)</a>
                         </p>
                     </div>
                     <div class="text-center">
-                        <h4 class="text-grey mb-sm">Want to test SaaS as a beta user?</h4>
+                        <h4 class="text-grey mb-sm">Contact us if you wish to beta test our service !</h4>
                         <a class="btn btn-primary" href="<?= Router::url(['controller' => 'Contacts', 'action' => 'index', '?' => ['type' => ContactsTable::TYPE_COMMUNITY_SAAS_TESTER]]) ?>">Contact Us</a>
                     </div>
                 </div>
@@ -125,7 +125,7 @@ $this->SocialHeaders->set([
                                 Onsite Workshops
                             </h4>
                             <p class="lead text-grey">
-                                Our four day onsite training/workshop helps you understanding and implementing eramba in your organisation - this is highly recommended to ensure you start with the right foot!<a href="https://docs.google.com/document/d/1FTAG1vMDhNXJXySLBgvore60zhcObKhAievBk3rCOdA/edit#heading=h.ovs2krb4amke"> (FAQ)</a>  
+                                Our four day onsite workshop helps you understanding and implementing eramba in your organisation!<a href="https://docs.google.com/document/d/1FTAG1vMDhNXJXySLBgvore60zhcObKhAievBk3rCOdA/edit#heading=h.ovs2krb4amke"> (FAQ)</a>  
                             </p>
                         </div>
                         <div class="form-group narrow">
