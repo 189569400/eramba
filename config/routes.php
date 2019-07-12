@@ -94,6 +94,7 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->redirect('/privacy', 'https://docs.google.com/document/d/1VctdYiI3b5_imQYYy0z3QEA8Ab6bpMISdhWBfj1pq2U/', ['status' => 302]);
     $routes->redirect('/blog', 'https://www.linkedin.com/company/eramba/', ['status' => 302]);
     $routes->redirect('/forum', 'https://discussions.eramba.org', ['status' => 302]);
+    $routes->redirect('/faq', 'https://docs.google.com/document/u/1/d/1FTAG1vMDhNXJXySLBgvore60zhcObKhAievBk3rCOdA/edit#heading=h.tlds5h3krixr', ['status' => 302]);
 
     /**
      * Connect catchall routes for all controllers.
