@@ -91,8 +91,8 @@ var documentationItems = <?= $documentationItemsJson ?>;
                     <div class="doc-video">
                         <div id="documentation-modal-video"></div>
                     </div>
-                    <div class="alert alert-warning doc-video-alert">
-                        <?= __('Warning: Videos are never as updated as the written documentation.') ?>
+                    <div class="alert alert-warning doc-video-alert text-center">
+                        <?= __('Videos are never as updated as the written documentation.') ?>
                     </div>
                 </div>
                 <div id="documentation-modal-left">
