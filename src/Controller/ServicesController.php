@@ -17,9 +17,7 @@ class ServicesController extends AppController
     {
         parent::initialize();
 
-        $this->loadComponent('Email', [
-            'template' => 'order_form'
-        ]);
+        $this->loadComponent('Email');
 
         $this->Crud->enable(['index', 'add']);
     }
@@ -86,10 +84,12 @@ class ServicesController extends AppController
                 // Delete user data from session
                 $this->clearSessionData();
 
-                // Send email
+                //
+                // Send email to eramba support
                 $this->loadModel('Countries');
                 $this->loadModel('ServiceBillingInformations');
                 $this->Email->setConfig('subject', __("Purchase Request from www.eramba.org"));
+                $this->Email->setConfig('template', 'order_form');
                 $this->Email->sendEmail('eramba', 'web@licenses.eramba.org', [
                     'order_number' => $subject->entity->number,
                     'company_name' => $subject->entity->service_billing_information->company_name,
@@ -110,6 +110,17 @@ class ServicesController extends AppController
                     'online_trainings_hours' => $subject->entity->online_trainings_hours,
                     'onsite_workshops' => $subject->entity->onsite_workshops
                 ]);
+                //
+                
+                //
+                // Send email to customer
+                $this->Email->setConfig('subject', __("Your eramba enterprise order is pending"));
+                $this->Email->setConfig('template', 'order_form_customer');
+                $this->Email->setConfig('sendTo', $subject->entity->email);
+                $this->Email->sendEmail('eramba', 'web@licenses.eramba.org', [
+                    'orderNumber' => $subject->entity->number
+                ]);
+                // 
             }
         });
 

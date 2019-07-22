@@ -14,10 +14,7 @@ class ContactsController extends AppController
         parent::initialize();
 
         $this->loadComponent('ReCaptcha.ReCaptcha');
-        $this->loadComponent('Email', [
-            'subject' => "E-mail from eramba website's contact form",
-            'template' => 'contact_form'
-        ]);
+        $this->loadComponent('Email');
 
         $this->Crud->enable(['index', 'add']);
     }
@@ -43,9 +40,13 @@ class ContactsController extends AppController
         $this->Crud->on('afterSave', function(Event $event) {
             $subject = $event->getSubject();
             if ($subject->success) {
+                //
+                // Send email to eramba support
                 $this->loadModel('Countries');
                 $this->loadModel('States');
                 $this->loadModel('Cities');
+                $this->Email->setConfig('subject', __("E-mail from eramba website's contact form"));
+                $this->Email->setConfig('template', 'contact_form');
                 $this->Email->sendEmail('eramba', 'web@licenses.eramba.org', [
                     'name' => $subject->entity->name,
                     'country' => $this->Countries->getCountryName($subject->entity->country_id),
@@ -55,6 +56,15 @@ class ContactsController extends AppController
                     'email' => $subject->entity->email,
                     'body' => $subject->entity->body
                 ]);
+                //
+                
+                //
+                // Send email to customer
+                $this->Email->setConfig('subject', __("eramba Contact Form Message"));
+                $this->Email->setConfig('template', 'contact_form_customer');
+                $this->Email->setConfig('sendTo', $subject->entity->email);
+                $this->Email->sendEmail('eramba', 'web@licenses.eramba.org');
+                // 
             }
         });
         
