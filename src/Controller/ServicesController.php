@@ -116,7 +116,7 @@ class ServicesController extends AppController
                 // Send email to customer
                 $this->Email->setConfig('subject', __("Your eramba enterprise order is pending"));
                 $this->Email->setConfig('template', 'order_form_customer');
-                $this->Email->setConfig('sendTo', $subject->entity->email);
+                $this->Email->setConfig('sendTo', $subject->entity->service_billing_information->email);
                 $this->Email->sendEmail('eramba', 'web@licenses.eramba.org', [
                     'orderNumber' => $subject->entity->number
                 ]);
