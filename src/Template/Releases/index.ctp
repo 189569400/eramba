@@ -51,9 +51,16 @@ $this->assign('title', __('Releases | Eramba'));
                                 <?= date('F d, Y', strtotime($rls->release_date)) ?>
                             </td>
                             <td>
-                                <span data-container="body" data-toggle="popover" data-placement="top" data-html="true" data-trigger="hover" data-content="<?= nl2br($rls->changelog) ?>" data-template='<div class="popover popover-release" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'>
+                                <span class="changelog-trigger">
                                     Show
                                 </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="changelog-td">
+                                <div class="changelog">
+                                    <?= nl2br($rls->changelog) ?>
+                                </div>
                             </td>
                         </tr>
                         <?php endforeach; ?>
@@ -88,9 +95,16 @@ $this->assign('title', __('Releases | Eramba'));
                                 March 19, 2018
                             </td>
                             <td>
-                                <span data-container="body" data-toggle="popover" data-placement="top" data-html="true" data-trigger="hover" data-content="<?= nl2br('TBD') ?>" data-template='<div class="popover popover-release" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'>
+                                <span class="changelog-trigger">
                                     Show
                                 </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="changelog-td">
+                                <div class="changelog">
+                                    <?= nl2br('TBD') ?>
+                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -101,9 +115,16 @@ $this->assign('title', __('Releases | Eramba'));
                                 March 24, 2016
                             </td>
                             <td>
-                                <span data-container="body" data-toggle="popover" data-placement="top" data-html="true" data-trigger="hover" data-content="<?= nl2br('This update is provided only to test out self-updates right after deployment to customers') ?>" data-template='<div class="popover popover-release" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'>
+                                <span class="changelog-trigger">
                                     Show
                                 </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="changelog-td">
+                                <div class="changelog">
+                                    <?= nl2br('This update is provided only to test out self-updates right after deployment to customers') ?>
+                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -114,9 +135,16 @@ $this->assign('title', __('Releases | Eramba'));
                                 March 23, 2016
                             </td>
                             <td>
-                                <span data-container="body" data-toggle="popover" data-placement="top" data-html="true" data-trigger="hover" data-content="<?= nl2br('First Community Package') ?>" data-template='<div class="popover popover-release" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'>
+                                <span class="changelog-trigger">
                                     Show
                                 </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="changelog-td">
+                                <div class="changelog">
+                                    <?= nl2br('First Community Package') ?>
+                                </div>
                             </td>
                         </tr>
                     </tbody>

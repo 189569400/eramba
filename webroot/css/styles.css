@@ -2128,13 +2128,28 @@ input.datepicker {
 #releases table td {
 	padding: 10px 20px;
 }
-#releases table tr:nth-child(odd) td {
+#releases table tr:nth-child(4n+1) td {
+	background: #f9f9f9;
+}
+#releases table tr:nth-child(4n+2) td {
 	background: #f9f9f9;
 }
 #releases-img {
 	transform: rotate(-12deg);
 	margin-top: 20px;
 	margin-left: -70px;
+}
+#releases .changelog-trigger {
+	cursor: pointer;
+}
+#releases .changelog-td {
+	padding: 0px;
+}
+#releases .changelog {
+	display: none;
+	padding: 10px 20px;
+	word-break: break-word;
+	font-size: 18px;
 }
 .popover-release {
     max-width: 550px;
@@ -2151,6 +2166,9 @@ input.datepicker {
 	.popover-release .popover-body {
 		font-size: 15px;
 		padding: 10px 15px;
+	}
+	#releases .changelog {
+		font-size: 16px;
 	}
 }
 /**
