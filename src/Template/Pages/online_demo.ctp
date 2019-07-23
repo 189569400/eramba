@@ -3,7 +3,7 @@ use Cake\Routing\Router;
 
 $this->assign('title', __('Online Demo | Eramba'));
 $this->SocialHeaders->set([
-    'description' => __('This is your playground! Our enterpries and community releases can be tested. Bare in mind the database will reset every hour!')
+    'description' => __('This is your playground! Test our enterprise and community releases but bare in mind the database will reset every hour!')
 ]);
 ?>
 <section id="online-demo" class="footer-margin first-section-margin">
@@ -12,7 +12,7 @@ $this->SocialHeaders->set([
            Try eramba! 
         </h1>
         <p class="text-center lead text-grey mb-md" id="online-demo-choice">
-            This is your playground!<br> Our enterpries and community releases<br>can be tested in this portal. <br><b>Bare in mind the database will reset every hour!</b>
+            This is your playground!<br>Test our enterprise and community <br>releases but bare in mind the<br>database will reset every hour!</b>
         </p>
         <div class="row">
             <div class="online-demo-item col-md-4 offset-md-1">
