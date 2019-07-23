@@ -144,7 +144,7 @@ class ServicesController extends AppController
             if (!$subject->success) {
                 $subject->text = __('We could not process your request - check the form below to see what went wrong!');
             } else {
-                $subject->text = __('Your quote was processed successfully');
+                $subject->text = __('Your quote was processed successfully - in the next 24Hs we will write you back to process your order and help you with any additional paperwork you might need');
             }
         });
 
