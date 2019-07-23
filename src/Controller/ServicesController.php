@@ -116,7 +116,7 @@ class ServicesController extends AppController
                 // Send email to customer
                 $this->Email->setConfig('subject', __("Your eramba enterprise order is pending"));
                 $this->Email->setConfig('template', 'order_form_customer');
-                $this->Email->setConfig('sendTo', $subject->entity->email);
+                $this->Email->setConfig('sendTo', $subject->entity->service_billing_information->email);
                 $this->Email->sendEmail('eramba', 'web@licenses.eramba.org', [
                     'orderNumber' => $subject->entity->number
                 ]);
@@ -144,7 +144,7 @@ class ServicesController extends AppController
             if (!$subject->success) {
                 $subject->text = __('We could not process your request - check the form below to see what went wrong!');
             } else {
-                $subject->text = __('Your quote was processed successfully');
+                $subject->text = __('Your quote was processed successfully - in the next 24Hs we will write you back to process your order and help you with any additional paperwork you might need');
             }
         });
 

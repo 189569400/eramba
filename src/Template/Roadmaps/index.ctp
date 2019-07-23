@@ -11,7 +11,7 @@ $this->assign('title', __('Planned Roadmap | Eramba'));
                     Planned Roadmap
                 </h1>
                 <p class="text-grey">
-This is the list of bugs and functionalities we want to get done at some point - we keep three work queues: Long term (stuff we will some day do), Short Term (things we will most likely do in the next couple of months) and Next Release (things we are doing right now). The roadmap is influenced by our enterprise customers support and forum suggestions, if you are a community user please use our contact form to share any bug or idea.
+This is the work ahead of us! Functionalities and bugs are documented as reported or identified and put into this backlog of work on three specific work queues: short, medium and long plans. This roadmap is influenced by <a href="https://www.eramba.org/contact-us">reported</a> community suggestions and our enterprise <a href="https://discussions.eramba.org">forum</a>
                 </p>
             </div>
         </div>

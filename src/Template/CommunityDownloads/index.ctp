@@ -13,7 +13,7 @@ $this->assign('title', __('Community Download | Eramba'));
                 <div class="row">
                     <div class="col-md-10">
                         <p class="text-grey mb-sm">
-			You are about to download our 2019 community edition - please use our documentation guide to understand how the software is installed, updated and used ! Your download link will include references to all our install options and documentation.
+			You are about to download our 2019 community edition - please use our documentation guide to understand how the software is installed, updated and used ! Your download link includes references to all our install options and documentation.
                         </p>
                     </div>
                 </div>
