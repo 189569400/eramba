@@ -12,7 +12,7 @@ $this->assign('title', __('Releases | Eramba'));
                     Releases
                 </h1>
                 <p class="text-grey">
-		This is the list of the last ten releases we have made public to both our enterprise and community releases. In most cases you update your system using the built in update tool (please review our documentation) so this page is simply informative. 
+		This is the list of the last ten releases we have made public to both our enterprise and community releases. Updates reach out your eramba installation using the built in update functionality. 
                 </p>
             </div>
         </div>
