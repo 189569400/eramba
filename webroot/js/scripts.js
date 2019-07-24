@@ -267,7 +267,9 @@ $(function() {
         return false;
     });
 
-    
+    $('.changelog-trigger').on('click', function() {
+        $(this).closest('tr').next().find('.changelog').slideToggle();
+    });
 });
 
 (function(window)
