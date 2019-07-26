@@ -95,7 +95,9 @@ $this->SocialHeaders->set([
                         }
                     ?>
                     <div class="partners-list-item partners-tag-0 <?= $partnerTags ?>">
-                        <img src="/img/partners/<?= $partner->logo ?>" alt="">
+                        <a href="<?= $partner->link ?>" target="_blank">
+                            <img src="/img/partners/<?= $partner->logo ?>" alt="">
+                        </a>
                     </div>
                     <?php endforeach; ?>
                 </div>
