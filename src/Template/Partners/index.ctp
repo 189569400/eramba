@@ -25,7 +25,7 @@ $this->SocialHeaders->set([
                 <div class="row">
                     <div class="col-xl-8 col-lg-12">
                         <p class="text-grey">
-                            Organisations need time and knowledge to mature and run efficiently - eramba works with a network of consulting business that can help you succeed in the monumental task of running GRC. <br><br>If you are a consulting bussiness review the <a href="<a href="https://docs.google.com/document/d/1FTAG1vMDhNXJXySLBgvore60zhcObKhAievBk3rCOdA/edit#heading=h.tlds5h3krixr">partner FAQ</a> to understand in detail how this works!
+                            Organisations need time and knowledge to mature and run efficiently - eramba works with a network of consulting business that can help you succeed in the monumental task of running GRC. <br><br>If you are a consulting bussiness review the <a href="https://docs.google.com/document/d/1FTAG1vMDhNXJXySLBgvore60zhcObKhAievBk3rCOdA/edit#heading=h.tlds5h3krixr">partner FAQ</a> to understand in detail how this works!
                         </p>
                     </div>
                 </div>
