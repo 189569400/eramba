@@ -102,7 +102,7 @@ $this->SocialHeaders->set([
                 <option value="2">Atypical GRC Features</option>
                 <option value="3">Open</option>
                 <option value="4">Free &amp; Enterprise</option>
-                <option value="5">On-perm Or SaaS</option>
+                <option value="5">On-Prem Or SaaS</option>
                 <option value="6">Much More!</option>
             </select>
         </div>
@@ -143,7 +143,7 @@ $this->SocialHeaders->set([
                 <a data-toggle="tab" data-tab="5" href="#tab5" role="tab" aria-controls="tab5" aria-selected="false">
                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 24 24" height="70" width="70"><title></title><g transform="matrix(1,0,0,1,0,0)"><path d="M 20.5,6.927c-0.034-2.005-1.687-3.603-3.692-3.569c-0.045,0.001-0.091,0.002-0.136,0.005 C15.787,1.596,13.976,0.486,12,0.5C9.31,0.461,7.053,2.518,6.842,5.2C5.36,4.872,3.892,5.808,3.564,7.29 C3.526,7.464,3.504,7.642,3.5,7.82c0,2.722,2.956,2.68,2.956,2.68h10.718C17.174,10.5,20.5,10.079,20.5,6.927z " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 6.75,20.749 c-0.138,0-0.25,0.112-0.25,0.25c0,0.138,0.112,0.25,0.25,0.25c0.138,0,0.249-0.111,0.25-0.249c0.001-0.138-0.11-0.249-0.248-0.25 C6.751,20.75,6.751,20.75,6.75,20.749L6.75,20.749 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 9.25,20.749c-0.138,0-0.25,0.112-0.25,0.25s0.112,0.25,0.25,0.25 c0.138,0,0.249-0.111,0.25-0.249c0.001-0.138-0.11-0.249-0.248-0.25C9.251,20.75,9.251,20.75,9.25,20.749L9.25,20.749 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 20.5,22 c0,0.828-0.672,1.5-1.5,1.5H5c-0.828,0-1.5-0.672-1.5-1.5v-2c0-0.828,0.672-1.5,1.5-1.5h14c0.828,0,1.5,0.672,1.5,1.5V22z " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 6.75,15.749c-0.138,0-0.25,0.112-0.25,0.25c0,0.138,0.112,0.25,0.25,0.25c0.138,0,0.249-0.111,0.25-0.249 c0.001-0.138-0.11-0.249-0.248-0.25c-0.001,0-0.001,0-0.002,0l0,0 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 9.25,15.749c-0.138,0-0.25,0.112-0.25,0.25 c0,0.138,0.112,0.25,0.25,0.25c0.138,0,0.249-0.111,0.25-0.249c0.001-0.138-0.11-0.249-0.248-0.25c-0.001,0-0.001,0-0.002,0l0,0 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 20.5,17c0,0.828-0.672,1.5-1.5,1.5H5c-0.828,0-1.5-0.672-1.5-1.5v-2c0-0.828,0.672-1.5,1.5-1.5h14c0.828,0,1.5,0.672,1.5,1.5V17z" stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
                     <span>
-                        On-perm Or SaaS
+                        On-prem Or SaaS
                     </span>
                 </a>
             </li>
