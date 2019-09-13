@@ -129,7 +129,7 @@ $this->SocialHeaders->set([
                             </p>
                         </div>
                         <div class="form-group narrow">
-                            <label>Onsite Trainning Required?</label><br>
+                            <label>Onsite Training Required?</label><br>
                             <?= $this->Form->select('Services.onsite_workshops', [
                                 0 => __('No'),
                                 1 => __('Yes')

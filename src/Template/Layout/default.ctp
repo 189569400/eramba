@@ -2,12 +2,11 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="robots" content="noindex" />
         <meta name="google-site-verification" content="NuSejYw8kM9_puQ2yD1D2WducP944tH_DqfMFg0VZt8">
-        <title><?= $this->fetch('title') ?></title>
 
-        <meta name="robots" content="noindex">
+        <title><?= $this->fetch('title') ?></title>
 
         <?= $this->Html->meta('icon', 'img/favicon.png') ?>
 
