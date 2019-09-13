@@ -87,12 +87,13 @@ $this->assign('title', __('Releases | Eramba'));
                         </tr>
                     </thead>
                     <tbody>
+                        <?php foreach ($cReleases as $rls): ?>
                         <tr>
                             <td>
-                                c1.0.6.052
+                                <?= $rls->version ?>
                             </td>
                             <td>
-                                March 19, 2018
+                                <?= date('F d, Y', strtotime($rls->release_date)) ?>
                             </td>
                             <td>
                                 <span class="changelog-trigger">
@@ -103,50 +104,11 @@ $this->assign('title', __('Releases | Eramba'));
                         <tr>
                             <td colspan="3" class="changelog-td">
                                 <div class="changelog">
-                                    <?= nl2br('TBD') ?>
+                                    <?= nl2br($rls->changelog) ?>
                                 </div>
                             </td>
                         </tr>
-                        <tr>
-                            <td>
-                                c1.0.6.001
-                            </td>
-                            <td>
-                                March 24, 2016
-                            </td>
-                            <td>
-                                <span class="changelog-trigger">
-                                    Show
-                                </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="3" class="changelog-td">
-                                <div class="changelog">
-                                    <?= nl2br('This update is provided only to test out self-updates right after deployment to customers') ?>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                c1.0.6.000
-                            </td>
-                            <td>
-                                March 23, 2016
-                            </td>
-                            <td>
-                                <span class="changelog-trigger">
-                                    Show
-                                </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="3" class="changelog-td">
-                                <div class="changelog">
-                                    <?= nl2br('First Community Package') ?>
-                                </div>
-                            </td>
-                        </tr>
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>

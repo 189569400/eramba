@@ -46,10 +46,8 @@ class HomeController extends AppController
                 'type' => ReleasesTable::TYPE_COMMUNITY
             ])->first();
 
-
         $latestEnterpriseRls = !empty($eRls) ? date('F d, Y', strtotime($eRls->release_date)) : __('No Date');
-        // $latestCommunityRls = !empty($cRls) ? $cRls->release_date : __('No Date');
-        $latestCommunityRls = 'March 19, 2018';
+        $latestCommunityRls = !empty($cRls) ? date('F d, Y', strtotime($cRls->release_date)) : __('No Date');
 
         $this->set(compact('latestEnterpriseRls', 'latestCommunityRls'));
     }
