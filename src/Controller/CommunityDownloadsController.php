@@ -62,7 +62,7 @@ class CommunityDownloadsController extends AppController
         ])->order([
             'Countries.name' => 'ASC'
         ])->toArray();
-        $countryOptions = [-1 => __('My country is not listed')] + $countryOptions;
+        #$countryOptions = [-1 => __('My country is not listed')] + $countryOptions;
 
         $this->set(compact('countryOptions'));
     }
