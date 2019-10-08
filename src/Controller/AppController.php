@@ -119,14 +119,6 @@ class AppController extends Controller
                         'key' => 'online_demo'
                     ],
                     [
-                        'name' => __('Community Download'),
-                        'link' => [
-                            'controller' => 'CommunityDownloads',
-                            'action' => 'index'
-                        ],
-                        'key' => 'communitydownloads'
-                    ],
-                    [
                         'name' => __('Blog'),
                         'link' => '/blog',
                         'target' => '_blank'
@@ -152,7 +144,15 @@ class AppController extends Controller
                 ]
             ],
             [
-                'name' => __('Paid Services'),
+            'name' => __('Community'),
+            	'link' => [
+            		'controller' => 'CommunityDownloads',
+            		'action' => 'index'
+            	],
+            'key' => 'communitydownloads'
+            ],
+            [
+                'name' => __('Enterprise'),
                 'link' => [
                     'controller' => 'services',
                     'action' => 'index'
