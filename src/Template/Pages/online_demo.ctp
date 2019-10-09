@@ -49,6 +49,7 @@ $this->SocialHeaders->set([
                 <p class="text-grey">
                     <strong>Username:</strong> admin<br>
                     <strong>Password:</strong> alphanumeric1
+		<br><br><b>Bare in mind community has less<br>features and patches than <a href="https://www.eramba.org/services">enterprise</a></b>!
                 </p>
             </div>
         </div>
