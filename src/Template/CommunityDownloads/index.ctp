@@ -13,7 +13,7 @@ $this->assign('title', __('Community Download | Eramba'));
                 <div class="row">
                     <div class="col-md-10">
                         <p class="text-grey mb-sm">
-			You are about to download our 2019 community edition - please use our documentation guide to understand how the software is installed, updated and used ! <b>Bare in mind community does not include support (install, training, bug resolution, etc) from the core team, it misses features (notifications, emails, etc) and has far less updates per year than our enterprise release.
+			You are about to download our 2019 community edition - please use our documentation guide to understand how the software is installed, updated and used ! <br><br><b>Bare in mind community does not include support (install, training, bug resolution, etc), has less features (notifications, emails, etc) and receives far less updates per year than our enterprise release.
                         </p>
                     </div>
                 </div>
