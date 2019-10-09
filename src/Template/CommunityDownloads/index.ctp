@@ -13,7 +13,9 @@ $this->assign('title', __('Community Download | Eramba'));
                 <div class="row">
                     <div class="col-md-10">
                         <p class="text-grey mb-sm">
-			You are about to download our 2019 community edition - please use our documentation guide to understand how the software is installed, updated and used ! <br><br><b>Bare in mind community does not include support (install, training, bug resolution, etc), has less features (notifications, emails, etc) and receives far less updates per year than our enterprise release.
+                            You are about to download our 2019 community edition - please use our documentation guide to understand how the software is installed, updated and used !<br>
+                            <br>
+                            <b>Bare in mind community does not include support (install, training, bug resolution, etc), has less features (notifications, emails, etc) and receives far less updates per year than our enterprise release.</b>
                         </p>
                     </div>
                 </div>
@@ -32,7 +34,7 @@ $this->assign('title', __('Community Download | Eramba'));
 <section>
     <div class="container text-center mb-xl">
         <div class="row">
-            <div class="col-md-4 mb-sm">
+            <div class="offset-md-2 col-md-4 mb-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 24 24" height="100" width="100" class="mb-xs icon-md"><title></title><g transform="matrix(1,0,0,1,0,0)"><path d="M 15.75,12l3,3l-3,3 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 8.25,12l-3,3l3,3 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 13.5,12l-3,6 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 2.5,3h19c1.105,0,2,0.895,2,2v14c0,1.105-0.895,2-2,2 h-19c-1.105,0-2-0.895-2-2V5C0.5,3.895,1.395,3,2.5,3z " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 0.5,8h23 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 4,5.25c0.138,0,0.25,0.112,0.25,0.25S4.138,5.75,4,5.75 c-0.138,0-0.25-0.112-0.25-0.25S3.862,5.25,4,5.25 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 7,5.25c0.138,0,0.25,0.112,0.25,0.25S7.138,5.75,7,5.75S6.75,5.638,6.75,5.5 S6.862,5.25,7,5.25 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 10,5.25c0.138,0,0.25,0.112,0.25,0.25S10.138,5.75,10,5.75S9.75,5.638,9.75,5.5S9.862,5.25,10,5.25" stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
                 <h5>Source Code</h5>
                 <p class="text-grey">
@@ -44,13 +46,6 @@ $this->assign('title', __('Community Download | Eramba'));
                 <h5>VM</h5>
                 <p class="text-grey">
 		We have prepared a Vmware image with eramba pre-installed
-                </p>
-            </div>
-            <div class="col-md-4 mb-sm">
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 24 24" height="100" width="100" class="mb-xs icon-md"><title></title><g transform="matrix(1,0,0,1,0,0)"><path d="M 5,23.5h7 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 8.5,21.5v2 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 0.5,19.5h16 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 20.761,9.522c1.544-0.19,2.713-1.489,2.739-3.045 c0.001-1.678-1.359-3.039-3.037-3.039c-0.039,0-0.077,0.001-0.116,0.002c-0.996-2.128-3.529-3.045-5.656-2.049 c-1.417,0.664-2.356,2.052-2.444,3.614c-1.235-0.256-2.443,0.537-2.699,1.771C9.516,6.929,9.5,7.084,9.5,7.239 c0.014,1.277,1.061,2.3,2.338,2.286c0.032,0,0.065-0.001,0.097-0.003L20.761,9.522z " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 16.5,12v7.912 c0.024,0.852-0.648,1.563-1.5,1.588H2c-0.852-0.025-1.524-0.736-1.5-1.588V11c0-0.828,0.672-1.5,1.5-1.5h5 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 8.5,17.5V13 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 6.5,15.5 l2,2l2-2" stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
-                <h5>Hosted SaaS</h5>
-                <p class="text-grey">
-		We can host eramba for you on our <a href="https://www.eramba.org/services">SaaS environment</a>
                 </p>
             </div>
         </div>

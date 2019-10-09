@@ -1,36 +1,94 @@
 <?php
 use Cake\Routing\Router;
 use App\Model\Table\ContactsTable;
+use App\Model\Table\ServicesTable;
 
 $this->assign('title', __('Paid Services | Eramba'));
 $this->SocialHeaders->set([
     'description' => __('Choose the eramba for your needs.')
 ]);
 ?>
+
+<section id="community-download" class="mb-lg first-section-margin">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>
+                    Eramba Enterprise
+                </h1>
+                <div class="row">
+                    <div class="col-md-10">
+                        <p class="text-grey mb-sm">
+                            Support, Trainings, Extra Features and many important regular Updates are guaranteed for a flat yearly fee no matter how many users or how much data you want to input in eramba.<br>
+                            <br>
+                            <b>Join the hundreds of organizations around the world that have chosen our affordable enterprise services and support this project!</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 hidden-sm">
+                <div class="text-center">
+                    <div class="img-shadow">
+                        <img src="/img/enterprise-rocket.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container text-center mb-xl">
+        <div class="row">
+            <div class="col-md-4 mb-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 24 24" height="100" width="100" class="mb-xs icon-md"><title></title><g transform="matrix(1,0,0,1,0,0)"><path d="M 16,21.5h1c1.934,0,3.5-1.067,3.5-3v-2.17 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 19.5,8.5c2.209-0.002,4.001,1.788,4.003,3.997 c0.001,1.697-1.069,3.21-2.669,3.775c-0.521,0.184-1.092-0.088-1.277-0.609c-0.038-0.107-0.057-0.22-0.057-0.333V8.5z " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 4.5,8.5 c-2.209-0.002-4.001,1.788-4.003,3.997c-0.001,1.697,1.069,3.21,2.669,3.775c0.521,0.184,1.092-0.088,1.277-0.609 C4.481,15.556,4.5,15.444,4.5,15.33V8.5z " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 19.5,10V8c0-4.142-3.358-7.5-7.5-7.5S4.5,3.858,4.5,8v2 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 11.5,20.5h4 c0.276,0,0.5,0.224,0.5,0.5v1c0,0.276-0.224,0.5-0.5,0.5h-4c-0.552,0-1-0.448-1-1l0,0C10.5,20.948,10.948,20.5,11.5,20.5z" stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+                <h5>Support</h5>
+                <p class="text-grey">
+                    You will get assistance from the core team by email or Zoom. Install troubles? Understanding how eramba works? Implementing Advice? We got it covered.
+                </p>
+            </div>
+            <div class="col-md-4 mb-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 24 24" height="100" width="100" class="mb-xs icon-md"><title></title><g transform="matrix(1,0,0,1,0,0)"><path d="M 9.138,23.5c0.829-1.175,1.302-2.564,1.362-4 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 14.862,23.5c-0.829-1.175-1.302-2.564-1.362-4 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 7.5,23.5h9 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 0.5,16.5h23 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 1.5,0.5h21c0.552,0,1,0.448,1,1v17c0,0.552-0.448,1-1,1h-21c-0.552,0-1-0.448-1-1v-17C0.5,0.948,0.948,0.5,1.5,0.5z " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 17,5.5l-5,5l-2-2 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 16.5,9c0,2.485-2.016,4.5-4.501,4.499c-2.485,0-4.5-2.016-4.499-4.501s2.016-4.5,4.501-4.499 c0.694,0,1.378,0.161,1.999,0.469" stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+                <h5>Regular Updates</h5>
+                <p class="text-grey">
+                    While community gets 2-3 updates a year, Enterprise gets well over 40 updates. Security patches, bug fixing, new features, Etc.
+                </p>
+            </div>
+            <div class="col-md-4 mb-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 24 24" height="100" width="100" class="mb-xs icon-md"><title></title><g transform="matrix(1,0,0,1,0,0)"><path d="M 17.518,11.506c3.314,0,6,2.686,6,6s-2.686,6-6,6s-6-2.686-6-6S14.204,11.506,17.518,11.506z " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 17.518,14.506v6 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 20.518,17.506h-6 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 0.515,4.504h20 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 3.515,2.254L3.515,2.254 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 3.515,2.254c-0.138,0-0.25,0.112-0.25,0.25s0.112,0.25,0.25,0.25 s0.25-0.112,0.25-0.25S3.653,2.254,3.515,2.254 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 5.515,2.254L5.515,2.254 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 5.515,2.254c-0.138,0-0.25,0.112-0.25,0.25 s0.112,0.25,0.25,0.25s0.25-0.112,0.25-0.25S5.653,2.254,5.515,2.254 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 7.515,2.254L7.515,2.254 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 7.515,2.254 c-0.138,0-0.25,0.112-0.25,0.25s0.112,0.25,0.25,0.25s0.25-0.112,0.25-0.25S7.653,2.254,7.515,2.254 " stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M 8.515,16.5h-6 c-1.105,0-2-0.895-2-2v-12c0-1.105,0.895-2,2-2h16c1.105,0,2,0.895,2,2v6" stroke="#000000" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+                <h5>Extra Features</h5>
+                <p class="text-grey">
+                    Some features are enterprise only: Email Notifications, Custom Fields, Online Assessments, Awareness Programs, Etc. See the full list on the documentation page.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="paid-services" class="footer-margin first-section-margin">
     <?= $this->Form->create(isset($service) ? $service : null, [
         'url' => ['controller' => 'Services', 'action' => 'processQuote'],
         'id' => 'services_form'
     ]) ?>
         <div class="container">
-            <h1 class="text-center">
+            <h1 class="text-center mb-lg">
                 Choose the eramba for your needs
             </h1>
             
-            <div id="paid-services-choice" class="hidden-sm"></div>
+            <!-- <div id="paid-services-choice" class="hidden-sm"></div> -->
 
             <div class="row">
-                <div class="licence-item col-lg-4 offset-lg-1 col-md-6 mb-md">
-                    <h4 class="text-center">
+                <div class="licence-item col-lg-6 offset-lg-3 col-md-6 mb-md">
+                    <h4 class="text-center mb-xs">
                         Enterprise License
                     </h4>
-                    <div class="text-center mb-md">
+                    <!-- <div class="text-center mb-md">
                         <div class="img-shadow">
                             <img class="img-fluid" src="/img/enterprise-rocket.png" alt="">
                         </div>
-                    </div>
+                    </div> -->
                     <p class="text-grey text-center mb-sm">
-                        Includes our Enterprise version, support and regular updates<a href="https://docs.google.com/document/d/1FTAG1vMDhNXJXySLBgvore60zhcObKhAievBk3rCOdA/edit#heading=h.23mitxs37sgm"> (FAQ)</a> <a href="https://www.eramba.org/tc">(T&C)</a>
+                        Includes our Enterprise version, support and regular updates <a href="https://docs.google.com/document/d/1FTAG1vMDhNXJXySLBgvore60zhcObKhAievBk3rCOdA/edit#heading=h.23mitxs37sgm">(FAQ)</a> <a href="https://www.eramba.org/tc">(T&C)</a>
                     </p>
                     <div class="form-group narrow">
                         <label>Version</label>
@@ -42,14 +100,10 @@ $this->SocialHeaders->set([
                                     'value' => $key
                                 ];
                             }
-                            $versionOptionsModified[] = [
-                                'text' => __('On SaaS (Comming Soon)'),
-                                'value' => -1,
-                                'disabled' => true
-                            ];
                         ?>
                         <?= $this->Form->select('Services.version', $versionOptionsModified, [
                             'class' => 'form-control',
+                            'default' => ServicesTable::VERSION_PERM,
                             'onChange' => 'ServicesSection.updateBill();'
                         ]) ?>
                         <?= $this->Form->error('Services.version') ?>
@@ -64,6 +118,7 @@ $this->SocialHeaders->set([
                         <?= $this->Form->error('Services.start_date') ?>
                     </div>
                 </div>
+                <?php /*
                 <div class="licence-item col-lg-4 offset-lg-2 col-md-6 mb-md">
                     <div class="comming-soon">
                         Comming soon
@@ -86,6 +141,7 @@ $this->SocialHeaders->set([
                         <a class="btn btn-primary" href="<?= Router::url(['controller' => 'Contacts', 'action' => 'index', '?' => ['type' => ContactsTable::TYPE_COMMUNITY_SAAS_TESTER]]) ?>">Contact Us</a>
                     </div>
                 </div>
+                */ ?>
             </div>
 
             <div class="paid-services-step">
