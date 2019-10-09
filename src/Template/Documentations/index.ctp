@@ -20,6 +20,8 @@ var documentationItems = <?= $documentationItemsJson ?>;
                 </h1>
                 <p class="text-grey">
                     Watch this informative video to get you started, it will not take more than 3 minutes.
+			<br><br>
+			Some features, trainings and support are exclusive to <a href="https://www.eramba.org/services">enterprise customers</a>.
                 </p>
             </div>
         </div>
