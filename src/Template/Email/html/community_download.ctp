@@ -1455,60 +1455,6 @@ background-color: #ffffff; font-family: Arial, Helvetica,; font-size: 14px; colo
 
 		                                <tr>
 
-		                                    <td>
-
-		                                        <table cellpadding="0" cellspacing="0" border="0">
-
-		                                            <tbody><tr>
-
-		                                                <td valign="top" width="32">
-
-		                                                    <a href="#" target="_blank" style="text-decoration: none;">
-
-		                                                        <img src="http://themes.scsnoopyindustri.netdna-cdn.com/BBT_Builder/Template_Pics/Kahuna/featured_services39.png" width="32" border="0" alt="" style="display: block;">
-
-		                                                    </a>
-
-		                                                </td>
-
-		                                                <td width="12">
-
-		                                                </td>
-
-		                                                <td>
-
-		                                                    <table cellpadding="0" cellspacing="0" border="0">
-
-		                                                        <tbody><tr>
-
-		                                                            <td  class="blue_text raleway weight_600"    style="font-size: 20px; line-height: 24px; font-weight: 600; font-family: 'Raleway', sans-serif; color: #16abc2;">ERAMBA SaaS IS ALSO AN OPTION!</td>
-
-		                                                        </tr>
-
-		                                                        <tr>
-
-		                                                            <td height="7" class="space_class" style="font-size: 1px; line-height: 1px;">&nbsp;
-
-		                                                            </td>
-
-		                                                        </tr>
-
-		                                                        <tr>
-
-		                                                            <td  class="dark_grey_text roboto weight_400"    style="font-size: 14px; line-height: 22px; font-weight: 400; font-family: 'Roboto', sans-serif; color: #464646;">At a friendly monthly fee we can host your eramba instance at our Amazon AWS backed infrastructure with top notch technology! <a href="https://www.eramba.org/services">Learn more here</a>.</td>
-
-		                                                        </tr>
-
-		                                                    </tbody></table>
-
-		                                                </td>
-
-		                                            </tr>
-
-		                                        </tbody></table>
-
-		                                    </td>
-
 		                                </tr>
 
 		                                <tr>

@@ -19,7 +19,7 @@ $this->SocialHeaders->set([
                 <div class="row">
                     <div class="col-md-10">
                         <p class="text-grey mb-sm">
-                            Support, Trainings, Extra Features and many important regular Updates are guaranteed for a flat yearly fee no matter how many users or how much data you want to input in eramba.<br>
+                            Support, Trainings, Extra Features and many important regular Updates are guaranteed for a <b>flat yearly fee</b> no matter how many users or how much data you want to input in eramba.<br>
                             <br>
                             <b>Join the hundreds of organizations around the world that have chosen our affordable enterprise services and support this project!</b>
                         </p>
