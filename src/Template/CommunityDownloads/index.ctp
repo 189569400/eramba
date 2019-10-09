@@ -52,6 +52,10 @@ $this->assign('title', __('Community Download | Eramba'));
     </div>
 </section>
 
+<p style="text-align:center;"><b>We are doing upgrades to the system - downloads will be paused until October the 14th</b></p>
+
+<!--
+
 <section class="footer-margin">
     <div class="container">
         <div class="row">
@@ -118,11 +122,12 @@ $this->assign('title', __('Community Download | Eramba'));
 
                     <?= $this->ReCaptcha->getHtml() ?>
 
-                    <div class="text-center">
+                     <div class="text-center">
                         <?= $this->Form->button(__('SUBMIT'), [
                             'class' => 'btn btn-primary'
                         ]) ?>
                     </div>
+		-->
                 <?= $this->Form->end() ?>
             </div>
         </div>
