@@ -4,6 +4,11 @@
 #    RequestHeader unset Proxy
 #</IfModule>
 
+#<IfModule mod_rewrite.c>
+#    RewriteCond %{HTTP_HOST} ^eramba.org$ [NC]
+#    RewriteRule (.*) https://www.eramba.org/$1 [R=301,L]
+#</IfModule>
+
 <IfModule mod_rewrite.c>
     RewriteEngine on
     RewriteRule    ^(sitemap\.xml) - [L]

@@ -46,7 +46,7 @@ var documentationItems = <?= json_encode($documentationItems) ?>;
         <div class="row">
             <div class="col-lg-7 col-md-12" id="documentation-intro-left">
                 <div class="doc-video">
-                    <iframe src="https://www.youtube.com/embed/7YUfAUCr6rk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/um7EBrDJkn0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
             <div class="col col-lg-4 offset-lg-1 col-md-12 mb-md" id="documentation-intro-right">
