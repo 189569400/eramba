@@ -146,7 +146,7 @@ $this->SocialHeaders->set([
 
             <div class="paid-services-step">
                 <h2 class="text-center text-blue mb-md">
-                    Add your optional training Packages
+                   Help learning and implemeting eramba? 
                 </h2>
 
                 <div class="row">
@@ -181,7 +181,7 @@ $this->SocialHeaders->set([
                                 Onsite Workshops
                             </h4>
                             <p class="lead text-grey">
-                                Our four day onsite workshop helps you understand and implement eramba in your organisation!<a href="https://docs.google.com/document/d/1FTAG1vMDhNXJXySLBgvore60zhcObKhAievBk3rCOdA/edit#heading=h.ovs2krb4amke"> (FAQ)</a>  
+                                Our very popular four day onsite workshop helps you understand and implement eramba in your organisation!<a href="https://docs.google.com/document/d/1FTAG1vMDhNXJXySLBgvore60zhcObKhAievBk3rCOdA/edit#heading=h.ovs2krb4amke"> (FAQ)</a>  
                             </p>
                         </div>
                         <div class="form-group narrow">

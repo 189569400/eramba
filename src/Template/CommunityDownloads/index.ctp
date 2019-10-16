@@ -52,7 +52,7 @@ $this->assign('title', __('Community Download | Eramba'));
     </div>
 </section>
 
-<p style="text-align:center;"><b>We are doing upgrades to the system - downloads will be paused until October the 14th</b></p>
+<p style="text-align:center;"><b>We are doing upgrades to the system - downloads will be paused until October the 17th</b></p>
 
 <!--
 
