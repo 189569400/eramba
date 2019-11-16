@@ -1135,7 +1135,7 @@ background-color: #ffffff; font-family: Arial, Helvetica,; font-size: 14px; colo
 
 		                                                            <td   class="button blue_border2 raleway weight_600" align="center" width="124" height="31" style="font-size: 14px; display: block; font-weight: 600; font-family: 'Raleway', sans-serif; border: 2px solid #16abc2;" bgcolor="">
 
-		                                                                <a href="https://downloadseramba.s3-eu-west-1.amazonaws.com/CommunityTGZ/c241.tgz" class="blue_text"  style="display: block; line-height: 31px; text-decoration: none; color: rgb(22, 171, 194);" target="_blank">SOURCE CODE</a>
+		                                                                <a href="https://downloadseramba.s3-eu-west-1.amazonaws.com/CommunityTGZ/latest.tgz" class="blue_text"  style="display: block; line-height: 31px; text-decoration: none; color: rgb(22, 171, 194);" target="_blank">SOURCE CODE</a>
 
 		                                                            </td>
 
