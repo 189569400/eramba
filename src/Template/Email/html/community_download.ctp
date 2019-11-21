@@ -1329,7 +1329,7 @@ background-color: #ffffff; font-family: Arial, Helvetica,; font-size: 14px; colo
 
 		                                    </td>
 
-		                                    <td class="col_md_2 weight_600 raleway white_text text_center"     style="font-size: 16px; line-height: 18px; font-weight: 600; color: #fff; font-family: 'Raleway', sans-serif;" width="345">Deploy our source code on your linux servers, use our pre-built Vmware or AWS AMI Image.</td>
+		                                    <td class="col_md_2 weight_600 raleway white_text text_center"     style="font-size: 16px; line-height: 18px; font-weight: 600; color: #fff; font-family: 'Raleway', sans-serif;" width="345">Deploy our source code on your linux serversor use our pre-built Vmware.</td>
 
 		                                </tr>
 
