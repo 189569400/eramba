@@ -48,6 +48,7 @@ class ServiceBillingInformation extends Entity
         'email' => true,
         'currency' => true,
         'payment_type' => true,
+        'notes' => true,
         'service' => true,
         'country' => true
     ];

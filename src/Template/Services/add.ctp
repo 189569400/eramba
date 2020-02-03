@@ -119,6 +119,14 @@ $this->SocialHeaders->set([
                         <?= $this->Form->radio('service_billing_information.payment_type', $paymentTypeOptions) ?>
                         <?= $this->Form->error('service_billing_information.payment_type') ?>
                     </div>
+                    <div class="form-group">
+                        <label>Notes</label>
+                        <?= $this->Form->textarea('service_billing_information.notes', [
+                            'class' => 'form-control',
+                            'placeholder' => __("Leave a note to our invoicing team if you need a quote, invoice, partner license, etc. You will be responded by a human!")
+                        ]) ?>
+                        <?= $this->Form->error('service_billing_information.notes') ?>
+                    </div>
                 </div>
             </div>
 

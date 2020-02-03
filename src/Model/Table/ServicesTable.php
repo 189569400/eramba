@@ -6,6 +6,8 @@ use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
 use Cake\Event\Event;
+use Cake\I18n\Number;
+use App\Model\Table\ServiceBillingInformationsTable as SBIT;
 
 /**
  * Services Model
@@ -59,10 +61,50 @@ class ServicesTable extends Table
         }
     }
 
-    const VERSION_PERM_PRICE = 2500;
-    const VERSION_SAAS_PRICE = 0;
-    const ONLINE_TRAININGS_HOUR_PRICE = 80;
-    const ONSITE_WORKSHOPS_PRICE = 2500;
+    const VERSION_PERM_PRICE_EUR = 2500;
+    const VERSION_PERM_PRICE_USD = 3000;
+    const VERSION_PERM_PRICE_GBP = 2100;
+    const VERSION_SAAS_PRICE_EUR = 0;
+    const ONLINE_TRAININGS_HOUR_PRICE_EUR = 80;
+    const ONSITE_WORKSHOPS_PRICE_EUR = 2500;
+
+    public static function getPriceByCurrency($type, $currency = SBIT::CURRENCY_EUR)
+    {
+        $prices = [
+            'PERM' => [
+                SBIT::CURRENCY_EUR => 2500,
+                SBIT::CURRENCY_USD => 3000,
+                SBIT::CURRENCY_GBP => 2100
+            ],
+            'SAAS' => [
+                SBIT::CURRENCY_EUR => 0,
+                SBIT::CURRENCY_USD => 0,
+                SBIT::CURRENCY_GBP => 0
+            ],
+            'ONLINE_TRAININGS' => [
+                SBIT::CURRENCY_EUR => 80,
+                SBIT::CURRENCY_USD => 80,
+                SBIT::CURRENCY_GBP => 80
+            ],
+            'ONSITE_WORKSHOPS' => [
+                SBIT::CURRENCY_EUR => 2500,
+                SBIT::CURRENCY_USD => 2500,
+                SBIT::CURRENCY_GBP => 2500
+            ]
+        ];
+
+        return isset($prices[$type][$currency]) ? $prices[$type][$currency] : $prices[$type][SBIT::CURRENCY_EUR];
+    }
+
+    public static function getFriendlyPrice($price, $currency = SBIT::CURRENCY_EUR)
+    {
+        $convert = [
+            SBIT::CURRENCY_EUR => 'EUR',
+            SBIT::CURRENCY_USD => 'USD',
+            SBIT::CURRENCY_GBP => 'GBP'
+        ];
+        return Number::currency($price, $convert[$currency], ['places' => 0]);
+    }
 
     private $setNewQuoteNumber = false;
 
@@ -190,7 +232,7 @@ class ServicesTable extends Table
         }
     }
 
-    public function calcPrice($data, $which = null)
+    public function calcPrice($data, $which = null, $currency = SBIT::CURRENCY_EUR)
     {
         $version = $data['version'];
         $online_trainings_hours = $data['online_trainings_hours'];
@@ -201,15 +243,15 @@ class ServicesTable extends Table
         $priceOnlineTranings = 0;
         $priceOnsiteWorkshops = 0;
         if ($version == self::VERSION_PERM) {
-            $priceVersion = self::VERSION_PERM_PRICE;
+            $priceVersion = self::getPriceByCurrency('PERM', $currency);
         } elseif ($version == self::VERSION_SAAS) {
-            $priceVersion = self::VERSION_SAAS_PRICE;
+            $priceVersion = self::getPriceByCurrency('SAAS', $currency);
         }
 
-        $priceOnlineTranings = $online_trainings_hours * self::ONLINE_TRAININGS_HOUR_PRICE;
+        $priceOnlineTranings = $online_trainings_hours * self::getPriceByCurrency('ONLINE_TRAININGS', $currency);
 
         if ($onsite_workshops == 1) {
-            $priceOnsiteWorkshops = self::ONSITE_WORKSHOPS_PRICE;
+            $priceOnsiteWorkshops = self::getPriceByCurrency('ONSITE_WORKSHOPS', $currency);
         }
 
         switch ($which) {

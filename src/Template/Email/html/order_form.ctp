@@ -34,3 +34,5 @@
 <p><?= $online_trainings_hours ?></p>
 <h3><?= __('Onsite Workshops') ?>:</h3>
 <p><?= $onsite_workshops ?></p>
+<h3><?= __('Notes') ?>:</h3>
+<p><?= $notes ?></p>

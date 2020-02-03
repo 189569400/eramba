@@ -161,6 +161,10 @@ class ServiceBillingInformationsTable extends Table
             ->requirePresence('payment_type', 'create')
             ->allowEmptyString('payment_type', false);
 
+        $validator
+            ->scalar('notes')
+            ->maxLength('notes', 2000);
+
         return $validator;
     }
 

@@ -108,7 +108,8 @@ class ServicesController extends AppController
                     'version' => $this->Services->getVersions($subject->entity->version),
                     'start_date' => $subject->entity->start_date,
                     'online_trainings_hours' => $subject->entity->online_trainings_hours,
-                    'onsite_workshops' => $subject->entity->onsite_workshops
+                    'onsite_workshops' => $subject->entity->onsite_workshops,
+                    'notes' => $subject->entity->notes
                 ]);
                 //
                 
@@ -193,6 +194,11 @@ class ServicesController extends AppController
 
         $billingInfoData = !empty($data['service_billing_information']) ? $data['service_billing_information'] : [];
 
+        //
+        // Set currency
+        $currency = !empty($billingInfoData['currency']) ? $billingInfoData['currency'] : ServiceBillingInformationsTable::CURRENCY_EUR;
+        // 
+
         if (!empty($billingInfoData['country_id'])) {
             $this->loadModel('Countries');
             $billingInfoData['country_name'] = $this->Countries->getCountryName($billingInfoData['country_id']);
@@ -209,50 +215,50 @@ class ServicesController extends AppController
 
         $items = [];
         if (!empty($servicesData['version'])) {
-            $versionPrice = $this->Services->calcPrice($servicesData, 'version');
+            $versionPrice = $this->Services->calcPrice($servicesData, 'version', $currency);
             $versionUnitPrice = 0;
             if ($servicesData['version'] == ServicesTable::VERSION_PERM) {
-                $versionUnitPrice = ServicesTable::VERSION_PERM_PRICE;
+                $versionUnitPrice = ServicesTable::getPriceByCurrency('PERM', $currency);
             } elseif ($servicesData['version'] == ServicesTable::VERSION_SAAS) {
-                $versionUnitPrice = ServicesTable::VERSION_SAAS_PRICE;
+                $versionUnitPrice = ServicesTable::getPriceByCurrency('SAAS', $currency);
             }
             $items[] = [
                 'name' => ServicesTable::getTypes($servicesData['version']),
                 'quantity' => 1,
                 'unit_price' => $versionUnitPrice,
-                'unit_price_friendly' => $this->getFriendlyPrice($versionUnitPrice),
+                'unit_price_friendly' => ServicesTable::getFriendlyPrice($versionUnitPrice, $currency),
                 'vat' => 0,
                 'vat_friendly' => __('No VAT'),
                 'price' => $versionPrice,
-                'price_friendly' => $this->getFriendlyPrice($versionPrice)
+                'price_friendly' => ServicesTable::getFriendlyPrice($versionPrice, $currency)
             ];
         }
         if (!empty($servicesData['online_trainings_hours'])) {
-            $othPrice = $this->Services->calcPrice($servicesData, 'online_trainings');
-            $othUnitPrice = ServicesTable::ONLINE_TRAININGS_HOUR_PRICE;
+            $othPrice = $this->Services->calcPrice($servicesData, 'online_trainings', $currency);
+            $othUnitPrice = ServicesTable::getPriceByCurrency('ONLINE_TRAININGS', $currency);
             $items[] = [
                 'name' => __('Online Trainings and Assistance'),
                 'quantity' => $servicesData['online_trainings_hours'],
                 'unit_price' => $othUnitPrice,
-                'unit_price_friendly' => $this->getFriendlyPrice($othUnitPrice),
+                'unit_price_friendly' => ServicesTable::getFriendlyPrice($othUnitPrice, $currency),
                 'vat' => 0,
                 'vat_friendly' => __('No VAT'),
                 'price' => $othPrice,
-                'price_friendly' => $this->getFriendlyPrice($othPrice)
+                'price_friendly' => ServicesTable::getFriendlyPrice($othPrice, $currency)
             ];
         }
         if (!empty($servicesData['onsite_workshops'])) {
-            $owPrice = $this->Services->calcPrice($servicesData, 'onsite_workshops');
-            $owUnitPrice = ServicesTable::ONSITE_WORKSHOPS_PRICE;
+            $owPrice = $this->Services->calcPrice($servicesData, 'onsite_workshops', $currency);
+            $owUnitPrice = ServicesTable::getPriceByCurrency('ONSITE_WORKSHOPS', $currency);
             $items[] = [
                 'name' => __('Onsite Workshops (excluding travel expenses)'),
                 'quantity' => $servicesData['onsite_workshops'],
                 'unit_price' => $owUnitPrice,
-                'unit_price_friendly' => $this->getFriendlyPrice($owUnitPrice),
+                'unit_price_friendly' => ServicesTable::getFriendlyPrice($owUnitPrice, $currency),
                 'vat' => 0,
                 'vat_friendly' => __('No VAT'),
                 'price' => $owPrice,
-                'price_friendly' => $this->getFriendlyPrice($owPrice)
+                'price_friendly' => ServicesTable::getFriendlyPrice($owPrice, $currency)
             ];
         }
         if (!empty($billingInfoData['payment_type'])) {
@@ -272,11 +278,11 @@ class ServicesController extends AppController
                 'name' => $paymentName,
                 'quantity' => 1,
                 'unit_price' => $paymentUnitPrice,
-                'unit_price_friendly' => $this->getFriendlyPrice($paymentUnitPrice),
+                'unit_price_friendly' => ServicesTable::getFriendlyPrice($paymentUnitPrice, $currency),
                 'vat' => 0,
                 'vat_friendly' => __('No VAT'),
                 'price' => $paymentPrice,
-                'price_friendly' => $this->getFriendlyPrice($paymentPrice)
+                'price_friendly' => ServicesTable::getFriendlyPrice($paymentPrice, $currency)
             ];
         }
 
@@ -286,15 +292,10 @@ class ServicesController extends AppController
             $priceSubtotal += $item['price'];
             $priceTotal += $item['price'] + $item['vat'];
         }
-        $priceSubtotalFriendly = $this->getFriendlyPrice($priceSubtotal);
-        $priceTotalFriendly = $this->getFriendlyPrice($priceTotal);
+        $priceSubtotalFriendly = ServicesTable::getFriendlyPrice($priceSubtotal, $currency);
+        $priceTotalFriendly = ServicesTable::getFriendlyPrice($priceTotal, $currency);
 
         $this->set(compact('startDate', 'expiryDate', 'billingInfoData', 'items', 'priceSubtotal', 'priceSubtotalFriendly', 'priceTotal', 'priceTotalFriendly'));
-    }
-
-    protected function getFriendlyPrice($price)
-    {
-        return Number::currency($price, 'EUR', ['places' => 0]);
     }
 
     public function processQuote()

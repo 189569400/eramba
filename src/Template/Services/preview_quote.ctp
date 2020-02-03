@@ -93,7 +93,7 @@
                 <tr>
                     <td class="hidden-sm"></td>
                     <td class="hidden-sm"></td>
-                    <td colspan="2" class="border-black"><strong>TOTAL EUR</strong></td>
+                    <td colspan="2" class="border-black"><strong>TOTAL</strong></td>
                     <td class="border-black"><strong><?= $priceTotalFriendly ?></strong></td>
                 </tr>
             </tbody>
