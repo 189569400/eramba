@@ -61,20 +61,13 @@ class ServicesTable extends Table
         }
     }
 
-    const VERSION_PERM_PRICE_EUR = 2500;
-    const VERSION_PERM_PRICE_USD = 3000;
-    const VERSION_PERM_PRICE_GBP = 2100;
-    const VERSION_SAAS_PRICE_EUR = 0;
-    const ONLINE_TRAININGS_HOUR_PRICE_EUR = 80;
-    const ONSITE_WORKSHOPS_PRICE_EUR = 2500;
-
     public static function getPriceByCurrency($type, $currency = SBIT::CURRENCY_EUR)
     {
         $prices = [
             'PERM' => [
                 SBIT::CURRENCY_EUR => 2500,
                 SBIT::CURRENCY_USD => 3000,
-                SBIT::CURRENCY_GBP => 2100
+                SBIT::CURRENCY_GBP => 2200
             ],
             'SAAS' => [
                 SBIT::CURRENCY_EUR => 0,
@@ -83,13 +76,13 @@ class ServicesTable extends Table
             ],
             'ONLINE_TRAININGS' => [
                 SBIT::CURRENCY_EUR => 80,
-                SBIT::CURRENCY_USD => 80,
-                SBIT::CURRENCY_GBP => 80
+                SBIT::CURRENCY_USD => 90,
+                SBIT::CURRENCY_GBP => 70
             ],
             'ONSITE_WORKSHOPS' => [
                 SBIT::CURRENCY_EUR => 2500,
-                SBIT::CURRENCY_USD => 2500,
-                SBIT::CURRENCY_GBP => 2500
+                SBIT::CURRENCY_USD => 3000,
+                SBIT::CURRENCY_GBP => 2200
             ]
         ];
 
