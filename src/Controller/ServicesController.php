@@ -109,7 +109,7 @@ class ServicesController extends AppController
                     'start_date' => $subject->entity->start_date,
                     'online_trainings_hours' => $subject->entity->online_trainings_hours,
                     'onsite_workshops' => $subject->entity->onsite_workshops,
-                    'notes' => $subject->entity->notes
+                    'notes' => $subject->entity->service_billing_information->notes
                 ]);
                 //
                 
