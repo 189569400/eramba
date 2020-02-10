@@ -94,6 +94,7 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->redirect('/privacy', 'https://docs.google.com/document/d/1VctdYiI3b5_imQYYy0z3QEA8Ab6bpMISdhWBfj1pq2U/', ['status' => 302]);
     $routes->redirect('/blog', 'https://www.linkedin.com/company/eramba/', ['status' => 302]);
     $routes->redirect('/forum', 'https://discussions.eramba.org', ['status' => 302]);
+    $routes->redirect('/forum_rules', 'https://docs.google.com/document/d/1xwI7kfqQXknszBafhqzX_f84W6bLS-2Ch7ukz8POS90/edit?usp=sharing', ['status' => 302]);
     #$routes->redirect('/faq', 'https://docs.google.com/document/u/1/d/1FTAG1vMDhNXJXySLBgvore60zhcObKhAievBk3rCOdA/edit#heading=h.tlds5h3krixr', ['status' => 302]);
     $routes->redirect('/faq', 'https://docs.google.com/document/u/1/d/1FTAG1vMDhNXJXySLBgvore60zhcObKhAievBk3rCOdA/', ['status' => 302]);
     $routes->redirect('/news', ['controller' => 'Home', 'action' => 'index'], ['status' => 302]);
